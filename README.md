@@ -1,2 +1,0 @@
-# SkySwitch-catalog
-Product catalog 
