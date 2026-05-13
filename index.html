@@ -8,7 +8,7 @@
         :root { --primary: #3b82f6; }
         * { margin:0; padding:0; box-sizing:border-box; }
         body { 
-            font-family: 'Segoe UI', Arial, sans-serif; 
+            font-family: 'Segoe UI', Times New Roman, sans-serif; 
             background:#0f172a; 
             color:#e2e8f0; 
             line-height:1.6;
@@ -117,16 +117,16 @@
         <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: white;">
             <img src="https://imgur.com/5jlSX4v.png" 
                  alt="SkySwitch Logo" 
-                 style="height: 50px; margin-right: 12px;">
+                 style="height: 100px; margin-right: 12px;">
             <div>
-                <span style="font-size: 1.85rem; font-weight: bold;">SkySwitch</span>
-                <span style="font-size: 0.95rem; opacity: 0.9;"> Technologies</span>
+                <span style="font-size: 1.85rem; font-weight: bold;">SkySwitch Technologies</span>
+                <span style="font-size: 0.95rem; opacity: 0.9;"> </span>
             </div>
         </a>
 
         <div class="nav-links">
             <a href="#about">About Company</a>
-            <a href="#applications">Application</a>
+            <a href="#applications">Application</a><br>
             <a href="catalog.html">Full Catalog</a>
             <a href="#contact">Contacts</a>
         </div>
@@ -151,7 +151,7 @@
             Our products meet the highest standards of reliability and are successfully used in aviation, space, rail transport and military equipment.
         </p>
 
-        <!-- Галерея изображений  -->
+        <!-- Галерея изображений - легко заменять -->
         <div class="about-images">
             <img src="https://imgur.com/FATAxET.png" alt="Production 1">
             <img src="https://imgur.com/2eXw16n.png" alt="Production 2">
@@ -184,28 +184,75 @@
 <p style="margin: 15px 0 30px; font-size: 1.15rem;">Alarm system, on-board equipment</p>
             </div>
 
-            <!-- Technics -->
+            <!-- Military technics -->
             <div style="text-align: center;">
-                <h3>Technics</h3><br>
+                <h3>Military technics</h3><br>
                 <img src="https://imgur.com/NUd0jt2.png" 
-                     style="width: 100%; max-width: 1100px; max-height: 420px; object-fit: cover; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.6);" alt="Technics">
-<p style="margin: 15px 0 30px; font-size: 1.15rem;">Land, sea and air vehicles and devices</p>
+                     style="width: 100%; max-width: 1100px; max-height: 420px; object-fit: cover; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.6);" alt="Military">
+<p style="margin: 15px 0 30px; font-size: 1.15rem;">Land, sea and air vehicles</p>
             </div>
 </div>
         </div>
     </section>
 
-    <!-- КОНТАКТЫ -->
-    <section id="contact" class="section">
-        <h2>Contacts</h2>
-        <p style="text-align:center; font-size:1.4rem;">
-            Email: <strong><a href="mailto:agent007.99@gmail.com" style="color:#60a5fa;">agent007.99@gmail.com</a></strong>
-        </p>
-    </section>
+<!-- ==================== ФУТЕР ==================== -->
+    <footer style="background: #020617; padding: 80px 20px 40px; color: #e2e8f0;">
+        <div style="max-width: 1400px; margin: 0 auto;">
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 50px; margin-bottom: 60px;">
+                
+                <!-- 1. Логотип + Описание -->
+                <div>
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <img src="https://imgur.com/5jlSX4v.png" 
+                             alt="SkySwitch Logo" 
+                             style="height: 100px; margin-right: 15px;">
+                        <div>
+                            <span style="font-size: 1.8rem; font-weight: bold;">SkySwitch</span>
+                            <span style="font-size: 1.2rem; ofont-weight: bold;"> Technologies</span>
+                        </div>
+                    </div>
+                    <p style="opacity: 0.8; line-height: 1.7;">
+	            Highly reliable sealed relays and contactors for aviation,
+                    space and extreme environments.
+                    </p>
+                </div>
 
-    <div class="footer">
-        <p>&copy; 2026 SkySwitch Technologies • All Rights Reserved</p>
-    </div>
+                <!-- 2. Быстрые ссылки -->
+                <div>
+                    <h4 style="margin-bottom: 20px; color: #60a5fa;">Navigation</h4>
+                    <a href="#about" style="display:block; color:#e2e8f0; text-decoration:none; margin-bottom: 10px;">About Company</a>
+                    <a href="#applications" style="display:block; color:#e2e8f0; text-decoration:none; margin-bottom: 10px;">Application</a>
+                    <a href="catalog.html" style="display:block; color:#e2e8f0; text-decoration:none; margin-bottom: 10px;">Full catalog</a>
+                </div>
 
+                <!-- 3. Контакты -->
+                <div>
+                    <h4 style="margin-bottom: 20px; color: #60a5fa;">Contacts</h4>
+                    <p style="margin-bottom: 8px;">
+                        Email: <a href="mailto:agent007.99@gmail.com" style="color:#60a5fa;">agent007.99@gmail.com</a>
+                    </p>
+                </div>
+
+                <!-- 4. Форма запроса -->
+                <div>
+                    <h4 style="margin-bottom: 20px; color: #60a5fa;">Send a request</h4>
+                    <form action="https://formspree.io/f/your-email" method="POST" style="display: flex; flex-direction: column; gap: 12px;">
+                        <input type="text" name="name" placeholder="Your name" required style="padding:12px; background:#1e2937; border:1px solid #475569; border-radius:6px; color:white;">
+                        <input type="email" name="email" placeholder="Email" required style="padding:12px; background:#1e2937; border:1px solid #475569; border-radius:6px; color:white;">
+                        <textarea name="message" rows="3" placeholder="Your request (models, datasheets and etc.)" required style="padding:12px; background:#1e2937; border:1px solid #475569; border-radius:6px; color:white;"></textarea>
+                        <button type="submit" style="padding:14px; background:#3b82f6; color:white; border:none; border-radius:6px; font-weight:600; cursor:pointer;">Send a request</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Нижняя линия -->
+            <div style="border-top: 1px solid #334155; padding-top: 30px; text-align: center; opacity: 0.6; font-size: 0.95rem;">
+                © 2026 SkySwitch Technologies • All Rights Reserved
+            </div>
+
+        </div>
+    </footer>
 </body>
 </html>
