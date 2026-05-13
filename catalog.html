@@ -1,186 +1,2869 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
+﻿<html lang="ru"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkySwitch Technologies | High-Reliability Relays</title>
+    <title>SkySwitch Technologies | Product Catalog 2026</title>
     <style>
-        :root { --primary: #3b82f6; }
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body { 
-            font-family: 'Segoe UI', Arial, sans-serif; 
-            background:#0f172a; 
-            color:#e2e8f0; 
-            line-height:1.6;
-        }
+        body { font-family: 'Segoe UI', Times New Roman, sans-serif; margin:0; background:#0f172a; color:#e2e8f0; line-height:1.55; }
+        .header { background: linear-gradient(135deg, #1e40af, #3b82f6); padding:80px 20px; text-align:center; color:white; }
+        .container { max-width: 1580px; margin:0 auto; padding:20px; }
+        h1 { font-size: 3.2rem; margin:0; }
+        h2 { color:#60a5fa; margin:20px 0 20px; border-bottom:3px solid #334155; padding-bottom:12px; }
+        h3 { color:#93c5fd; margin-top:40px; }
         
-        .header {
-            background: linear-gradient(135deg, #1e40af, #1e3a8a);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-        .nav {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo { 
-            font-size: 1.9rem; 
-            font-weight: bold; 
-            color: white; 
-            text-decoration: none; 
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            margin-left: 30px;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-        .nav-links a:hover { color: #60a5fa; }
-
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.9)), 
-                        url('https://images.unsplash.com/photo-1581092160607-2c1b8d2c9c3d?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover;
-            display: flex;
-            align-items: center;
-            text-align: center;
-        }
-        .hero-content { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-        .hero h1 { font-size: 3.8rem; margin-bottom: 20px; }
-        .hero p { font-size: 1.5rem; margin-bottom: 40px; }
-
-        .btn {
-            display: inline-block;
-            padding: 16px 36px;
-            background: var(--primary);
-            color: white;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 0 12px;
-        }
-        .btn:hover { background: #2563eb; transform: translateY(-4px); }
-        .btn-outline { background: transparent; border: 2px solid #60a5fa; }
-
-        .section { 
-            padding: 120px 20px 80px; 
-            max-width: 1400px; 
-            margin: 0 auto; 
-        }
-        .section h2 { 
-            font-size: 2.8rem; 
-            text-align: center; 
-            margin-bottom: 50px; 
-            color: #60a5fa; 
-        }
-
-        .about-images {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 50px;
-        }
-        .about-images img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 10px;
-            border: 2px solid #334155;
-            transition: 0.3s;
-        }
-        .about-images img:hover {
-            transform: scale(1.05);
-            border-color: #60a5fa;
-        }
-
-        .footer {
-            background: #020617;
-            padding: 60px 20px;
-            text-align: center;
-        }
+        table { width:100%; border-collapse:collapse; margin:25px 0; background:#1e2937; box-shadow:0 4px 20px rgba(0,0,0,0.5); }
+        th, td { padding:12px 10px; text-align:center; border-bottom:1px solid #475569; vertical-align:middle; }
+        th { background:#1e40af; color:white; text-align:center; }
+        .model { font-weight:bold; color:#93c5fd; }
+        .product-img { width:100px; height:120px; object-fit:contain; background:#334155; padding:4px; border-radius:5px; }
+        .center { text-align:center; }
     </style>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="nav">
-            <a href="#" class="logo">SkySwitch Technologies</a>
-            <div class="nav-links">
-                <a href="#about">About Company</a>
-                <a href="#applications">Application</a>
-                <a href="catalog.html">Full Catalog</a>
-                <a href="#contact">Contacts</a>
-            </div>
-        </div>
-    </header>
+<div class="header">
+    <h1 style="font-size: 3rem; margin:0;">SkySwitch Technologies</h1>
+    <p style="font-size: 1.4rem; margin:10px 0 0 0;">High-Reliability Sealed Relays &amp; Contactors</p>
+    <p style="font-size: 1.1rem;">Aerospace • Defense • Harsh Environments</p>
+</div>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>High-Reliability<br>Sealed Relays & Contactors</h1>
-            <p>Aerospace • Defense • Railway • Extreme Environments</p>
-            <a href="catalog.html" class="btn">Open Full Catalog</a>
-            <a href="mailto:agent007.99@gmail.com" class="btn btn-outline">Request an offer</a>
-        </div>
-    </section>
+<div class="container">
 
-    <!-- О КОМПАНИИ -->
-    <section id="about" class="section">
-        <h2>About Company</h2>
-        <p style="max-width:900px; margin:0 auto 50px; text-align:center; font-size:1.25rem;">
-            Sky Switch Technologies specializes in the development and manufacture of highly reliable sealed relays and contactors. 
-            Our products meet the highest standards of reliability and are successfully used in aviation, space, rail transport and military equipment.
-        </p>
+<h2 style="text-align:center; color:#bfdbfe;">Full Product Catalog 2026</h2>
 
-        <!-- Галерея изображений - легко заменять -->
-        <div class="about-images">
-            <img src="https://imgur.com/FATAxET.png" alt="Production 1">
-            <img src="https://imgur.com/2eXw16n.png" alt="Production 2">
-            <img src="https://imgur.com/9BtVTip.png" alt="Testing Laboratory">
-            <img src="https://imgur.com/2AVNQD4.png" alt="Products">
-            
-        </div>
-    </section>
+<!-- ==================== ВВЕДЕНИЕ ==================== -->
+<div class="highlight">
+    <h2>О Компании</h2>
+    <p>SkySwitch Technologies manufactures highly reliable sealed relays and contactors for extreme operating conditions. The products meet the requirements of MIL-STD and are successfully used in aviation, space, military and special equipment.</p>
+</div>
+<h2>Quick Selection Guide</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Series</th>
+            <th>Type</th>
+            <th>Current Range</th>
+            <th>Package</th>
+            <th>Application</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="model">1J</td>
+            <td>Signal Relay</td>
+            <td>≤1A</td>
+            <td>TO-5</td>
+            <td>Avionics, control circuits</td>
+        </tr>
+        <tr>
+            <td class="model">6J</td>
+            <td>Power Relay</td>
+            <td>≤10A</td>
+            <td>Cube</td>
+            <td>Industrial switching</td>
+        </tr>
+        <tr>
+            <td class="model">8J</td>
+            <td>High Power</td>
+            <td>≤75A</td>
+            <td>Metal</td>
+            <td>Power systems</td>
+        </tr>
+    </tbody>
+</table>
 
-    <!-- ПРИМЕНЕНИЕ -->
-    <section id="applications" class="section" style="background:#1e2937;">
-        <h2>Application areas</h2>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:30px; max-width:1100px; margin:0 auto;">
-            <div style="text-align:center;">
-                <h3>Aviation and Space</h3>
-                <p>Avionics, control systems, power distribution</p>
-            </div>
-            <div style="text-align:center;">
-                <h3>Railway transport</h3>
-                <p>Alarm system, on-board equipment</p>
-            </div>
-            <div style="text-align:center;">
-                <h3>Military technics</h3>
-                <p>Land, sea and air vehicles</p>
-            </div>
-        </div>
-    </section>
+<!-- ==================== ЧАСТЬ 1 ==================== -->
 
-    <!-- КОНТАКТЫ -->
-    <section id="contact" class="section">
-        <h2>Contacts</h2>
-        <p style="text-align:center; font-size:1.4rem;">
-            Email: <strong><a href="mailto:agent007.99@gmail.com" style="color:#60a5fa;">agent007.99@gmail.com</a></strong>
-        </p>
-    </section>
+<h2>1. Sealed electromagnetic relay</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Product Model</th>
+            <th>Picture</th>
+            <th>Dimensions (mm)</th>
+            <th>Temperature (°C)</th>
+            <th>Contact Form</th>
+            <th>Vibration</th>
+            <th>Contact Load &amp; Lifetime</th>
+            <th>Benchmarking Model</th>
+        </tr>
+    </thead>
+    <tbody>
 
-    <div class="footer">
-        <p>&copy; 2026 SkySwitch Technologies • All Rights Reserved</p>
-    </div>
 
-</body>
-</html>
+
+        <tr>
+            <td class="center"><span class="model">1J1Z1A</span></td>
+            <td class="center"><img src="https://imgur.com/PQCZJCx.jpg" class="product-img" alt=""></td>
+            <td>Φ8.5×7.1 Resistance sealing welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">1PDT</td>
+            <td class="center">Sinusoidal:
+196m/s<sup>2</sup>
+10~2000Hz
+Random:
+169.1m/s<sup>2</sup>
+20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
+            <td>Teledyne (411)</td>
+        </tr>
+
+
+
+        <tr>
+            <td class="center"><span class="model">1J2Z1A</span></td>
+            <td class="center"><img src="https://imgur.com/PQCZJCx.jpg" class="product-img" alt=""></td>
+            <td>Φ8.5×7.1 Resistance sealing welding</td>
+            <td class="center">-55~85</td>
+            <td class="center">2PDT</td>
+<td class="center">Sinusoidal:
+196m/s<sup>2</sup>
+10~2000Hz</td>
+            <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
+            <td>Teledyne (412) Tyco (MA)</td>
+        </tr>
+
+
+
+
+        <tr>
+            <td class="center"><span class="model">1J2Z1AG</span></td>
+            <td class="center"><img src="https://imgur.com/GoMs0Nz.jpg" class="product-img" alt=""></td>
+            <td>Φ8.5×9.53 Resistance sealing welding</td>
+            <td class="center">-55~85</td>
+            <td class="center">2PDT</td>
+            <td class="center">Sinusoidal:
+196m/s<sup>2</sup>
+10~2000Hz</td>
+            <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
+            <td>Teledyne (432) Tyco (MS)</td>
+        </tr>
+
+
+
+
+<tr>
+            <td class="center"><span class="model">1J2Z05AFD</span></td>
+            <td class="center"><img src="https://imgur.com/7b6Jhl9.jpg" class="product-img" alt=""></td>
+            <td>8.5×8.5×7.3 Built-in transient suppression for resistance sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td class="center">Sinusoidal:
+294m/s<sup>2</sup>
+10~3000Hz
+Random:
+169.1m/s<sup>2</sup>
+20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>0.5A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
+            <td>Teledyne (114D)Tyco (MA)</td>
+        </tr>
+
+<tr>
+       <td class="center"><span class="model">1J2Z1AFG</span></td>
+       <td class="center"><img src="https://imgur.com/pziFX0e.jpg" class="product-img" alt=""></td>
+            <td>8.5×8.5×10 Resistance sealing welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td class="center">Sinusoidal:
+294m/s<sup>2</sup>
+10~3000Hz
+Random:
+169.1m/s<sup>2</sup>
+20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
+            <td>Teledyne (134) Tyco (MG)</td>
+        </tr>
+
+
+
+<tr>
+       <td class="center"><span class="model">1J2Z1AFGD</span></td>
+       <td class="center"><img src="https://imgur.com/pziFX0e.jpg" class="product-img" alt=""></td>
+            <td>8.5×8.5×10 Resistance sealing welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td class="center">Sinusoidal:
+294m/s<sup>2</sup>
+10~3000Hz
+Random:
+169.1m/s<sup>2</sup>
+20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
+            <td>Teledyne (134D) Tyco (MGAD)</td>
+        </tr>
+
+
+
+<tr>
+       <td class="center"><span class="model">2J1Z1A</span></td>
+       <td class="center"><img src="https://imgur.com/Av1JfUW.jpg" class="product-img" alt=""></td>
+            <td>10.5×5.5×13 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">1PDT</td>
+            <td class="center">Sinusoidal:
+294m/s<sup>2</sup>
+10~3000Hz
+Random:
+169.1m/s<sup>2</sup>
+20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
+            <td>РЭК23, РЭС49</td>
+        </tr>
+
+
+
+<tr>
+       <td class="center"><span class="model">2J1Z2A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/u3IqJlC.jpg"></td>
+            <td>10.5×6×13Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">1PDT</td>
+            <td class="center">Sinusoidal:
+294m/s<sup>2</sup>
+10~3000Hz
+Random:
+239.1m/s<sup>2</sup>
+40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>2A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
+            <td>—</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">2J2Z1AT</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/DaX8m6x.jpg"></td>
+            <td>10.5×5.5×10.8 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td class="center">Sinusoidal:
+294m/s<sup>2</sup>
+10~3000Hz
+Random:
+169.1m/s<sup>2</sup>
+20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
+            <td>РЭС60, РЭС80</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">3J2Z2AT</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/rlepfTw.jpg"></td>
+            <td>15.5×8.2×8.2 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td class="center">Sinusoidal:
+294m/s<sup>2</sup>
+10~3000Hz
+Random:
+169.1m/s<sup>2</sup>
+20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>2A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
+            <td>—</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">3J2Z2A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/Lr51RoE.jpg"></td>
+            <td>15.5×8.2×8.2 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td class="center">Sinusoidal:
+294m/s<sup>2</sup>
+10~3000Hz
+Random:
+169.1m/s<sup>2</sup>
+20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>2A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
+            <td>Tyco (3SBC)</td>
+        </tr>
+
+
+
+<tr>
+       <td class="center"><span class="model">3J2Z5A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/Qqdbbgo.jpg"></td>
+            <td>15.5×8.2×10 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td class="center">Sinusoidal:
+196m/s<sup>2</sup>
+10~2000Hz
+Random:
+169.1m/s<sup>2</sup>
+20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>5A, 28Vd.c. 3×10<sup>4</sup> cycles</td>
+            <td>—</td>
+        </tr>
+
+
+
+<tr>
+       <td class="center"><span class="model">4J1Z10A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/SIk65sb.jpg"></td>
+            <td>20.5×10.5×11.5 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">1PDT</td>
+            <td class="center">Sinusoidal:
+196m/s<sup>2</sup>
+10~2000Hz
+Random:
+169.1m/s<sup>2</sup>
+20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>10A, 28Vd.c. 2×10<sup>4</sup> cycles</td>
+            <td>—</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">4J1Z15A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/nPAFoMB.jpg"></td>
+            <td>20.5×10.5×11.5 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">1PDT</td>
+            <td class="center">Sinusoidal:
+196m/s<sup>2</sup>
+10~2000Hz
+Random:
+169.1m/s<sup>2</sup>
+40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>15A, 28Vd.c. 2×10<sup>4</sup> cycles</td>
+            <td>—</td>
+        </tr>
+
+
+
+<tr>
+       <td class="center"><span class="model">4J2Z2A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/bfYj8Nd.jpg"></td>
+            <td>21×11×11 Laser sealing and welding</td>
+            <td class="center">-55~85</td>
+            <td class="center">2PDT</td>
+            <td class="center">Sinusoidal:
+147m/s<sup>2</sup>
+10~2000Hz
+</td>
+            <td>2A, 27Vd.c. 2×10<sup>4</sup> cycles</td>
+            <td>РЭС47</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">4J2Z5A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/kFVE4Jg.jpg"></td>
+            <td>20.5×10.5×11.5 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td class="center">Sinusoidal:
+294m/s<sup>2</sup>
+10~3000Hz
+</td>
+            <td>5A, 28Vd.c. 2×10<sup>4</sup> cycles</td>
+            <td>Tyco (HFW4/HFC-5A)</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">4J2Z8A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/xQ8SmiB.jpg"></td>
+            <td>20.5×10.5×11.5 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td class="center">Sinusoidal:
+196m/s<sup>2</sup>
+10~2000Hz
+</td>
+            <td>8A, 28Vd.c. 1×10<sup>4</sup> cycles</td>
+            <td>—</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">4J2Z10A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/srKLYyG.jpg"></td>
+            <td>20.5×10.5×11.5 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td class="center">Sinusoidal:
+294m/s<sup>2</sup>
+10~3000Hz
+Random:
+239.1m/s<sup>2</sup>
+40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>10A, 28Vd.c. 3×10<sup>4</sup> cycles</td>
+            <td>—</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">6J1Z10A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/oX44INt.jpg"></td>
+            <td>20.6×10.5×17 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">1PDT</td>
+            <td class="center">Sinusoidal:
+196m/s<sup>2</sup>
+10~2000Hz</td>
+            <td>10A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
+            <td>Leach US (XC) Leach EU (M215)</td>
+        </tr>
+
+
+
+<tr>
+       <td class="center"><span class="model">6J1Z15A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/oX44INt.jpg"></td>
+            <td>20.6×10.5×17 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">1PDT</td>
+            <td class="center">Sinusoidal:
+196m/s<sup>2</sup>
+10~2000Hz</td>
+            <td>15A, 28Vd.c. 1×10<sup>4</sup> cycles</td>
+            <td>—</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">6J2Z5A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/wVUBILQ.jpg"></td>
+            <td>20.6×10.6×16.8 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td class="center">Sinusoidal:
+196m/s<sup>2</sup>
+10~2000Hz</td>
+            <td>5A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
+            <td>Leach EU (M205)</td>
+        </tr>
+
+
+
+<tr>
+       <td class="center"><span class="model">6J3Z10AD</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/lClkVc8.jpg"></td>
+            <td>20.6×20.6×16.3 Built-in transient suppression for laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">3PDT</td>
+            <td class="center">Sinusoidal:
+294m/s<sup>2</sup>
+10~3000Hz
+Random:
+239.1m/s<sup>2</sup>
+40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>10A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
+            <td>Leach EU (M230)</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">6J4Z5AD</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/Z7qtI6o.jpg"></td>
+            <td>20.6×10.6×16.8 Built-in transient suppression for laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">4PDT</td>
+            <td class="center">Sinusoidal:
+294m/s<sup>2</sup>
+10~3000Hz
+Random:
+239.1m/s<sup>2</sup>
+40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>5A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
+            <td>Leach EU (M220)</td>
+        </tr>
+
+
+
+<tr>
+       <td class="center"><span class="model">6J4Z10A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/LJ2d6Xp.jpg"></td>
+            <td>20.6×20.6×16.3 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">4PDT</td>
+            <td class="center">Sinusoidal:
+294m/s<sup>2</sup>
+10~3000Hz
+Random:
+239.1m/s<sup>2</sup>
+40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>10A, 28Vd.c. 1×10<sup>4</sup> cycles</td>
+            <td>—</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">7J1Z25A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/lvgPN81.jpg"></td>
+            <td>26×13.5×26 Laser sealing and welding</td>
+            <td class="center">I: -55~85 II: -65~125 III: -65~125
+</td>
+            <td class="center">1PDT</td>
+            <td class="center">Depending on 
+the class
+Sinusoidal:
+98÷294m/s<sup>2</sup>
+10~1000÷3000Hz
+Random:
+119.5÷239.1m/s<sup>2</sup>
+10÷40(m/s<sup>2</sup>)<sup>2</sup>/Hz
+</td>
+            <td>25A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
+            <td>Leach US (JC) Leach EU (M320)</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">7J1Z25AD</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/CZV4eu2.jpg"></td>
+            <td>26×13.5×26 Built-in transient suppression for laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">1PDT</td>
+            <td class="center">Sinusoidal:
+196m/s<sup>2</sup>
+10~2000Hz
+Random:
+169.1m/s<sup>2</sup>
+20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>25A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
+            <td>Leach EU (M320)</td>
+        </tr>
+
+
+
+
+
+<tr>
+       <td class="center"><span class="model">7J1Z40A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/JbnWUyF.jpg"></td>
+            <td>26×13.5×26 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td class="center">Sinusoidal:
+196m/s<sup>2</sup>
+10~2000Hz
+Random:
+239.1m/s<sup>2</sup>
+40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>40A, 28Vd.c. 1×10<sup>4</sup> cycles</td>
+            <td>Leach EU (M320)</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">7J2Z12A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/YCLu5P1.jpg"></td>
+            <td>26×13.5×26 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td class="center">Sinusoidal:
+245m/s<sup>2</sup>
+10~3000Hz</td>
+            <td>12A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
+            <td>Leach US (J) Leach EU (M300) Tyco (FCA-210)</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">7J2Z10AD</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/yaxFMjQ.jpg"></td>
+            <td>26×13.5×26 Built-in transient suppression for laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td class="center">Sinusoidal:
+245m/s<sup>2</sup>
+10~3000Hz
+Random:
+169.1m/s<sup>2</sup>
+20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>10A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
+            <td>Leach EU (M300)</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">7J2Z15A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/m4GmyJ1.jpg"></td>
+            <td>26×13.5×26 Laser sealing and welding</td>
+            <td class="center">I: -55~85 II: -65~125 III: -65~125</td>
+            <td class="center">2PDT</td>
+            <td class="center">Depending on the class
+Sinusoidal:
+98÷294m/s<sup>2</sup>
+10~1000÷3000Hz
+Random:
+119.5÷239.1m/s<sup>2</sup>
+10÷40(m/s<sup>2</sup>)<sup>2</sup>/Hz
+</td>
+            <td>15A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
+            <td>Leach EU (M300)</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">8J3Z25A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/DYevLh2.jpg"></td>
+            <td>26×26×26 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">3PDT</td>
+            <td class="center">Sinusoidal:
+196m/s<sup>2</sup>
+10~2000Hz
+Random:
+169.1m/s<sup>2</sup>
+20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>25A, 28Vd.c. 2×10<sup>4</sup> cycles</td>
+            <td>Leach US (KC) Leach EU (M500) Tyco (FCA-325)</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">8J3Z30A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/vZKEIzc.jpg"></td>
+            <td>26×26×26 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">3PDT</td>
+            <td class="center">Sinusoidal:
+196m/s<sup>2</sup>
+10~2000Hz
+Random:
+169.1m/s<sup>2</sup>
+20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>30A, 28Vd.c. 1×10<sup>4</sup> cycles</td>
+            <td>Leach EU (M500)</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">8J4Z10A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/OhmAKVM.jpg"></td>
+            <td>26×26×26 Laser sealing and welding</td>
+            <td class="center">I: -55~85 II: -65~125 III: -65~125</td>
+            <td class="center">4PDT</td>
+            <td class="center">Depending on the class
+Sinusoidal:
+147÷294m/s<sup>2</sup>
+10~1000÷3000Hz
+Random:
+119.5÷239.1m/s<sup>2</sup>
+10÷40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>30A, 28Vd.c. 1×10<sup>4</sup> cycles</td>
+            <td>Leach EU (M400)</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">8J4Z10AD</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/1J27JtX.jpg"></td>
+            <td>26×26×26 Built-in transient suppression for laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">4PDT</td>
+            <td class="center">Sinusoidal:
+294m/s<sup>2</sup>
+10~3000Hz
+Random:
+239.1m/s<sup>2</sup>
+40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>10A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
+            <td>Leach EU (M400)</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">8J4Z20A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/wH0NI4D.jpg"></td>
+            <td>26×26×26 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">4PDT</td>
+            <td class="center">Sinusoidal:
+294m/s<sup>2</sup>
+10~3000Hz
+Random:
+239.1m/s<sup>2</sup>
+40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>20A, 28Vd.c. 1×10<sup>4</sup> cycles</td>
+            <td>—</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">8J1Z50A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/Iv8b4mV.jpg"></td>
+            <td>26×26×30 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">1PDT</td>
+            <td class="center">Sinusoidal:
+196m/s<sup>2</sup>
+10~2000Hz
+Random:
+169.1m/s<sup>2</sup>
+20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>50A, 28Vd.c. 2×10<sup>4</sup> cycles</td>
+            <td>—</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">8J1Z50AD</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/K8rpLS9.jpg"></td>
+            <td>26×26×30 Built-in transient suppression for laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">1PDT</td>
+            <td class="center">Sinusoidal:
+196m/s<sup>2</sup>
+10~2000Hz
+Random:
+169.1m/s<sup>2</sup>
+20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>50A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
+            <td>—</td>
+        </tr>
+
+
+
+
+
+<tr>
+       <td class="center"><span class="model">8J1H75A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/g0AcGF1.jpg"></td>
+            <td>26×26×28.5 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">1H</td>
+            <td class="center">Sinusoidal:
+196m/s<sup>2</sup>
+10~2000Hz
+Random:
+169.1m/s<sup>2</sup>
+20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>75A, 28Vd.c. 2×10<sup>4</sup> cycles</td>
+            <td>—</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">8J2Z30A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/1PhVIJB.jpg"></td>
+            <td>26×26×30 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td class="center">Sinusoidal:
+196m/s<sup>2</sup>
+10~2000Hz
+Random:
+169.1m/s<sup>2</sup>
+20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>30A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
+            <td>—</td>
+        </tr>
+
+
+
+
+<tr>
+       <td class="center"><span class="model">8J2Z30AD</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/X79sLtC.jpg"></td>
+            <td>26×26×30 Built-in transient suppression for laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td class="center">Sinusoidal:
+196m/s<sup>2</sup>
+10~2000Hz
+Random:
+169.1m/s<sup>2</sup>
+20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>30A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
+            <td>—</td>
+        </tr>
+
+
+
+<tr>
+       <td class="center"><span class="model">9J6Z2A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/wzpsNBc.jpg"></td>
+            <td>Φ30×34 Tin seal</td>
+            <td class="center">-55~85</td>
+            <td class="center">6PDT</td>
+            <td class="center">Sinusoidal:
+58.8m/s<sup>2</sup>
+10~1500Hz</td>
+            <td>2A, 27Vd.c. 1×10<sup>5</sup> cycles</td>
+            <td>РЭС8</td>
+        </tr>
+
+
+
+
+
+
+
+
+<tr>
+       <td class="center"><span class="model">10J4Z25A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/6qmroXg.jpg"></td>
+            <td>36×26×26 Laser sealing and welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">4PDT</td>
+            <td class="center">Sinusoidal:
+147m/s<sup>2</sup>
+10~2000Hz
+Random:
+119.5m/s<sup>2</sup>
+10(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
+            <td>25A, 28d.c. 1×10<sup>4</sup> cycles</td>
+            <td>—</td>
+        </tr>
+
+
+
+<tr>
+       <td class="center"><span class="model">10J6Z15A</span></td>
+       <td class="center"><img class="product-img" alt="" src="https://imgur.com/6qmroXg.jpg"></td>
+            <td>36×26×26 Laser sealing and welding</td>
+            <td class="center">I: -55~85 II: -65~125 III: -65~125</td>
+            <td class="center">6PDT</td>
+            <td class="center">Depending on the class Sinusoidal:
+98÷294m/s<sup>2</sup>
+10~1000÷3000Hz
+Random:
+119.5÷239.1m/s<sup>2</sup>
+10÷40(m/s<sup>2</sup>)<sup>2</sup>/Hz
+</td>
+            <td>25A, 28d.c. 1×10<sup>4</sup> cycles</td>
+            <td>—</td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+  <h3>Technology Overview — Sealed Magnetic Latching Relay</h3>
+
+<div style="background:#1e2937; padding:20px; border-radius:10px; border-left:4px solid #3b82f6;">
+
+    <p>
+      <b>Sealed magnetic latching relays</b> are electromechanical switching devices that maintain their contact position 
+      after actuation without continuous coil power. Switching is achieved using a magnetic latching mechanism 
+      (permanent magnet or remanent magnetization), combined with a hermetically sealed contact system.
+    </p>
+
+    <p>
+      A short electrical pulse applied to the coil sets or resets the relay. Once switched, the relay remains in its 
+      state even when power is removed, significantly reducing energy consumption and heat generation.
+    </p>
+
+    <h4>Key Advantages</h4>
+    <ul>
+      <li>Zero holding power consumption (no continuous coil drive)</li>
+      <li>High reliability due to hermetic sealing</li>
+      <li>Low thermal load and improved system efficiency</li>
+      <li>Stable operation in vibration and shock environments</li>
+    </ul>
+
+    <h4>Design Features</h4>
+    <ul>
+      <li>Magnetic latching mechanism (single-coil or dual-coil design)</li>
+      <li>Hermetically sealed contact chamber (inert gas or vacuum)</li>
+      <li>Optimized contact materials for long electrical life</li>
+      <li>Compact metal package for harsh environments</li>
+    </ul>
+
+    <h4>Typical Limitations</h4>
+    <ul>
+      <li>Requires polarity control or separate SET/RESET pulses</li>
+      <li>More complex control circuitry compared to non-latching relays</li>
+      <li>Switching speed in milliseconds range</li>
+    </ul>
+
+  </div>
+
+
+
+<h2>2. Sealed magnetic holding relay</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Product Model</th>
+            <th>Product Picture</th>
+            <th>Dimensions (mm)</th>
+            <th>Temperature Range (°C)</th>
+            <th>Contact Form</th>
+            <th>Vibration</th>
+            <th>Contact Load and Lifetime</th>
+            <th>Benchmarking Model</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="center"><span class="model">1JM2Z1A</span></td>
+            <td class="center"><img class="product-img" alt="1JM2Z1A" src="https://imgur.com/XewESbZ.jpg"></td>
+            <td class="center">Φ8.5×7.1</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td>Sinusoidal: 196m/s² 10~2000Hz<br>Random: 239.1m/s² 40(m/s²)²/Hz</td>
+            <td>1A, 28Vd.c.<br>1×10⁵ cycles</td>
+            <td>Teledyne (422)</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">4JM2Z2A</span></td>
+            <td class="center"><img class="product-img" alt="4JM2Z2A" src="https://imgur.com/zQ8TVvI.jpg"></td>
+            <td class="center">20.5×10.5×10.5</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td>Sinusoidal: 294m/s² 10~3000Hz<br>Random: 169.1m/s² 20(m/s²)²/Hz</td>
+            <td>2A, 28Vd.c.<br>1×10⁵ cycles</td>
+            <td>Leach EU (GP2)<br>Tyco (LS)<br>Teledyne (J255)</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">5JM2Z2A</span></td>
+            <td class="center"><img class="product-img" alt="5JM2Z2A" src="https://imgur.com/goBURm9.jpg"></td>
+            <td class="center">21×11×24</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td>Sinusoidal: 147m/s² 10~2000Hz<br>Random: 169.1m/s² 20(m/s²)²/Hz</td>
+            <td>2A, 28Vd.c.<br>5×10⁴ cycles</td>
+            <td>РПС32<br>РПК44</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">6JM1Z10A</span></td>
+            <td class="center"><img class="product-img" alt="6JM1Z10A" src="https://imgur.com/w18deez.jpg"></td>
+            <td class="center">20.6×10.6×17</td>
+            <td class="center">-65~125</td>
+            <td class="center">1PDT</td>
+            <td>Sinusoidal: 196m/s² 10~2000Hz</td>
+            <td>10A, 28Vd.c.<br>5×10⁴ cycles</td>
+            <td>Leach US (XCL)</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">6JM2Z5A</span></td>
+            <td class="center"><img class="product-img" alt="6JM2Z5A" src="https://imgur.com/BkAN7tZ.jpg"></td>
+            <td class="center">20.6×10.6×16.8</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td>Sinusoidal: 147m/s² 10~3000Hz<br>Random: 239.1m/s² 40(m/s²)²/Hz</td>
+            <td>5A, 28Vd.c.<br>5×10⁴ cycles</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">6JM3Z10A</span></td>
+            <td class="center"><img class="product-img" alt="6JM3Z10A" src="https://imgur.com/mcZ6FSy.jpg"></td>
+            <td class="center">20.6×20.6×18.2</td>
+            <td class="center">-65~125</td>
+            <td class="center">3PDT</td>
+            <td>Sinusoidal: 196m/s² 10~3000Hz<br>Random: 169.1m/s² 20(m/s²)²/Hz</td>
+            <td>10A, 28Vd.c.<br>5×10⁴ cycles</td>
+            <td>Leach US (YCL)<br>Leach EU (M232)</td>
+        </tr>
+<!-- Новые модели из вашего изображения -->
+        <tr>
+            <td class="center"><span class="model">6JM4Z5A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/6oaBkua.jpg"></td>
+            <td class="center">20.6×20.6×17</td>
+            <td class="center">-65~125</td>
+            <td class="center">4PDT</td>
+            <td>Sinusoidal: 294m/s² 10~3000Hz<br>Random: 239.1m/s² 40(m/s²)²/Hz</td>
+            <td>5A, 28Vd.c.<br>1×10⁵ cycles</td>
+            <td>Leach US (Y)</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">7JM1Z25A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/hor80UI.jpg"></td>
+            <td class="center">26×13.5×26</td>
+            <td class="center">-65~125</td>
+            <td class="center">1PDT</td>
+            <td>Sinusoidal: 196m/s² 10~3000Hz<br>Random: 169.1m/s² 20(m/s²)²/Hz</td>
+            <td>25A, 28Vd.c.<br>5×10⁴ cycles</td>
+            <td>Leach US (JCL)<br>Tyco (FCA-125)</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">7JM2Z10A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/KsshWDS.jpg"></td>
+            <td class="center">26×13.5×26</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td>Sinusoidal: 294m/s² 10~3000Hz<br>Random: 239.1m/s² 40(m/s²)²/Hz</td>
+            <td>10A, 28Vd.c.<br>5×10⁴ cycles</td>
+            <td>Leach US (JL)<br>Leach EU (M302)</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">7JM2Z15A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/KsshWDS.jpg"></td>
+            <td class="center">26×13.5×26</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td>Sinusoidal: 294m/s² 10~3000Hz<br>Random: 239.1m/s² 40(m/s²)²/Hz</td>
+            <td>15A, 28Vd.c.<br>1×10⁵ cycles</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">8JM3Z25A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/rLuWcgj.jpg"></td>
+            <td class="center">26×26×26</td>
+            <td class="center">-65~125</td>
+            <td class="center">3PDT</td>
+            <td>Sinusoidal: 196m/s² 10~2000Hz<br>Random: 169.1m/s² 20(m/s²)²/Hz</td>
+            <td>25A, 28Vd.c.<br>2×10⁴ cycles</td>
+            <td>Leach US (KCL)</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">8JM4Z15A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/lYkuwTI.jpg"></td>
+            <td class="center">26×26×26</td>
+            <td class="center">-65~125</td>
+            <td class="center">4PDT</td>
+            <td>Sinusoidal: 294m/s² 10~3000Hz<br>Random: 239.1m/s² 40(m/s²)²/Hz</td>
+            <td>15A, 28Vd.c.<br>1×10⁵ cycles</td>
+            <td>Leach EU (M402)</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">9JM12Z2A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/U7NyYpP.jpg"></td>
+            <td class="center">54×41×41</td>
+            <td class="center">-65~85</td>
+            <td class="center">12PDT</td>
+            <td>Sinusoidal: 98m/s² 10~1500Hz</td>
+            <td>2A, 28Vd.c.<br>1×10⁵ cycles</td>
+            <td>DP12</td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+<h3>Technology Overview — Radio Frequency (RF) Relays</h3>
+
+<div style="background:#1e2937; padding:20px; border-radius:10px; border-left:4px solid #3b82f6;">
+
+<p>
+<b>Radio Frequency (RF) relays</b> are precision electromechanical switching devices designed for routing high-frequency signals 
+while maintaining signal integrity. They are optimized for applications where low loss, high isolation, and stable impedance are critical.
+</p>
+
+<p>
+RF relays operate using an electromagnetic actuator that mechanically switches signal paths. 
+Unlike standard relays, RF designs focus on minimizing parasitic capacitance and inductance, 
+ensuring consistent performance across a defined frequency range.
+</p>
+
+<h4 style="color:#93c5fd; margin-top:15px;">Key Advantages</h4>
+<ul>
+    <li>Low insertion loss (minimal signal attenuation)</li>
+    <li>High isolation between signal paths</li>
+    <li>Stable impedance (typically 50Ω or 75Ω systems)</li>
+    <li>Wide frequency range (from MHz up to GHz)</li>
+</ul>
+
+<h4 style="color:#93c5fd; margin-top:15px;">Design Features</h4>
+<ul>
+    <li>Controlled impedance transmission paths</li>
+    <li>Coaxial or stripline internal structures</li>
+    <li>Hermetically sealed enclosure for signal stability</li>
+    <li>Precision contact geometry to reduce reflection (low VSWR)</li>
+</ul>
+
+<h4 style="color:#93c5fd; margin-top:15px;">Key RF Parameters</h4>
+<ul>
+    <li><b>Insertion Loss (dB):</b> signal attenuation through the relay</li>
+    <li><b>Isolation (dB):</b> separation between open signal paths</li>
+    <li><b>VSWR:</b> impedance matching quality</li>
+    <li><b>Operating Frequency:</b> maximum usable frequency range</li>
+</ul>
+
+<h4 style="color:#93c5fd; margin-top:15px;">Typical Limitations</h4>
+<ul>
+    <li>Mechanical switching speed (slower than solid-state RF switches)</li>
+    <li>Limited lifetime due to contact wear</li>
+    <li>Performance degradation at extreme high frequencies if not properly designed</li>
+</ul>
+
+</div>
+
+<h2>3. Radio frequency relay</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Product Model</th>
+            <th>Product Picture</th>
+            <th>Dimensions (mm), Package</th>
+            <th>Temperature Range (°C)</th>
+            <th>Contact Form</th>
+            <th>Vibration</th>
+            <th>Contact Load and Lifetime</th>
+            <th>Benchmarking Model</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="center"><span class="model">9JPK1H</span></td>
+            <td class="center"><img class="product-img" alt="9JPK1H" src="https://imgur.com/34PW15M.jpg"></td>
+            <td class="center">Φ16.5×55.4<br>Closed type</td>
+            <td class="center">-65~125</td>
+            <td class="center">SPST<br>1H</td>
+            <td>98m/s²<br>10~2000Hz</td>
+            <td>25A<br>1×10⁶ cycles</td>
+            <td>Gigavac: G43A<br>Kilovac: K43A</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">9JPK1D</span></td>
+            <td class="center"><img class="product-img" alt="9JPK1D" src="https://imgur.com/34PW15M.jpg"></td>
+            <td class="center">Φ16.5×55.4<br>Closed type</td>
+            <td class="center">-65~125</td>
+            <td class="center">SPST<br>1D</td>
+            <td>98m/s²<br>10~2000Hz</td>
+            <td>25A<br>1×10⁶ cycles</td>
+            <td>Gigavac: G43B<br>Kilovac: K43B</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">9JPK1Z</span></td>
+            <td class="center"><img class="product-img" alt="9JPK1Z" src="https://imgur.com/FOSrJ9p.jpg"></td>
+            <td class="center">Φ16.5×66.5<br>Closed type</td>
+            <td class="center">-65~125</td>
+            <td class="center">1PDT</td>
+            <td>98m/s²<br>10~2000Hz</td>
+            <td>25A<br>1×10⁶ cycles</td>
+            <td>Gigavac: G43C<br>Kilovac: K43C</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">11JPT-SPDT50S</span></td>
+            <td class="center"><img class="product-img" alt="11JPT-SPDT50S" src="https://imgur.com/xf2Qnlr.jpg"></td>
+            <td class="center">34×12.7×34.3<br>Closed type</td>
+            <td class="center">-55~85</td>
+            <td class="center">1PDT</td>
+            <td>98m/s²<br>10~2000Hz</td>
+            <td>100W @ 1GHz<br>1×10⁶ cycles</td>
+            <td>Radiall: 570413000<br>Teledyne: CCS-33S<br>Dowkey: 401T-20802</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">11JPT-DPDT50S</span></td>
+            <td class="center"><img class="product-img" alt="11JPT-DPDT50S" src="https://imgur.com/osbITDa.jpg"></td>
+            <td class="center">33×33×48<br>Closed type</td>
+            <td class="center">-55~85</td>
+            <td class="center">2PDT</td>
+            <td>98m/s²<br>10~2000Hz</td>
+            <td>100W @ 1GHz<br>1×10⁶ cycles</td>
+            <td>Radiall: 577412000<br>Teledyne: CCS-37S<br>Dowkey: 411CT-230802</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">11JPT-SPDT50N</span></td>
+            <td class="center"><img class="product-img" alt="11JPT-SPDT50N" src="https://imgur.com/THkHaYM.jpg"></td>
+            <td class="center">67×24×48<br>Closed type</td>
+            <td class="center">-55~85</td>
+            <td class="center">1PDT</td>
+            <td>98m/s²<br>10~2000Hz</td>
+            <td>150W @ 3GHz<br>1×10⁶ cycles</td>
+            <td>Radiall: 570013000<br>Teledyne: CCS-32<br>Dowkey: 402T-330102</td>
+        </tr>
+
+<tr>
+            <td class="center"><span class="model">11JPT-DPDT50N</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/kIsZHZE.jpg"></td>
+            <td class="center">44.5×44.5×58.5<br>Closed type</td>
+            <td class="center">-55~85</td>
+            <td class="center">2PDT</td>
+            <td>98m/s² 10~2000Hz</td>
+            <td>800W @ 30MHz<br>1×10⁶ cycles</td>
+            <td>Radiall: 577113000<br>Teledyne: CCS-47<br>Dowkey: 412T-230102</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">11JPTSPDT75S</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/1mWw27m.jpg"></td>
+            <td class="center">32×28×12<br>Closed type</td>
+            <td class="center">-55~85</td>
+            <td class="center">1PDT</td>
+            <td>98m/s² 10~2000Hz</td>
+            <td>24W @ 500MHz<br>1×10⁶ cycles</td>
+            <td>PПB5/7-PC4.521.326</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">11JPT-2Z50C</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/xloA2n2.jpg"></td>
+            <td class="center">20.6×10.5×11.5<br>Resistance sealing welding</td>
+            <td class="center">-65~125</td>
+            <td class="center">2PDT</td>
+            <td>196m/s² 10~2000Hz</td>
+            <td>2A, 28Vd.c.<br>1×10⁵ cycles</td>
+            <td>—</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h3>Technology Overview — Electromechanical Contactors</h3>
+
+<div style="background:#1e2937; padding:20px; border-radius:10px; border-left:4px solid #3b82f6;">
+
+<p>
+<b>Electromechanical contactors</b> are high-power switching devices designed for reliable operation in DC and AC power systems. 
+Switching is performed by mechanically actuated contacts driven by an electromagnetic coil.
+</p>
+
+<p>
+When control voltage is applied to the coil, a magnetic field is generated, pulling the armature and closing the power contacts. 
+Upon removal of voltage, the contacts return to their original state via a spring mechanism.
+</p>
+
+<h4 style="color:#93c5fd; margin-top:15px;">Key Advantages</h4>
+<ul>
+    <li>High current switching capability (tens to hundreds of amperes)</li>
+    <li>True galvanic isolation between control and power circuits</li>
+    <li>Low contact resistance in ON state</li>
+    <li>Robust performance in harsh environments</li>
+</ul>
+
+<h4 style="color:#93c5fd; margin-top:15px;">Design Features</h4>
+<ul>
+    <li>Hermetically sealed or gas-filled contact chamber</li>
+    <li>Arc suppression system (magnetic blowout or gas quenching)</li>
+    <li>Auxiliary contacts for feedback and control logic</li>
+    <li>Optimized contact materials for DC load switching</li>
+</ul>
+
+<h4 style="color:#93c5fd; margin-top:15px;">Typical Limitations</h4>
+<ul>
+    <li>Mechanical wear limits lifetime compared to solid-state devices</li>
+    <li>Slower switching speed (milliseconds range)</li>
+    <li>Contact arcing under high DC loads requires proper derating</li>
+</ul>
+
+</div>
+
+
+<h2>4. Contactor</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Product Model</th>
+            <th>Product Picture</th>
+            <th>Dimensions (mm)</th>
+            <th>Temperature Range (°C)</th>
+            <th>Contact Form</th>
+            <th>Vibration</th>
+            <th>Contact Load and Lifetime</th>
+            <th>Benchmarking Model</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="center"><span class="model">1J1H50A</span></td>
+            <td class="center"><img class="product-img" alt="1J1H50A" src="https://imgur.com/cUV3diw.jpg"></td>
+            <td class="center">60×38×53.5</td>
+            <td class="center">-55~90</td>
+            <td class="center">1H</td>
+            <td>A ver: 98m/s² 10~500Hz<br>B ver: 147m/s²</td>
+            <td>50A, 27Vd.c. (Resistive)<br>5×10⁴ cycles</td>
+            <td>ТКД501<br>ДОД</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">1J1H50A-I</span></td>
+            <td class="center"><img class="product-img" alt="1J1H50A-I" src="https://imgur.com/IqrlakE.jpg"></td>
+            <td class="center">56×38.5×54</td>
+            <td class="center">-55~85</td>
+            <td class="center">1H</td>
+            <td>44.1m/s² 10~2000Hz</td>
+            <td>50A, 27Vd.c. (Resistive)<br>5×10⁴ cycles</td>
+            <td>КМ-50ДВ</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">1J1H100A</span></td>
+            <td class="center"><img class="product-img" alt="1J1H100A" src="https://imgur.com/YVNPecF.jpg"></td>
+            <td class="center">70×42.5×68</td>
+            <td class="center">-55~85</td>
+            <td class="center">1H</td>
+            <td>44.1m/s² 10~2000Hz</td>
+            <td>100A, 27Vd.c. (Resistive)<br>5×10⁴ cycles</td>
+            <td>КМ-100ДВ</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">1J1H200A</span></td>
+            <td class="center"><img class="product-img" alt="1J1H200A" src="https://imgur.com/gaNBQaJ.jpg"></td>
+            <td class="center">81.4×50.4×83</td>
+            <td class="center">-55~85</td>
+            <td class="center">1H</td>
+            <td>49m/s² 10~500Hz</td>
+            <td>200A, 27Vd.c. (Resistive)<br>5×10⁴ cycles</td>
+            <td>ТКС201 ДОД</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">1J3H3D25A</span></td>
+            <td class="center"><img class="product-img" alt="1J3H3D25A" src="https://imgur.com/Tb2RPRw.jpg"></td>
+            <td class="center">87.5×44×83</td>
+            <td class="center">-55~85</td>
+            <td class="center">3H3D</td>
+            <td>98m/s² 10~500Hz</td>
+            <td>25A, 115/200Va.c. 400Hz<br>5×10⁴ cycles</td>
+            <td>ТКД233 ДОД</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">1J3H100A</span></td>
+            <td class="center"><img class="product-img" alt="1J3H100A" src="https://imgur.com/mny3VL2.jpg"></td>
+            <td class="center">117×69×95</td>
+            <td class="center">-55~85</td>
+            <td class="center">3H</td>
+            <td>98m/s² 10~500Hz</td>
+            <td>150A, 115/200Va.c. 400Hz<br>5×10⁴ cycles</td>
+            <td>ТКС103 ДОД</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">2J1H100A</span></td>
+            <td class="center"><img class="product-img" alt="2J1H100A" src="https://imgur.com/ogS0tmj.jpg"></td>
+            <td class="center">81×48×36</td>
+            <td class="center">-55~85</td>
+            <td class="center">Main: 1H<br>Aux: 1H1D</td>
+            <td>Sinusoidal: 98m/s² 10~2000Hz<br>Random: 4(m/s²)²/Hz</td>
+            <td>Main: 100A, 28Vd.c.<br>Aux: 5A, 28Vd.c.<br>5×10⁴ cycles</td>
+            <td>101CC01 ECE</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">2J1H200A</span></td>
+            <td class="center"><img class="product-img" alt="2J1H200A" src="https://imgur.com/BE4m7ds.jpg"></td>
+            <td class="center">96×65×42</td>
+            <td class="center">-55~85</td>
+            <td class="center">Main: 1H<br>Aux: 1H1D</td>
+            <td>Sinusoidal: 98m/s² 10~2000Hz<br>Random: 4(m/s²)²/Hz</td>
+            <td>Main: 200A, 28Vd.c.<br>Aux: 5A, 28Vd.c.<br>5×10⁴ cycles</td>
+            <td>2520MM ECE<br>S209 Leach</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">2J3H3D30A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/2MEWGqx.jpg"></td>
+            <td class="center">80.8×95×85</td>
+            <td class="center">-55~85</td>
+            <td class="center">Main: 3H3D<br>Aux: 1H1D</td>
+            <td>Sinusoidal: 98m/s² 10~2000Hz<br>Random: 4(m/s²)²/Hz</td>
+            <td>Main: 30A, 115/200Va.c. 400Hz<br>Aux: 5A, 115Va.c.<br>5×10⁴ cycles</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">2J3H3D150A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/FmIIQOU.jpg"></td>
+            <td class="center">116×80×105</td>
+            <td class="center">-55~85</td>
+            <td class="center">Main: 3H3D<br>Aux: 3H3D</td>
+            <td>Sinusoidal: 98m/s² 10~2000Hz<br>Random: 4(m/s²)²/Hz</td>
+            <td>Main: 150A, 115/200Va.c. 400Hz<br>Aux: 5A, 115/200Va.c.<br>5×10⁴ cycles</td>
+            <td>25860SBM ECE</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">3J1H200A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/bdt1vjk.jpg"></td>
+            <td class="center">87×35.5×71.5</td>
+            <td class="center">-55~85</td>
+            <td class="center">Main: 1H<br>Aux: 3Z</td>
+            <td>Sinusoidal: 98m/s² 5~2000Hz<br>Random: 10(m/s²)²/Hz</td>
+            <td>Main: 200A, 28Vd.c.<br>Aux: 5A, 28Vd.c.<br>5×10⁴ cycles</td>
+            <td>CC0201P-XXR02B<br>Leach</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">3J1H400A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/oO2kwT1.jpg"></td>
+            <td class="center">72×35.5×91</td>
+            <td class="center">-55~85</td>
+            <td class="center">Main: 1H<br>Aux: 3Z</td>
+            <td>Sinusoidal: 98m/s² 10~2000Hz<br>Random: 10(m/s²)²/Hz</td>
+            <td>Main: 400A, 28Vd.c.<br>Aux: 5A, 28Vd.c.<br>5×10⁴ cycles</td>
+            <td>CC0401P-XXN52B<br>Leach</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">3J3H100A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/XMYQ2eb.jpg"></td>
+            <td class="center">60×59×81</td>
+            <td class="center">-55~85</td>
+            <td class="center">Main: 3H<br>Aux: 4Z</td>
+            <td>Sinusoidal: 98m/s² 10~2000Hz<br>Random: 16(m/s²)²/Hz</td>
+            <td>Main: 100A, 115/200Va.c.<br>Aux: 5A, 28.5Vd.c.<br>5×10⁴ cycles</td>
+            <td>CA090-003 Leach</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">3J3H375A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/bI1MxwI.jpg"></td>
+            <td class="center">109×93×111</td>
+            <td class="center">-55~85</td>
+            <td class="center">Main: 3H<br>Aux: 8Z</td>
+            <td>Sinusoidal: 98m/s² 10~2000Hz<br>Random: 16(m/s²)²/Hz</td>
+            <td>Main: 375A, 115/200Va.c. 400Hz<br>Aux: 5A, 28.5Vd.c.<br>5×10⁴ cycles</td>
+            <td>CA350-001-PR Leach</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">4J1H150A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/GfgjePD.jpg"></td>
+            <td class="center">60.5×60.5×70</td>
+            <td class="center">-55~85</td>
+            <td class="center">Main: 1H<br>Aux: 1H</td>
+            <td>Sinusoidal: 147m/s² 10~2000Hz<br>Random: 6(m/s²)²/Hz</td>
+            <td>Main: 150A, 270Vd.c.<br>Aux: 2A, 28Vd.c.<br>1×10⁴ cycles</td>
+            <td>EV150 Tyco</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">4J1H350A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/OBuIrnh.jpg"></td>
+            <td class="center">96×80×100</td>
+            <td class="center">-55~85</td>
+            <td class="center">Main: 1H<br>Aux: 1H</td>
+            <td>Sinusoidal: 147m/s² 10~2000Hz<br>Random: 6(m/s²)²/Hz</td>
+            <td>Main: 350A, 270Vd.c.<br>Aux: 2A, 28Vd.c.<br>1×10⁴ cycles</td>
+            <td>EV500 Tyco</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">4J1H400AI</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/pRVWyye.jpg"></td>
+            <td class="center">108×52×105</td>
+            <td class="center">-55~85</td>
+            <td class="center">Main: 1H<br>Aux: 1H</td>
+            <td>Sinusoidal: 49m/s² 10~500Hz</td>
+            <td>Main: 400A, 850Vd.c.<br>Aux: 2A, 28Vd.c.<br>1×10⁴ cycles</td>
+            <td>ECPN350<br>BHAADA Tyco</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">4J1H600AI</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/kFEyPaD.jpg"></td>
+            <td class="center">105×71×106</td>
+            <td class="center">-55~85</td>
+            <td class="center">Main: 1H<br>Aux: 1H</td>
+            <td>Sinusoidal: 49m/s² 10~500Hz</td>
+            <td>Main: 600A, 850Vd.c.<br>Aux: 2A, 28Vd.c.<br>1×10⁴ cycles</td>
+            <td>ECPN650<br>BHAADB Tyco</td>
+        </tr>
+
+    </tbody>
+</table>
+
+<h3>Technology Overview</h3>
+<div style="background:#1e2937; padding:20px; border-radius:10px;">
+<p><b>Solid State Relays (SSR)</b> use semiconductor switching elements instead of mechanical contacts.</p>
+
+<ul>
+<li>No mechanical wear → lifetime up to 10⁹ cycles</li>
+<li>Fast switching (µs range)</li>
+<li>High vibration resistance</li>
+<li>Leakage current present in OFF state</li>
+</ul>
+</div>
+
+<h3>Dimensions</h3>
+<div style="display:flex; gap:20px;">
+    <img src="DRAWING1.png" style="width:300px; background:white;">
+    <img src="DRAWING2.png" style="width:300px; background:white;">
+</div>
+
+<!-- Часть 2 -->
+<h2>5. Solid-state relays</h2>
+<h3>Ceramic package optical MOS relay</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Product Model</th>
+            <th>Product Picture</th>
+            <th>Dimensions (mm) and Packaging</th>
+            <th>Temperature Range (°C)</th>
+            <th>Number of Output Groups</th>
+            <th>Vibration</th>
+            <th>Load Current and Output Voltage</th>
+            <th>Benchmarking Model</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="center"><span class="model">1JG1H50-2A</span></td>
+            <td class="center"><img class="product-img" alt="1JG1H50-2A" src="https://imgur.com/r9hSofP.jpg"></td>
+            <td class="center">4.7×6.45×2.7<br>CSOP6<br>Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>2A, 50Vd.c.<br>1A, ±50 Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">1JG1H80-1.6A</span></td>
+            <td class="center"><img class="product-img" alt="1JG1H80-1.6A" src="https://imgur.com/dCULjlN.jpg"></td>
+            <td class="center">4.7×6.45×2.7<br>CSOP6<br>Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>1.6A, 80Vd.c.<br>0.8A, ±80 Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">1JG2H330-0.1A</span></td>
+            <td class="center"><img class="product-img" alt="1JG2H330-0.1A" src="https://imgur.com/Go5ACDI.jpg"></td>
+            <td class="center">6×6.45×2.7<br>CSOP8<br>Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">2a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>0.1A, ±330Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">1JG2H80-0.6A</span></td>
+            <td class="center"><img class="product-img" alt="1JG2H80-0.6A" src="https://imgur.com/gnPkgnt.jpg"></td>
+            <td class="center">6×6.45×2.7<br>CSOP8<br>Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">2a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>0.6A, ±80Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">1JG2H80-2.5A</span></td>
+            <td class="center"><img class="product-img" alt="1JG2H80-2.5A" src="https://imgur.com/EGs05Hn.jpg"></td>
+            <td class="center">6×6.45×2.7<br>CSOP8<br>Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">2a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>2.5A, ±80Vd.c.</td>
+            <td>—</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">1JG4H330-0.1A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/T3cEqmy.jpg"></td>
+            <td class="center">4.7×6.45×2.7<br>CSOP6 Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>2A, 50Vd.c.<br>1A, ±50 Vd.c.</td>
+            <td>—</td>
+        </tr>
+        
+        <tr>
+            <td class="center"><span class="model">1JG4H80-0.6A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/T3cEqmy.jpg"></td>
+            <td class="center">10.7×6.45×2.7<br>CSOP16 Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">4a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>0.6A, ±80Vd.c.</td>
+            <td>—</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">1JG4H80-2.5A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/Q52PmF3.jpg"></td>
+            <td class="center">10.5×6.4×2.3<br>CSOP16 Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">4a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>2.5A, 80Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">1JG4H80-2A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/6nzo1hZ.jpg"></td>
+            <td class="center">11.8×6.3×2.7<br>CSOP16 Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">4a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>2A, 80Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">2JG1H80-1A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/IXiHcuj.jpg"></td>
+            <td class="center">5.2×7.6×4.2<br>DIP4, SMD4, LCC4 Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>1A, ±80Vd.c.</td>
+            <td>AVAGO ASSR1218</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">2JG1H80-5A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/0E1PMzx.jpg"></td>
+            <td class="center">8.6×7.6×4.2<br>DIP6, SMD6, LCC6 Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>5A, 80Vd.c.<br>2.5A, ±80Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">2JG1H50-5A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/fuK6o2z.jpg"></td>
+            <td class="center">9.91×7.6×4.2<br>DIP8, SMD8, LCC8 Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>5A, 50Vd.c.<br>2.5A, ±50Vd.c.</td>
+            <td>AVAGO ASSR711X</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">2JG1H80-8A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/8v5m9K3.jpg"></td>
+            <td class="center">9.91×7.6×3.2<br>LCC4 Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>8A, 80Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">2JG1H80-20A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/XVotKjN.jpg"></td>
+            <td class="center">12×10×3.2<br>LCC Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>20A, 80Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">2JG2H80-2A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/A6Wvowo.jpg"></td>
+            <td class="center">9.91×7.6×4.2<br>DIP8, SMD8, LCC8 Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">2a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>20A, 80Vd.c.</td>
+            <td>AVAGO ASSR1228</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">2JG4H80-2A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/DD31MLg.jpg"></td>
+            <td class="center">20.5×7.6×4.2<br>DIP16, LCC16 Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">4a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>2A, ±80Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">2JG4H80-3A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/7T7WZTC.jpg"></td>
+            <td class="center">20.5×7.6×3.2<br>LCC16 Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">4a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>3A, 80Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">2JG4H80-5A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/nfuXyps.jpg"></td>
+            <td class="center">20.5×7.6×3.2<br>LCC16 Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">4a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>5A, 80Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">2JG1D50-0.2A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/OWORBMe.jpg"></td>
+            <td class="center">5.2×7.6×4.2<br>DIP4, SMD4, LCC4 Ceramic seal</td>
+            <td class="center">-55~105</td>
+            <td class="center">1b</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>0.2A, ±50Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">2JG1D180-0.3A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/o7YeVjJ.jpg"></td>
+            <td class="center">9.91×7.6×4.2<br>DIP8, SMD8 Ceramic seal</td>
+            <td class="center">-55~105</td>
+            <td class="center">1b</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>0.3A, 180Vd.c.<br>0.15A, ±180Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">2JG2D50-0.3A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/xmougrI.jpg"></td>
+            <td class="center">9.91×7.6×4.2<br>DIP8, SMD8 Ceramic seal</td>
+            <td class="center">-55~105</td>
+            <td class="center">2b</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>0.3A, ±50Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">2JG4D50-0.2A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/UupA4sF.jpg"></td>
+            <td class="center">20.5×7.6×4.2<br>DIP16, LCC16 Ceramic seal</td>
+            <td class="center">-55~105</td>
+            <td class="center">4b</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>0.2A, ±50Vd.c.</td>
+            <td>—</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Metal encapsulated solid state relay</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Product Model</th>
+            <th>Product Picture</th>
+            <th>Dimensions (mm) and Packaging</th>
+            <th>Temperature Range (°C)</th>
+            <th>Number of Output Groups</th>
+            <th>Vibration</th>
+            <th>Load Current and Output Voltage</th>
+            <th>Benchmarking Model</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="center"><span class="model">4JG1H80-6A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/hfADB1V.jpg"></td>
+            <td class="center">11×10×8.2<br>Metal seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>6A, 80Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">4JG1H60-10A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/tEQOdhX.jpg"></td>
+            <td class="center">20.5×10.5×10.5<br>Metal seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>10A, 60Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">4JG1H540-20A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/1nqbcy3.jpg"></td>
+            <td class="center">29×29×10<br>Metal seal</td>
+            <td class="center">-55~105</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>20A, 540Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">4JG1H270-10A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/AAhYjZ8.jpg"></td>
+            <td class="center">22×17×10<br>Metal seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>10A, 270Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">4JG1H60-20A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/c1f9vOC.jpg"></td>
+            <td class="center">25.5×15.5×7.5<br>Metal seal</td>
+            <td class="center">-55~105</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>20A, 60Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">4JG1H50-3A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/WzMsHxj.jpg"></td>
+            <td class="center">26.5×24.5×11.5<br>Metal seal</td>
+            <td class="center">-55~105</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 30(m/s²)²/Hz</td>
+            <td>3A, ±50Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">4JG1H380-7A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/8ILWpk6.jpg"></td>
+            <td class="center">43.5×22.5×12<br>Metal seal</td>
+            <td class="center">-55~85</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 294m/s² 10~3000Hz<br>Random: 30(m/s²)²/Hz</td>
+            <td>7A, 380Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">4JG1H80-40A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/TKsgL4G.jpg"></td>
+            <td class="center">56×34×10<br>Metal seal</td>
+            <td class="center">-55~105</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>40A, 80Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">4JG1H60-100A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/qAQFH8K.jpg"></td>
+            <td class="center">61×35×15<br>Metal seal</td>
+            <td class="center">-55~105</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 490m/s² 10~2000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>100A, 60Vd.c.</td>
+            <td>—</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">4JG1H270-150A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/Pxj3UHS.jpg"></td>
+            <td class="center">67×63×24<br>Metal seal</td>
+            <td class="center">-55~105</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>150A, 270Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">4JG2H50-4A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/bK14Wyy.jpg"></td>
+            <td class="center">20.5×10.5×10.5<br>Metal seal</td>
+            <td class="center">-55~105</td>
+            <td class="center">2a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 30(m/s²)²/Hz</td>
+            <td>4A, 50Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">4JG2H60-20A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/E63imqO.jpg"></td>
+            <td class="center">32×27×12<br>Metal seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">2a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>20A, ±60Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">4JG4H50-4A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/mjxuJ9D.jpg"></td>
+            <td class="center">26.5×24.5×11.5<br>Metal seal</td>
+            <td class="center">-55~105</td>
+            <td class="center">4a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 30(m/s²)²/Hz</td>
+            <td>4A, 50Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">4JG4H150-5A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/ocVwliS.jpg"></td>
+            <td class="center">26.5×24.5×11.5<br>Metal seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">4a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>5A, 150Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">4JG4H50-10A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/KDaMRHf.jpg"></td>
+            <td class="center">43.5×25.7×10.5<br>Metal seal</td>
+            <td class="center">-55~105</td>
+            <td class="center">4a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 30(m/s²)²/Hz</td>
+            <td>10A, 50Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">4JG8H80-5A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/3DLsR4e.jpg"></td>
+            <td class="center">32.7×27.7×9.5<br>Metal seal</td>
+            <td class="center">-55~105</td>
+            <td class="center">8a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 30(m/s²)²/Hz</td>
+            <td>5A, 80Vd.c.</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">9JG1H270-10A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/qEMtj7i.jpg"></td>
+            <td class="center">56×34×10.4<br>Metal seal</td>
+            <td class="center">-55~105</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 294m/s² 10~3000Hz<br>Random: 30(m/s²)²/Hz</td>
+            <td>10A, 270Vd.c.</td>
+            <td>Teledyne PC27010-47XX</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">9JG1H60-25A</span></td>
+            <td class="center"><img class="product-img" alt="" src="https://imgur.com/qEMtj7i.jpg"></td>
+            <td class="center">56×34×10.4<br>Metal seal</td>
+            <td class="center">-55~105</td>
+            <td class="center">1a</td>
+            <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 30(m/s²)²/Hz</td>
+            <td>25A, 60Vd.c.</td>
+            <td>Teledyne PC02825-47XX</td>
+        </tr>
+
+    </tbody>
+</table>
+
+<h3>Plastic photorelays (PhotoMOS relay)</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th>Package</th>
+            <th>Product Image</th>
+            <th>Number of Output Groups</th>
+            <th>Output Voltage / Transient Voltage</th>
+            <th>Output Current</th>
+            <th>On-Resistance</th>
+            <th>Panasonic and Omron Benchmarking Models</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="center"><span class="model">BC2213</span></td>
+            <td class="center">SMD7/DIP7</td>
+            <td rowspan="5" class="center" style="vertical-align: middle;">
+                <img src="https://imgur.com/28p3kaR.jpg" class="product-img" style="max-height:180px;" alt=""><br>
+<img src="https://imgur.com/9oVfWz1.jpg" class="product-img" style="max-height:180px;" alt="">
+            </td>
+            <td class="center">1a</td>
+            <td class="center">600V</td>
+            <td class="center">0.9A</td>
+            <td class="center">—</td>
+            <td>AQH2213(A)</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BC3213</span></td>
+            <td class="center">SMD7/DIP7</td>
+            <td class="center">1a</td>
+            <td class="center">600V</td>
+            <td class="center">1.2A</td>
+            <td class="center">—</td>
+            <td>AQH3213(A)</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BC5213</span></td>
+            <td class="center">SMD7/DIP7</td>
+            <td class="center">1a</td>
+            <td class="center">600V</td>
+            <td class="center">2A</td>
+            <td class="center">—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BC2223</span></td>
+            <td class="center">SMD7/DIP7</td>
+            <td class="center">1a</td>
+            <td class="center">600V</td>
+            <td class="center">0.9A</td>
+            <td class="center">—</td>
+            <td>AQH2223(A)</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BC3223 / BC5223</span></td>
+            <td class="center">SMD7/DIP7</td>
+            <td class="center">1a</td>
+            <td class="center">600V</td>
+            <td class="center">1.2A / 2A</td>
+            <td class="center">—</td>
+            <td>AQH3223(A)</td>
+        </tr>
+
+        <!-- Следующая группа с другой картинкой -->
+        <tr>
+            <td class="center"><span class="model">BCY211S</span></td>
+            <td class="center">SOP4</td>
+            <td rowspan="15" class="center" style="vertical-align: middle;">
+                <img src="https://imgur.com/BJrSigy.jpg" class="product-img" style="max-height:180px;" alt="">
+            </td>
+            <td class="center">1a</td>
+            <td class="center">40V</td>
+            <td class="center">2A</td>
+            <td class="center">0.06Ω</td>
+            <td>AQY211G2S, G3VM-41GR8</td>
+        </tr>
+        <!-- Добавляй остальные строки без картинки -->
+        <tr>
+            <td class="center"><span class="model">BCY212S1</span></td>
+            <td class="center">SOP4</td>
+            <td class="center">1a</td>
+            <td class="center">60V</td>
+            <td class="center">200mA</td>
+            <td class="center">2Ω</td>
+            <td>—</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">BCY212S</span></td>
+            <td class="center">SOP4</td>
+            <td class="center">1a</td>
+            <td class="center">60V</td>
+            <td class="center">500mA</td>
+            <td class="center">0.8Ω</td>
+            <td>AQY212S, G3VM-61G2</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">BCY212G1S</span></td>
+            <td class="center">SOP4</td>
+            <td class="center">1a</td>
+            <td class="center">60V</td>
+            <td class="center">800mA</td>
+            <td class="center">0.22Ω</td>
+            <td>—</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">BCY212G2S</span></td>
+            <td class="center">SOP4</td>
+            <td class="center">1a</td>
+            <td class="center">60V</td>
+            <td class="center">1.3A</td>
+            <td class="center">0.15Ω</td>
+            <td>—</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">BCY212GS</span></td>
+            <td class="center">SOP4</td>
+            <td class="center">1a</td>
+            <td class="center">60V</td>
+            <td class="center">2A</td>
+            <td class="center">0.07Ω</td>
+            <td>—</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">BCY215S</span></td>
+            <td class="center">SOP4</td>
+            <td class="center">1a</td>
+            <td class="center">100V</td>
+            <td class="center">1.25A</td>
+            <td class="center">0.15Ω</td>
+            <td>AQY225R1S, G3VM-81G1</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">BCY217S</span></td>
+            <td class="center">SOP4</td>
+            <td class="center">1a</td>
+            <td class="center">200V</td>
+            <td class="center">180mA</td>
+            <td class="center">5Ω</td>
+            <td>—</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">BCY217GS</span></td>
+            <td class="center">SOP4</td>
+            <td class="center">1a</td>
+            <td class="center">200V</td>
+            <td class="center">400mA</td>
+            <td class="center">1.25Ω</td>
+            <td>—</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">BCY214S</span></td>
+            <td class="center">SOP4</td>
+            <td class="center">1a</td>
+            <td class="center">400V</td>
+            <td class="center">120mA</td>
+            <td class="center">14Ω</td>
+            <td>AQY214S, G3VM-401G</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">BCY214ES</span></td>
+            <td class="center">SOP4</td>
+            <td class="center">1a</td>
+            <td class="center">400V</td>
+            <td class="center">120mA</td>
+            <td class="center">14.5Ω</td>
+            <td>—</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">BCY214GS</span></td>
+            <td class="center">SOP4</td>
+            <td class="center">1a</td>
+            <td class="center">400V</td>
+            <td class="center">180mA</td>
+            <td class="center">9Ω</td>
+            <td>—</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">BCY216S</span></td>
+            <td class="center">SOP4</td>
+            <td class="center">1a</td>
+            <td class="center">600V</td>
+            <td class="center">80mA</td>
+            <td class="center">28Ω</td>
+            <td>—</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">BCY412S</span></td>
+            <td class="center">SOP4</td>
+            <td class="center">1b</td>
+            <td class="center">60V</td>
+            <td class="center">500mA</td>
+            <td class="center">2Ω</td>
+            <td>AQY412S, G3VM-63G</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">BCY414S</span></td>
+            <td class="center">SOP4</td>
+            <td class="center">1b</td>
+            <td class="center">400V</td>
+            <td class="center">100mA</td>
+            <td class="center">20Ω</td>
+            <td>AQY414S</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">BCY212E</span></td>
+            <td class="center">SMD4/DIP4</td>
+            <td rowspan="5" class="center" style="vertical-align: middle;">
+                <img src="https://imgur.com/EzxsZLV.jpg" class="product-img" style="max-height:180px;" alt=""><br>
+<img src="https://imgur.com/ZewWQWN.jpg" class="product-img" style="max-height:180px;" alt="">
+            </td>
+            <td class="center">1a</td>
+            <td class="center">60V</td>
+            <td class="center">200mA</td>
+            <td class="center">2Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCY212</span></td>
+            <td class="center">SMD4/DIP4</td>
+            <td class="center">1a</td>
+            <td class="center">60V</td>
+            <td class="center">500mA</td>
+            <td class="center">1Ω</td>
+            <td>AQY212EH</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCY211G</span></td>
+            <td class="center">SMD4/DIP4</td>
+            <td class="center">1a</td>
+            <td class="center">40V</td>
+            <td class="center">3A</td>
+            <td class="center">0.04Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCY252</span></td>
+            <td class="center">SMD4/DIP4</td>
+            <td class="center">1a</td>
+            <td class="center">60V</td>
+            <td class="center">1.1A</td>
+            <td class="center">0.27Ω</td>
+            <td>AQY212GH</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCY252G</span></td>
+            <td class="center">SMD4/DIP4</td>
+            <td class="center">1a</td>
+            <td class="center">100V</td>
+            <td class="center">1.3A</td>
+            <td class="center">0.15Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCY217</span></td>
+            <td class="center">SMD4/DIP4</td>
+            <td class="center">1a</td>
+            <td class="center">200V</td>
+            <td class="center">200mA</td>
+            <td class="center">5Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCY214</span></td>
+            <td class="center">SMD4/DIP4</td>
+            <td class="center">1a</td>
+            <td class="center">400V</td>
+            <td class="center">140mA</td>
+            <td class="center">14Ω</td>
+            <td>AQY214EH, G3VM-401A, G3VM-401D</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCY216</span></td>
+            <td class="center">SMD4/DIP4</td>
+            <td class="center">1a</td>
+            <td class="center">600V</td>
+            <td class="center">80mA</td>
+            <td class="center">28Ω</td>
+            <td>AQY216EH</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCY412</span></td>
+            <td class="center">SMD4/DIP4</td>
+            <td class="center">1b</td>
+            <td class="center">60V</td>
+            <td class="center">500mA</td>
+            <td class="center">2Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCY414</span></td>
+            <td class="center">SMD4/DIP4</td>
+            <td class="center">1b</td>
+            <td class="center">400V</td>
+            <td class="center">120mA</td>
+            <td class="center">20Ω</td>
+            <td>—</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">BCV211G4</span></td>
+            <td class="center">SMD6/DIP6</td>
+            <td rowspan="13" class="center" style="vertical-align: middle;">
+                <img src="https://imgur.com/JQJ2GL5.jpg" class="product-img" style="max-height:220px; margin:5px;" alt=""><br>
+                <img src="https://imgur.com/kkSaxYK.jpg" class="product-img" style="max-height:140px; margin:5px;" alt="">
+            </td>
+            <td class="center">1a</td>
+            <td class="center">40V</td>
+            <td class="center">4.5A</td>
+            <td class="center">0.033Ω</td>
+            <td>AQV101</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCV212</span></td>
+            <td class="center">SMD6/DIP6</td>
+            <td class="center">1a</td>
+            <td class="center">60V</td>
+            <td class="center">500mA</td>
+            <td class="center">1Ω</td>
+            <td>AQV212</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCV212G</span></td>
+            <td class="center">SMD6/DIP6</td>
+            <td class="center">1a</td>
+            <td class="center">60V</td>
+            <td class="center">1.3A</td>
+            <td class="center">0.27Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCV252G</span></td>
+            <td class="center">SMD6/DIP6</td>
+            <td class="center">1a</td>
+            <td class="center">60V</td>
+            <td class="center">2.5A</td>
+            <td class="center">0.1Ω</td>
+            <td>AQV252G, G3VM-61BR, G3VM-61ER</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCV215</span></td>
+            <td class="center">SMD6/DIP6</td>
+            <td class="center">1a</td>
+            <td class="center">100V</td>
+            <td class="center">500mA</td>
+            <td class="center">0.27Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCV215G1</span></td>
+            <td class="center">SMD6/DIP6</td>
+            <td class="center">1a</td>
+            <td class="center">100V</td>
+            <td class="center">1.3A</td>
+            <td class="center">0.15Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCV215G2</span></td>
+            <td class="center">SMD6/DIP6</td>
+            <td class="center">1a</td>
+            <td class="center">100V</td>
+            <td class="center">2A</td>
+            <td class="center">0.15Ω</td>
+            <td>AQV215</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCV217</span></td>
+            <td class="center">SMD6/DIP6</td>
+            <td class="center">1a</td>
+            <td class="center">200V</td>
+            <td class="center">200mA</td>
+            <td class="center">5Ω</td>
+            <td>AQV257</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCV214</span></td>
+            <td class="center">SMD6/DIP6</td>
+            <td class="center">1a</td>
+            <td class="center">400V</td>
+            <td class="center">140mA</td>
+            <td class="center">14Ω</td>
+            <td>AQV214</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCV216</span></td>
+            <td class="center">SMD6/DIP6</td>
+            <td class="center">1a</td>
+            <td class="center">600V</td>
+            <td class="center">80mA</td>
+            <td class="center">35Ω</td>
+            <td>AQV216</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCV258</span></td>
+            <td class="center">SMD6/DIP6</td>
+            <td class="center">1a</td>
+            <td class="center">1500V</td>
+            <td class="center">45mA</td>
+            <td class="center">140Ω</td>
+            <td>AQV258</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCV412</span></td>
+            <td class="center">SMD6/DIP6</td>
+            <td class="center">1b</td>
+            <td class="center">60V</td>
+            <td class="center">500mA</td>
+            <td class="center">2Ω</td>
+            <td>AQV412EH</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCV414</span></td>
+            <td class="center">SMD6/DIP6</td>
+            <td class="center">1b</td>
+            <td class="center">400V</td>
+            <td class="center">100mA</td>
+            <td class="center">20Ω</td>
+            <td>AQV414</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">BCV278</span></td>
+            <td class="center">SMD5/DIP5</td>
+            <td rowspan="1" class="center" style="vertical-align: middle;">
+                <img src="https://imgur.com/N5KWTHj.jpg" class="product-img" style="max-height:220px; margin:5px;" alt="">
+            </td>
+            <td class="center">1a</td>
+            <td class="center">1700V</td>
+            <td class="center">30mA</td>
+            <td class="center">200Ω</td>
+            <td>—</td>
+        </tr>
+<!-- Группа SMD8/DIP8 -->
+        <tr>
+            <td class="center"><span class="model">BCW251</span></td>
+            <td class="center">SMD8/DIP8</td>
+            <td rowspan="11" class="center" style="vertical-align: middle;">
+                <img src="https://imgur.com/vwvdndq.jpg" class="product-img" style="max-height:220px; margin:5px;" alt=""><br>
+                <img src="https://imgur.com/n1UnPz1.jpg" class="product-img" style="max-height:140px; margin:5px;" alt="">
+            </td>
+            <td class="center">2a</td>
+            <td class="center">40V</td>
+            <td class="center">2A</td>
+            <td class="center">0.06Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW251G</span></td>
+            <td class="center">SMD8/DIP8</td>
+            <td class="center">2a</td>
+            <td class="center">40V</td>
+            <td class="center">2.5A</td>
+            <td class="center">0.05Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW212E</span></td>
+            <td class="center">SMD8/DIP8</td>
+            <td class="center">2a</td>
+            <td class="center">60V</td>
+            <td class="center">200mA</td>
+            <td class="center">2Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW212</span></td>
+            <td class="center">SMD8/DIP8</td>
+            <td class="center">2a</td>
+            <td class="center">60V</td>
+            <td class="center">500mA</td>
+            <td class="center">1Ω</td>
+            <td>AQW212EH, G3VM-62C1, G3VM-62F1</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW252</span></td>
+            <td class="center">SMD8/DIP8</td>
+            <td class="center">2a</td>
+            <td class="center">60V</td>
+            <td class="center">1.1A</td>
+            <td class="center">0.27Ω</td>
+            <td>AQW212</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW252G</span></td>
+            <td class="center">SMD8/DIP8</td>
+            <td class="center">2a</td>
+            <td class="center">60V</td>
+            <td class="center">2A</td>
+            <td class="center">0.07Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW215</span></td>
+            <td class="center">SMD8/DIP8</td>
+            <td class="center">2a</td>
+            <td class="center">100V</td>
+            <td class="center">500mA</td>
+            <td class="center">0.27Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW255</span></td>
+            <td class="center">SMD8/DIP8</td>
+            <td class="center">2a</td>
+            <td class="center">100V</td>
+            <td class="center">1.1A</td>
+            <td class="center">0.27Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW217</span></td>
+            <td class="center">SMD8/DIP8</td>
+            <td class="center">2a</td>
+            <td class="center">200V</td>
+            <td class="center">180mA</td>
+            <td class="center">5Ω</td>
+            <td>AQW217</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW214</span></td>
+            <td class="center">SMD8/DIP8</td>
+            <td class="center">2a</td>
+            <td class="center">400V</td>
+            <td class="center">140mA</td>
+            <td class="center">14Ω</td>
+            <td>AQW214, G3VM-402C, G3VM-402F</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW216</span></td>
+            <td class="center">SMD8/DIP8</td>
+            <td class="center">2a</td>
+            <td class="center">600V</td>
+            <td class="center">80mA</td>
+            <td class="center">28Ω</td>
+            <td>AQW216</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">BCW211GS</span></td>
+            <td class="center">SOP8</td>
+            <td rowspan="12" class="center" style="vertical-align: middle;">
+                <img src="https://imgur.com/iAY4CNt.jpg" class="product-img" style="max-height:220px; margin:5px;" alt="">
+            </td>
+            <td class="center">2a</td>
+            <td class="center">40V</td>
+            <td class="center">2A</td>
+            <td class="center">0.06Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW212S1</span></td>
+            <td class="center">SOP8</td>
+            <td class="center">2a</td>
+            <td class="center">60V</td>
+            <td class="center">200mA</td>
+            <td class="center">2Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW212S</span></td>
+            <td class="center">SOP8</td>
+            <td class="center">2a</td>
+            <td class="center">60V</td>
+            <td class="center">500mA</td>
+            <td class="center">0.8Ω</td>
+            <td>AQW212S</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW212GS</span></td>
+            <td class="center">SOP8</td>
+            <td class="center">2a</td>
+            <td class="center">60V</td>
+            <td class="center">1.1A</td>
+            <td class="center">0.15Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW215S</span></td>
+            <td class="center">SOP8</td>
+            <td class="center">2a</td>
+            <td class="center">100V</td>
+            <td class="center">1.1A</td>
+            <td class="center">0.15Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW217S</span></td>
+            <td class="center">SOP8</td>
+            <td class="center">2a</td>
+            <td class="center">200V</td>
+            <td class="center">180mA</td>
+            <td class="center">5Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW214S</span></td>
+            <td class="center">SOP8</td>
+            <td class="center">2a</td>
+            <td class="center">400V</td>
+            <td class="center">120mA</td>
+            <td class="center">13Ω</td>
+            <td>AQW214S</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW216S</span></td>
+            <td class="center">SOP8</td>
+            <td class="center">2a</td>
+            <td class="center">600V</td>
+            <td class="center">80mA</td>
+            <td class="center">28Ω</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW412S</span></td>
+            <td class="center">SOP8</td>
+            <td class="center">2b</td>
+            <td class="center">60V</td>
+            <td class="center">500mA</td>
+            <td class="center">2Ω</td>
+            <td>AQW412S</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW414S</span></td>
+            <td class="center">SOP8</td>
+            <td class="center">2b</td>
+            <td class="center">400V</td>
+            <td class="center">100mA</td>
+            <td class="center">20Ω</td>
+            <td>AQW414S</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW612S</span></td>
+            <td class="center">SOP8</td>
+            <td class="center">1a/1b</td>
+            <td class="center">60V</td>
+            <td class="center">500mA</td>
+            <td class="center">1Ω</td>
+            <td>AQW612S</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">BCW614S</span></td>
+            <td class="center">SOP8</td>
+            <td class="center">1a/1b</td>
+            <td class="center">400V</td>
+            <td class="center">100mA</td>
+            <td class="center">20Ω</td>
+            <td>AQW614S</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">BCS225S</span></td>
+            <td class="center">SOP16</td>
+            <td rowspan="1" class="center" style="vertical-align: middle;">
+                <img src="https://imgur.com/9X9aPbo.jpg" class="product-img" style="max-height:220px; margin:5px;" alt="">
+            </td>
+            <td class="center">4a</td>
+            <td class="center">100V</td>
+            <td class="center">100mA</td>
+            <td class="center">0.3Ω</td>
+            <td>AQS225R2S</td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+    </tbody>
+</table>
+
+<h2>6. Time Relays</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Product Model</th>
+            <th>Product Picture</th>
+            <th>Dimensions (mm) and Package</th>
+            <th>Temperature Range (°C)</th>
+            <th>Number of Output Groups</th>
+            <th>Vibration</th>
+            <th>Contact Load and Lifetime</th>
+            <th>Benchmarking Model</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="center"><span class="model">6JS2Z1-2A</span></td>
+            <td class="center"><img class="product-img" alt="6JS2Z1-2A" src="https://imgur.com/j8gX5Ga.jpg"></td>
+            </td>
+            <td class="center">20.5×10.5×15.5<br>Metal seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">2a</td>
+            <td>Sinusoidal: 196m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
+            <td>2A, 28Vd.c.<br>100000 cycles</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">6JS4Z1-4A</span></td>
+<td class="center"><img class="product-img" alt="6JS4Z1-4A" src="https://imgur.com/qA4Yav0.jpg"></td>
+            <td class="center">26×26×26<br>Metal seal</td>
+            <td class="center">-55~85</td>
+            <td class="center">4a</td>
+            <td>196m/s² 10~2000Hz</td>
+            <td>4A, 28Vd.c.<br>20000 cycles</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">6JS1Z1-10A</span></td>
+<td class="center"><img class="product-img" alt="6JS1Z1-10A" src="https://imgur.com/Bsyugo5.jpg"></td>
+            <td class="center">20.5×10.5×17<br>Metal seal</td>
+            <td class="center">-55~85</td>
+            <td class="center">1a</td>
+            <td>196m/s² 10~2000Hz</td>
+            <td>10A, 28Vd.c.<br>20000 cycles</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">6JS2Z1-10A</span></td>
+<td class="center"><img class="product-img" alt="6JS2Z1-10A" src="https://imgur.com/KbEkB7F.jpg"></td>
+            <td class="center">26×13.5×31<br>Metal seal</td>
+            <td class="center">-55~85</td>
+            <td class="center">2a</td>
+            <td>196m/s² 10~2000Hz</td>
+            <td>10A, 28Vd.c.<br>50000 cycles</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">6JS2Z3-1A</span></td>
+<td class="center"><img class="product-img" alt="6JS2Z3-1A" src="https://imgur.com/0y9FCHC.jpg"></td>
+            <td class="center">28×13.5×34.5<br>Metal seal</td>
+            <td class="center">-55~85</td>
+            <td class="center">2a</td>
+            <td>147m/s² 10~2000Hz</td>
+            <td>1A, 28Vd.c. 100000 cycles<br>2A, 28Vd.c. 20000 cycles</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">6JS2Z3-5A</span></td>
+<td class="center"><img class="product-img" alt="6JS2Z3-5A" src="https://imgur.com/YqXIGLi.jpg"></td>
+            <td class="center">28×13.5×34.5<br>Metal seal</td>
+            <td class="center">-55~85</td>
+            <td class="center">2a</td>
+            <td>196m/s² 10~2000Hz</td>
+            <td>5A, 28Vd.c.<br>10000 cycles</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">6JS2Z4-2A</span></td>
+<td class="center"><img class="product-img" alt="6JS2Z4-2A" src="https://imgur.com/lwhfzu9.jpg"></td>
+            <td class="center">20.5×10.5×15.5<br>Metal seal</td>
+            <td class="center">-55~85</td>
+            <td class="center">2a</td>
+            <td>196m/s² 10~2000Hz</td>
+            <td>2A, 28Vd.c.<br>50000 cycles</td>
+            <td>—</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h2>7. Sealed Optocouplers</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Product Model</th>
+            <th>Product Picture</th>
+            <th>Dimensions (mm) and Package</th>
+            <th>Temperature Range (°C)</th>
+            <th>Number of Output Groups</th>
+            <th>Vibration</th>
+            <th>Main Parameters</th>
+            <th>Benchmarking Model</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="center"><span class="model">5GH1H3202Z</span></td>
+            <td class="center"><img class="product-img" alt="5GH1H3202Z" src="https://imgur.com/7saS4rI.jpg"></td>
+            <td class="center">7.62×5.0×2.8<br>Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">2a</td>
+            <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
+            <td>Single channel;<br>CTR: ≥50%<br>BVCES: 100Vd.c.</td>
+            <td>TOSHIBA TLP521-1</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">5GH2H3201Z</span></td>
+            <td class="center"><img class="product-img" alt="5GH2H3201Z" src="https://imgur.com/OeMkj8l.jpg"></td>
+            <td class="center">11.50×7.62×2.8<br>Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">2a</td>
+            <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
+            <td>CTR: ≥50%<br>BVCES: 100Vd.c.</td>
+            <td>TOSHIBA TLP521-2</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">5GH4H3201Z</span></td>
+            <td class="center"><img class="product-img" alt="5GH4H3201Z" src="https://imgur.com/dQtewho.jpg"></td>
+            <td class="center">22.0×7.62×3.5<br>Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">4a</td>
+            <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
+            <td>CTR: ≥50%<br>BVCES: 100Vd.c.</td>
+            <td>TOSHIBA TLP521-4</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">5GH1H3201J</span></td>
+            <td class="center"><img class="product-img" alt="5GH1H3201J" src="https://imgur.com/xp4AzuA.jpg"></td>
+            <td class="center">4.5×3.4×2.3<br>Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">1a</td>
+            <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
+            <td>CTR: ≥50%<br>BVCES: 100Vd.c.</td>
+            <td>TOSHIBA TLP281</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">5GH2H3201J</span></td>
+            <td class="center"><img class="product-img" alt="5GH2H3201J" src="https://imgur.com/37tKsiA.jpg"></td>
+            <td class="center">5.3×5.3×2.4<br>Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">2a</td>
+            <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
+            <td>CTR: ≥50%<br>BVCES: 100Vd.c.</td>
+            <td>TOSHIBA TLP281-2</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">5GH4H3201J</span></td>
+            <td class="center"><img class="product-img" alt="5GH4H3201J" src="https://imgur.com/KqK5NVf.jpg"></td>
+            <td class="center">10.32×5.4×2.3<br>Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">4a</td>
+            <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
+            <td>CTR: ≥50%<br>BVCES: 100Vd.c.</td>
+            <td>TOSHIBA TLP281-4</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">5GH1H181</span></td>
+            <td class="center"><img class="product-img" alt="5GH1H181" src="https://imgur.com/1YuvIsZ.jpg"></td>
+            <td class="center">5.4×4×2.65<br>Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">1a</td>
+            <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
+            <td>CTR: ≥50%<br>BVCES: 100Vd.c.</td>
+            <td>TOSHIBA TLP181</td>
+        </tr>
+<tr>
+            <td class="center"><span class="model">5GH1H2502</span></td>
+            <td class="center"><img class="product-img" alt="5GH1H2502" src="https://imgur.com/e7uV8fZ.jpg"></td>
+            <td class="center">7.62×5×4.6<br>Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">1a</td>
+            <td>Random: 40(m/s²)²/Hz</td>
+            <td>Single channel;<br>Rated supply voltage: 5V;<br>Current transmission ratio: 1000~4000%</td>
+            <td>ISOCOM PS2502-1</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">5GH2H2502</span></td>
+            <td class="center"><img class="product-img" alt="5GH2H2502" src="https://imgur.com/RvmCaCW.jpg"></td>
+            <td class="center">12×7.62×4.6<br>Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">2a</td>
+            <td>Random: 40(m/s²)²/Hz</td>
+            <td>Single channel;<br>Rated supply voltage: 5V;<br>Current transmission ratio: 1000~4000%</td>
+            <td>ISOCOM PS2502-2</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">5GH4H2502</span></td>
+            <td class="center"><img class="product-img" alt="5GH4H2502" src="https://imgur.com/EIFx4hq.jpg"></td>
+            <td class="center">23×7.62×4.6<br>Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">4a</td>
+            <td>Random: 40(m/s²)²/Hz</td>
+            <td>Single channel;<br>Rated supply voltage: 5V;<br>Current transmission ratio: 1000~4000%</td>
+            <td>ISOCOM PS2502-4</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">5GH1H0601</span></td>
+            <td class="center"><img class="product-img" alt="5GH1H0601" src="https://imgur.com/jYtAdiN.jpg"></td>
+            <td class="center">5.7×5.7×2.6<br>Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">1a</td>
+            <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
+            <td>Single channel;<br>Rated supply voltage: 5V;<br>Output current: ≤25mA;<br>Maximum rate: 10Mbit/s</td>
+            <td>FAIRCHILD HCPL0601</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">5GH2H0631</span></td>
+            <td class="center"><img class="product-img" alt="5GH2H0631" src="https://imgur.com/Jl0b8mG.jpg"></td>
+            <td class="center">5.1×5.1×2.6<br>Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">2a</td>
+            <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
+            <td>Single channel;<br>Rated supply voltage: 5V;<br>Output current: ≤25mA;<br>Maximum rate: 10Mbit/s</td>
+            <td>AVAGO HCPL0630</td>
+        </tr>
+        <tr>
+            <td class="center"><span class="model">5GH4H6651</span></td>
+            <td class="center"><img class="product-img" alt="5GH4H6651" src="https://imgur.com/PNJF7C4.jpg"></td>
+            <td class="center">11.1×7.1×2.5<br>Ceramic seal</td>
+            <td class="center">-55~125</td>
+            <td class="center">4a</td>
+            <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
+            <td>Single channel;<br>Rated supply voltage: 5V;<br>Output current: ≤25mA;<br>Maximum rate: 10Mbit/s</td>
+            <td>AVAGO HCPL-6651</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+<h2>Applications</h2>
+<div style="display:flex; gap:40px;">
+<div>
+<h3>Aerospace</h3>
+<p>Avionics, power distribution, flight control</p>
+</div>
+
+<div>
+<h3>Railway</h3>
+<p>Signaling systems, onboard electronics</p>
+</div>
+
+<div>
+<h3>Industrial</h3>
+<p>Automation, switching systems</p>
+</div>
+</div>
+
+<div style="text-align:center; margin:50px 0; padding:30px; background:#1e2937; border-radius:12px;">
+    <h2>Do you need full datasheets?</h2>
+    <p style="font-size:1.2rem;">Contact us for full technical specifications, drawings and samples.</p>
+    <p><strong>SkySwitch Technologies — Reliability in extreme conditions</strong></p>
+</div>
+
+</div>
+
+</body></html>
