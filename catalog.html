@@ -102,6 +102,8 @@
             <th>Current Range</th>
             <th>Package</th>
             <th>Application</th>
+<th>Action</th>
+
         </tr>
     </thead>
     <tbody>
@@ -111,6 +113,8 @@
             <td>≤1A</td>
             <td>TO-5</td>
             <td>Avionics, control circuits</td>
+<td><button class="btn" onclick="openModal('Series 1J', 'Signal Relay', '1A', 'TO-5', 'Avionics, control circuits')">View Specs</button></td>
+
         </tr>
         <tr>
             <td class="model">6J</td>
@@ -118,6 +122,8 @@
             <td>≤10A</td>
             <td>Cube</td>
             <td>Industrial switching</td>
+<td><button class="btn" onclick="openModal('Series 6J', 'Power Relay', '10A', 'Cube', 'Industrial switching')">View Specs</button></td>
+
         </tr>
         <tr>
             <td class="model">8J</td>
@@ -125,6 +131,7 @@
             <td>≤75A</td>
             <td>Metal</td>
             <td>Power systems</td>
+<td><button class="btn" onclick="openModal('Series 8J', 'High Power', '≤75A', 'Metal', 'Power systems')">View Specs</button></td>
         </tr>
     </tbody>
 </table>
@@ -2903,5 +2910,38 @@ Upon removal of voltage, the contacts return to their original state via a sprin
 </div>
 
 </div>
+<!-- Конструкция самого окна -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle">Technical Specifications</h2>
+        <table class="tech-table">
+            <tr><td>Type:</td><td id="modalMaterial">-</td></tr>
+            <tr><td>Current Range:</td><td id="modalStandard">-</td></tr>
+            <tr><td>Package:</td><td id="modalLeak">-</td></tr>
+            <tr><td>Application:</td><td id="modalTemp">-</td></tr>
+        </table>
+    </div>
+</div>
 
-</body></html>
+<!-- Логика работы окна (открытие и закрытие) -->
+<script>
+function openModal(title, type, current, pack, app) {
+    document.getElementById('modalTitle').innerText = title;
+    document.getElementById('modalMaterial').innerText = type;
+    document.getElementById('modalStandard').innerText = current;
+    document.getElementById('modalLeak').innerText = pack;
+    document.getElementById('modalTemp').innerText = app;
+    document.getElementById('productModal').style.display = 'block';
+}
+function closeModal() {
+    document.getElementById('productModal').style.display = 'none';
+}
+window.onclick = function(event) {
+    let modal = document.getElementById('productModal');
+    if (event.target == modal) { modal.style.display = 'none'; }
+}
+</script>
+
+</body>
+</html>
