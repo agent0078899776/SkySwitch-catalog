@@ -256,7 +256,15 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
             <td>Teledyne (411)</td>
-            <td><button class="view-specs-btn" data-model="1J1Z1A">View Specs</button></td>
+            <td><!-- Пример для модели 1J121A -->
+<button class="view-specs-btn" 
+        data-desc="Высоконадежное герметичное реле для жестких условий эксплуатации."
+        data-temp="-65°C to +125°C"
+        data-weight="4.5 grams"
+        data-pdf="https://example.com">
+   View Specs
+</button>
+</td>
         </tr>
 
 
@@ -2988,6 +2996,7 @@ Upon removal of voltage, the contacts return to their original state via a sprin
         </tr>
     </tbody>
 </table>
+
 <!-- МОДАЛЬНОЕ ОКНО (Вставить между 2991 и 2994 строками) -->
 <div id="specsModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); align-items: center; justify-content: center;">
   <div style="background-color: #1e2937; color: #fff; padding: 30px; border-radius: 12px; width: 90%; max-width: 500px; position: relative; border: 1px solid #374151; font-family: sans-serif;">
@@ -2998,12 +3007,15 @@ Upon removal of voltage, the contacts return to their original state via a sprin
     <h3 style="margin-top: 0; color: #3b82f6; font-size: 1.5rem; border-bottom: 1px solid #374151; padding-bottom: 10px;">Technical Specifications</h3>
     
     <!-- Сюда скрипт будет вписывать данные из таблицы -->
-    <div style="margin-top: 20px; line-height: 1.6;">
-      <p><strong>Model:</strong> <span id="modalModel"></span></p>
-      <p><strong>Form Factor:</strong> <span id="modalFormFactor"></span></p>
-      <p><strong>Interfaces:</strong> <span id="modalInterfaces"></span></p>
-      <p><strong>Power:</strong> <span id="modalPower"></span></p>
-    </div>
+<div style="margin-top: 20px; line-height: 1.6;">
+  <p><strong>Description:</strong> <span id="modalDesc"></span></p>
+  <p><strong>Operating Temperature:</strong> <span id="modalTemp"></span></p>
+  <p><strong>Weight:</strong> <span id="modalWeight"></span></p>
+  <p style="margin-top: 15px;">
+    <a id="modalPdf" href="#" target="_blank" style="color: #3b82f6; text-decoration: underline; font-weight: bold;">Download Full Datasheet (PDF)</a>
+  </p>
+</div>
+
   </div>
 </div>
 
@@ -3020,29 +3032,36 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeBtn = document.querySelector(".close-btn");
 
   // Отслеживаем клик по кнопке View Specs
-  document.addEventListener("click", (event) => {
-    if (event.target.classList.contains("view-specs-btn")) {
-      event.preventDefault();
-      
-      const row = event.target.closest("tr");
-      if (!row) return;
+document.addEventListener("click", (event) => {
+  if (event.target.classList.contains("view-specs-btn")) {
+    event.preventDefault();
+    
+    // Получаем кнопку, на которую кликнули
+    const btn = event.target;
 
-      // Вытаскиваем текст из ячеек строки по порядку
-      const model = row.cells[0]?.textContent.trim() || "";
-      const formFactor = row.cells[2]?.textContent.trim() || "";
-      const interfaces = row.cells[5]?.textContent.trim() || "";
-      const power = row.cells[6]?.textContent.trim() || "";
+    // Считываем уникальные данные из data-атрибутов этой кнопки
+    const desc = btn.getAttribute("data-desc") || "No description available.";
+    const temp = btn.getAttribute("data-temp") || "N/A";
+    const weight = btn.getAttribute("data-weight") || "N/A";
+    const pdfUrl = btn.getAttribute("data-pdf") || "#";
 
-      // Передаем текст в модальное окно (ID должны совпадать с вашим HTML окна)
-      if (document.getElementById("modalModel")) document.getElementById("modalModel").textContent = model;
-      if (document.getElementById("modalFormFactor")) document.getElementById("modalFormFactor").textContent = formFactor;
-      if (document.getElementById("modalInterfaces")) document.getElementById("modalInterfaces").textContent = interfaces;
-      if (document.getElementById("modalPower")) document.getElementById("modalPower").textContent = power;
-
-      // Показываем окно
-      if (modal) modal.style.display = "flex";
+    // Вставляем эти данные в элементы модального окна
+    if (document.getElementById("modalDesc")) document.getElementById("modalDesc").textContent = desc;
+    if (document.getElementById("modalTemp")) document.getElementById("modalTemp").textContent = temp;
+    if (document.getElementById("modalWeight")) document.getElementById("modalWeight").textContent = weight;
+    
+    // Настраиваем ссылку на PDF
+    const pdfLink = document.getElementById("modalPdf");
+    if (pdfLink) {
+      pdfLink.href = pdfUrl;
+      // Если ссылки нет, скрываем ее, если есть — показываем
+      pdfLink.style.display = pdfUrl === "#" ? "none" : "inline-block";
     }
-  });
+
+    // Показываем окно
+    if (modal) modal.style.display = "flex";
+  }
+});
 
   // Закрытие окна при клике на крестик
   if (closeBtn) {
