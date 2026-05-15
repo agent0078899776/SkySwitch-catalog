@@ -2996,50 +2996,51 @@ Upon removal of voltage, the contacts return to their original state via a sprin
     <p style="font-size:1.2rem;">Contact us for full technical specifications, drawings and samples.</p>
     <p><strong>SkySwitch Technologies — Reliability in extreme conditions</strong></p>
 </div>
-// Дожидаемся загрузки всей страницы
+
+<script>
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("specsModal");
   const closeBtn = document.querySelector(".close-btn");
 
-  // 1. Делегирование событий: ловим клик по кнопке "View Specs" в каталоге
+  // Отслеживаем клик по кнопке View Specs
   document.addEventListener("click", (event) => {
     if (event.target.classList.contains("view-specs-btn")) {
       event.preventDefault();
       
-      // Находим строку таблицы, в которой лежит кнопка
       const row = event.target.closest("tr");
       if (!row) return;
 
-      // Берем данные из ячеек этой строки
-      const model = row.cells[0]?.textContent || "";
-      const formFactor = row.cells[1]?.textContent || "";
-      const interfaces = row.cells[2]?.textContent || "";
-      const power = row.cells[3]?.textContent || "";
+      // Вытаскиваем текст из ячеек строки по порядку
+      const model = row.cells[0]?.textContent.trim() || "";
+      const formFactor = row.cells[2]?.textContent.trim() || "";
+      const interfaces = row.cells[5]?.textContent.trim() || "";
+      const power = row.cells[6]?.textContent.trim() || "";
 
-      // Подставляем данные в модальное окно
-      document.getElementById("modalModel").textContent = model;
-      document.getElementById("modalFormFactor").textContent = formFactor;
-      document.getElementById("modalInterfaces").textContent = interfaces;
-      document.getElementById("modalPower").textContent = power;
+      // Передаем текст в модальное окно (ID должны совпадать с вашим HTML окна)
+      if (document.getElementById("modalModel")) document.getElementById("modalModel").textContent = model;
+      if (document.getElementById("modalFormFactor")) document.getElementById("modalFormFactor").textContent = formFactor;
+      if (document.getElementById("modalInterfaces")) document.getElementById("modalInterfaces").textContent = interfaces;
+      if (document.getElementById("modalPower")) document.getElementById("modalPower").textContent = power;
 
       // Показываем окно
-      modal.style.display = "flex";
+      if (modal) modal.style.display = "flex";
     }
   });
 
-  // 2. Закрытие окна при клике на крестик
+  // Закрытие окна при клике на крестик
   if (closeBtn) {
     closeBtn.addEventListener("click", () => {
       modal.style.display = "none";
     });
   }
 
-  // 3. Закрытие окна при клике на темный фон вокруг него
+  // Закрытие окна при клике на область вокруг окна
   window.addEventListener("click", (event) => {
     if (event.target === modal) {
       modal.style.display = "none";
     }
   });
 });
+</script>
 
 </body></html>
