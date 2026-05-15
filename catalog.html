@@ -256,15 +256,17 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
             <td>Teledyne (411)</td>
-            <td><!-- Пример для модели 1J121A -->
-<button class="view-specs-btn" 
-        data-desc="Высоконадежное герметичное реле для жестких условий эксплуатации."
-        data-temp="-65°C to +125°C"
-        data-weight="4.5 grams"
-        data-pdf="https://example.com">
-   View Specs
-</button>
+            <td>
+  <button class="view-specs-btn" 
+          data-desc="Высоконадежное герметичное реле для жестких условий эксплуатации."
+          data-temp="-65°C to +125°C"
+          data-weight="4.5 grams"
+          data-img="img/page_18.png"
+          data-pdf="https://example.com">
+     View Specs
+  </button>
 </td>
+
         </tr>
 
 
@@ -280,6 +282,16 @@ Random:
 10~2000Hz</td>
             <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
             <td>Teledyne (412) Tyco (MA)</td>
+                        <td>
+  <button class="view-specs-btn" 
+          data-desc="Высоконадежное герметичное реле для жестких условий эксплуатации."
+          data-temp="-65°C to +125°C"
+          data-weight="4.5 grams"
+          data-img="img/page_20.png"
+          data-pdf="https://example.com">
+     View Specs
+  </button>
+</td>
         </tr>
 
 
@@ -3014,6 +3026,11 @@ Upon removal of voltage, the contacts return to their original state via a sprin
   <p style="margin-top: 15px;">
     <a id="modalPdf" href="#" target="_blank" style="color: #3b82f6; text-decoration: underline; font-weight: bold;">Download Full Datasheet (PDF)</a>
   </p>
+  <!-- Вставьте этот код внутрь структуры вашего окна -->
+<p><strong>Schematic / Dimensions:</strong></p>
+<div style="text-align: center; margin-top: 10px; background: #fff; padding: 10px; border-radius: 6px;">
+  <img id="modalImg" src="" alt="Relay Specs Diagram" style="max-width: 100%; height: auto; display: none;">
+
 </div>
 
   </div>
@@ -3027,41 +3044,46 @@ Upon removal of voltage, the contacts return to their original state via a sprin
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("specsModal");
-  const closeBtn = document.querySelector(".close-btn");
-
-  // Отслеживаем клик по кнопке View Specs
 document.addEventListener("click", (event) => {
   if (event.target.classList.contains("view-specs-btn")) {
     event.preventDefault();
     
-    // Получаем кнопку, на которую кликнули
     const btn = event.target;
 
-    // Считываем уникальные данные из data-атрибутов этой кнопки
-    const desc = btn.getAttribute("data-desc") || "No description available.";
-    const temp = btn.getAttribute("data-temp") || "N/A";
-    const weight = btn.getAttribute("data-weight") || "N/A";
+    // Читаем все данные, включая ссылку на изображение
+    const desc = btn.getAttribute("data-desc") || "";
+    const temp = btn.getAttribute("data-temp") || "";
+    const weight = btn.getAttribute("data-weight") || "";
+    const imgUrl = btn.getAttribute("data-img") || "";
     const pdfUrl = btn.getAttribute("data-pdf") || "#";
 
-    // Вставляем эти данные в элементы модального окна
+    // Заполняем текстовые поля
     if (document.getElementById("modalDesc")) document.getElementById("modalDesc").textContent = desc;
     if (document.getElementById("modalTemp")) document.getElementById("modalTemp").textContent = temp;
     if (document.getElementById("modalWeight")) document.getElementById("modalWeight").textContent = weight;
     
+    // Работаем с картинкой схемы
+    const specImage = document.getElementById("modalImg");
+    if (specImage) {
+      if (imgUrl) {
+        specImage.src = imgUrl;       // Устанавливаем адрес картинки
+        specImage.style.display = "block"; // Показываем её
+      } else {
+        specImage.style.display = "none";  // Скрываем, если картинки нет
+      }
+    }
+
     // Настраиваем ссылку на PDF
     const pdfLink = document.getElementById("modalPdf");
     if (pdfLink) {
       pdfLink.href = pdfUrl;
-      // Если ссылки нет, скрываем ее, если есть — показываем
       pdfLink.style.display = pdfUrl === "#" ? "none" : "inline-block";
     }
 
-    // Показываем окно
     if (modal) modal.style.display = "flex";
   }
 });
+
 
   // Закрытие окна при клике на крестик
   if (closeBtn) {
