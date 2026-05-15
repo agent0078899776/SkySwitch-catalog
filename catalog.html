@@ -256,12 +256,6 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
             <td>Teledyne (411)</td>
-            <td>
-  <button class="view-specs-btn" 
-          data-img="img/page_18.png">
-     View Specs
-  </button>
-</td>
 
         </tr>
 
@@ -278,16 +272,6 @@ Random:
 10~2000Hz</td>
             <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
             <td>Teledyne (412) Tyco (MA)</td>
-                        <td>
-  <button class="view-specs-btn" 
-          data-desc="Высоконадежное герметичное реле для жестких условий эксплуатации."
-          data-temp="-65°C to +125°C"
-          data-weight="4.5 grams"
-          data-img="img/page_20.png"
-          data-pdf="https://example.com">
-     View Specs
-  </button>
-</td>
         </tr>
 
 
@@ -1103,6 +1087,7 @@ Random:
             <th>Vibration</th>
             <th>Contact Load and Lifetime</th>
             <th>Benchmarking Model</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -1302,6 +1287,7 @@ ensuring consistent performance across a defined frequency range.
             <th>Vibration</th>
             <th>Contact Load and Lifetime</th>
             <th>Benchmarking Model</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -1452,6 +1438,7 @@ Upon removal of voltage, the contacts return to their original state via a sprin
             <th>Vibration</th>
             <th>Contact Load and Lifetime</th>
             <th>Benchmarking Model</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -1671,6 +1658,7 @@ Upon removal of voltage, the contacts return to their original state via a sprin
             <th>Vibration</th>
             <th>Load Current and Output Voltage</th>
             <th>Benchmarking Model</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -1910,6 +1898,7 @@ Upon removal of voltage, the contacts return to their original state via a sprin
             <th>Vibration</th>
             <th>Load Current and Output Voltage</th>
             <th>Benchmarking Model</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -2110,6 +2099,7 @@ Upon removal of voltage, the contacts return to their original state via a sprin
             <th>Output Current</th>
             <th>On-Resistance</th>
             <th>Panasonic and Omron Benchmarking Models</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -2778,6 +2768,7 @@ Upon removal of voltage, the contacts return to their original state via a sprin
             <th>Vibration</th>
             <th>Contact Load and Lifetime</th>
             <th>Benchmarking Model</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -2869,6 +2860,7 @@ Upon removal of voltage, the contacts return to their original state via a sprin
             <th>Vibration</th>
             <th>Main Parameters</th>
             <th>Benchmarking Model</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -3041,35 +3033,51 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeBtn = document.querySelector(".close-btn");
   const specImage = document.getElementById("modalImg");
 
-  // Отслеживаем клик по кнопке View Specs
+  // 1. АВТОМАТИЧЕСКОЕ ДОБАВЛЕНИЕ КНОПОК ВО ВСЕ ТАБЛИЦЫ
+  const rows = document.querySelectorAll("table tbody tr");
+  let startPage = 17; 
+
+  rows.forEach((row) => {
+    const newCell = document.createElement("td");
+    
+    // Генерируем кнопку с правильным путем к картинке
+    newCell.innerHTML = `<button class="view-specs-btn" data-img="img/page_${startPage}.png" style="padding: 6px 12px; background-color: #3b82f6; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.85rem; transition: background 0.2s;">View Specs</button>`;
+    
+    row.appendChild(newCell);
+    startPage += 2; 
+  });
+
+  // 2. ОТКРЫТИЕ МОДАЛЬНОГО ОКНА ПРИ КЛИКЕ НА КНОПКУ
   document.addEventListener("click", (event) => {
     if (event.target.classList.contains("view-specs-btn")) {
       event.preventDefault();
       
-      // Получаем путь к картинке из атрибута data-img нажатой кнопки
       const imgUrl = event.target.getAttribute("data-img");
 
       if (specImage) {
         if (imgUrl) {
-          specImage.src = imgUrl;          // Подставляем ссылку на картинку
-          specImage.style.display = "block"; // Показываем картинку
+          specImage.src = imgUrl;
+          specImage.style.display = "block";
         } else {
-          specImage.style.display = "none";  // Скрываем, если картинки нет
+          specImage.style.display = "none";
         }
       }
 
-      // Показываем модальное окно
       if (modal) modal.style.display = "flex";
     }
   });
 
-  // Закрытие окна при клике на крестик
-  if (closeBtn) closeBtn.addEventListener("click", () => { modal.style.display = "none"; });
-
-  // Закрытие окна при клике на область вокруг окна
-  window.addEventListener("click", (event) => { if (event.target === modal) modal.style.display = "none"; });
+  // 3. ЛОГИКА ЗАКРЫТИЯ ОКНА
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => { modal.style.display = "none"; });
+  }
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) { modal.style.display = "none"; }
+  });
 });
 </script>
+
+
 
 
 </body></html>
