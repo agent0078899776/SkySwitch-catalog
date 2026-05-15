@@ -3044,61 +3044,40 @@ Upon removal of voltage, the contacts return to their original state via a sprin
 </div>
 
 <script>
-document.addEventListener("click", (event) => {
-  if (event.target.classList.contains("view-specs-btn")) {
-    event.preventDefault();
-    
-    const btn = event.target;
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("specsModal");
+  const closeBtn = document.querySelector(".close-btn");
+  const specImage = document.getElementById("modalImg");
 
-    // Читаем все данные, включая ссылку на изображение
-    const desc = btn.getAttribute("data-desc") || "";
-    const temp = btn.getAttribute("data-temp") || "";
-    const weight = btn.getAttribute("data-weight") || "";
-    const imgUrl = btn.getAttribute("data-img") || "";
-    const pdfUrl = btn.getAttribute("data-pdf") || "#";
+  // Отслеживаем клик по кнопке View Specs
+  document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("view-specs-btn")) {
+      event.preventDefault();
+      
+      // Получаем путь к картинке из атрибута data-img нажатой кнопки
+      const imgUrl = event.target.getAttribute("data-img");
 
-    // Заполняем текстовые поля
-    if (document.getElementById("modalDesc")) document.getElementById("modalDesc").textContent = desc;
-    if (document.getElementById("modalTemp")) document.getElementById("modalTemp").textContent = temp;
-    if (document.getElementById("modalWeight")) document.getElementById("modalWeight").textContent = weight;
-    
-    // Работаем с картинкой схемы
-    const specImage = document.getElementById("modalImg");
-    if (specImage) {
-      if (imgUrl) {
-        specImage.src = imgUrl;       // Устанавливаем адрес картинки
-        specImage.style.display = "block"; // Показываем её
-      } else {
-        specImage.style.display = "none";  // Скрываем, если картинки нет
+      if (specImage) {
+        if (imgUrl) {
+          specImage.src = imgUrl;          // Подставляем ссылку на картинку
+          specImage.style.display = "block"; // Показываем картинку
+        } else {
+          specImage.style.display = "none";  // Скрываем, если картинки нет
+        }
       }
-    }
 
-    // Настраиваем ссылку на PDF
-    const pdfLink = document.getElementById("modalPdf");
-    if (pdfLink) {
-      pdfLink.href = pdfUrl;
-      pdfLink.style.display = pdfUrl === "#" ? "none" : "inline-block";
-    }
-
-    if (modal) modal.style.display = "flex";
-  }
-});
-
-
-  // Закрытие окна при клике на крестик
-  if (closeBtn) {
-    closeBtn.addEventListener("click", () => {
-      modal.style.display = "none";
-    });
-  }
-
-  // Закрытие окна при клике на область вокруг окна
-  window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      modal.style.display = "none";
+      // Показываем модальное окно
+      if (modal) modal.style.display = "flex";
     }
   });
+
+  // Закрытие окна при клике на крестик
+  if (closeBtn) closeBtn.addEventListener("click", () => { modal.style.display = "none"; });
+
+  // Закрытие окна при клике на область вокруг окна
+  window.addEventListener("click", (event) => { if (event.target === modal) modal.style.display = "none"; });
 });
 </script>
+
 
 </body></html>
