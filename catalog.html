@@ -25,62 +25,6 @@
     z-index: 1000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
-/* Фиксируем окно строго по центру экрана и скрываем его */
-.modal {
-    display: none !important; /* Принудительно скрываем до нажатия кнопки */
-    position: fixed !important;
-    z-index: 99999 !important; /* Поднимаем окно над всеми элементами сайта */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.75) !important; /* Затемняем задний фон */
-}
-
-/* Стили для самого белого окошка с данными */
-.modal-content {
-    background-color: #ffffff !important;
-    color: #333333 !important;
-    margin: 15% auto !important;
-    padding: 25px !important;
-    border-radius: 8px !important;
-    width: 90% !important;
-    max-width: 450px !important;
-    position: relative !important;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
-}
-
-/* Кнопка-крестик для закрытия */
-.close-button {
-    position: absolute !important;
-    right: 15px !important;
-    top: 10px !important;
-    font-size: 32px !important;
-    cursor: pointer !important;
-    color: #666 !important;
-    line-height: 1 !important;
-}
-.close-button:hover { color: #000 !important; }
-
-/* Таблица внутри всплывающего окна */
-.tech-table {
-    width: 100% !important;
-    margin-top: 15px !important;
-    border-collapse: collapse !important;
-    background: transparent !important;
-}
-.tech-table td {
-    padding: 12px 8px !important;
-    border-bottom: 1px solid #dddddd !important;
-    color: #333333 !important;
-    text-align: left !important;
-}
-.tech-table td:first-child { 
-    font-weight: bold !important; 
-    color: #555555 !important; 
-    width: 40% !important;
-}
-
 .nav {
     max-width: 1580px;
     margin: 0 auto;
