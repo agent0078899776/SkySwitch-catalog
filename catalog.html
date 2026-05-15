@@ -3033,19 +3033,43 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeBtn = document.querySelector(".close-btn");
   const specImage = document.getElementById("modalImg");
 
-  // 1. АВТОМАТИЧЕСКОЕ ДОБАВЛЕНИЕ КНОПОК ВО ВСЕ ТАБЛИЦЫ
+
+  // 1. АВТОМАТИЧЕСКОЕ ДОБАВЛЕНИЕ КНОПОК ПО ИМЕНИ МОДЕЛИ
   const rows = document.querySelectorAll("table tbody tr");
-  let startPage = 18; 
+  
+  // КАРТА СООТВЕТСТВИЯ: "Точное имя модели из таблицы": "Номер страницы её схемы"
+  const modelPages = {
+    "1J1Z1A": 18,
+    "1J2Z1A": 20,
+    "1J2Z1AG": 22,
+    "1J2Z05AFD": 24,
+    "1J2Z1AFG": 26,
+    "1J2Z1AFGD": 28,
+    "2J1Z1A": 30,
+    "2J1Z2A": 32,
+    "2J2Z1AT": 34,
+    "3J2Z2AT": 36,
+    "3J2Z2A": 38,
+    "3J2Z5A": 40
+    // Допишите сюда остальные модели по аналогии, когда проверите эти
+  };
 
   rows.forEach((row) => {
-    const newCell = document.createElement("td");
+    // Получаем текст из самой первой ячейки строки (где написано имя модели)
+    const modelCell = row.cells[0];
+    if (!modelCell) return;
     
-    // Генерируем кнопку с правильным путем к картинке
-    newCell.innerHTML = `<button class="view-specs-btn" data-img="img/page_${startPage}.png" style="padding: 6px 12px; background-color: #3b82f6; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.85rem; transition: background 0.2s;">View Specs</button>`;
+    const modelName = modelCell.textContent.trim();
+    
+    // Ищем страницу в нашей карте. Если модели нет в списке, временно ставим заглушку 18
+    const pageNum = modelPages[modelName] || 18;
+
+    const newCell = document.createElement("td");
+    newCell.innerHTML = `<button class="view-specs-btn" data-img="img/page_${pageNum}.png" style="padding: 6px 12px; background-color: #3b82f6; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.85rem; transition: background 0.2s;">View Specs</button>`;
     
     row.appendChild(newCell);
-    startPage += 2; 
   });
+
 
   // 2. ОТКРЫТИЕ МОДАЛЬНОГО ОКНА ПРИ КЛИКЕ НА КНОПКУ
   document.addEventListener("click", (event) => {
