@@ -3086,31 +3086,33 @@ document.addEventListener("DOMContentLoaded", () => {
     // Допишите сюда остальные модели по аналогии, когда проверите эти
   };
 
-// Автоматическая логика клика по строкам
+// Логика клика по строкам для показа картинок из папки img
+const rows = document.querySelectorAll("table tbody tr");
 rows.forEach(row => {
     row.addEventListener("click", () => {
-        // Получаем имя модели из первой ячейки строки таблицы
         const firstCell = row.querySelector("td");
         if (!firstCell) return;
         const modelName = firstCell.innerText.trim();
 
-        // Ищем точное имя файла в вашей карте соответствия
+        // Ищем точное имя файла в карте modelPages
         const imgFileName = modelPages[modelName];
 
         if (imgFileName) {
-            // Загружаем картинку из папки img по имени файла
             const imgElement = document.getElementById("modalImg");
             if (imgElement) {
                 imgElement.src = `img/${imgFileName}`;
             }
-            
-            // Открываем окно
-            modal.style.display = "flex";
+            // Открываем окно specsModal
+            const modalElement = document.getElementById("specsModal");
+            if (modalElement) {
+                modalElement.style.display = "flex";
+            }
         } else {
             console.warn(`Файл для модели "${modelName}" не найден в карте modelPages`);
         }
     });
 });
+
 
 
 
