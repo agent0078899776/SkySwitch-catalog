@@ -3086,32 +3086,52 @@ document.addEventListener("DOMContentLoaded", () => {
     // Допишите сюда остальные модели по аналогии, когда проверите эти
   };
 
-// Логика клика по строкам для показа картинок из папки img
+// 1. АВТОМАТИЧЕСКИЙ ВЫВОД КНОПОК И ОБРАБОТКА КЛИКОВ
 const rows = document.querySelectorAll("table tbody tr");
+
 rows.forEach(row => {
-    row.addEventListener("click", () => {
-        const firstCell = row.querySelector("td");
-        if (!firstCell) return;
-        const modelName = firstCell.innerText.trim();
+    // Получаем имя модели из первой ячейки строки
+    const firstCell = row.querySelector("td");
+    if (!firstCell) return;
+    const modelName = firstCell.innerText.trim();
 
-        // Ищем точное имя файла в карте modelPages
-        const imgFileName = modelPages[modelName];
+    // Находим последнюю ячейку в строке (столбец Action)
+    const cells = row.querySelectorAll("td");
+    const lastCell = cells[cells.length - 1];
 
-        if (imgFileName) {
-            const imgElement = document.getElementById("modalImg");
-            if (imgElement) {
-                imgElement.src = `img/${imgFileName}`;
+    if (lastCell) {
+        // Автоматически создаем и вставляем красивую кнопку в пустую ячейку Action
+        lastCell.innerHTML = `<button class="btn" style="padding: 6px 12px; cursor: pointer;">View Specs</button>`;
+        
+        // Находим только что созданную кнопку внутри этой строки
+        const button = lastCell.querySelector(".btn");
+
+        // Вешаем событие клика именно на эту кнопку
+        button.addEventListener("click", (event) => {
+            event.stopPropagation(); // Защита от двойного срабатывания
+
+            // Ищем точное имя файла картинки в карте modelPages
+            const imgFileName = modelPages[modelName];
+
+            if (imgFileName) {
+                // Подставляем картинку из папки img
+                const imgElement = document.getElementById("modalImg");
+                if (imgElement) {
+                    imgElement.src = `img/${imgFileName}`;
+                }
+                
+                // Плавно открываем модальное окно specsModal
+                const modalElement = document.getElementById("specsModal");
+                if (modalElement) {
+                    modalElement.style.display = "flex";
+                }
+            } else {
+                console.warn(`Файл для модели "${modelName}" не настроен в карте modelPages`);
             }
-            // Открываем окно specsModal
-            const modalElement = document.getElementById("specsModal");
-            if (modalElement) {
-                modalElement.style.display = "flex";
-            }
-        } else {
-            console.warn(`Файл для модели "${modelName}" не найден в карте modelPages`);
-        }
-    });
+        });
+    }
 });
+
 
 
 
