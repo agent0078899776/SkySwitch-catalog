@@ -2980,7 +2980,8 @@ Upon removal of voltage, the contacts return to their original state via a sprin
    <!-- Вставьте этот код внутрь структуры вашего окна -->
 <p><strong>Schematic / Dimensions:</strong></p>
 <div style="text-align: center; margin-top: 10px; background: #fff; padding: 10px; border-radius: 6px;">
-  <img id="modalImg" src="" alt="Relay Specs Diagram" style="max-width: 100%; height: auto; display: none; margin: 0 auto;">
+  <img id="modalImg" src="" alt="Schematic" style="max-width: 100%; height: auto; display: block; margin: 10px auto;">
+
 
 </div>
   </div>
@@ -3085,21 +3086,32 @@ document.addEventListener("DOMContentLoaded", () => {
     // Допишите сюда остальные модели по аналогии, когда проверите эти
   };
 
-  rows.forEach((row) => {
-    // Получаем текст из самой первой ячейки строки (где написано имя модели)
-    const modelCell = row.cells[0];
-    if (!modelCell) return;
-    
-    const modelName = modelCell.textContent.trim();
-    
-    // Ищем страницу в нашей карте. Если модели нет в списке, временно ставим заглушку 18
-    const pageNum = modelPages[modelName] || 18;
+// Автоматическая логика клика по строкам
+rows.forEach(row => {
+    row.addEventListener("click", () => {
+        // Получаем имя модели из первой ячейки строки таблицы
+        const firstCell = row.querySelector("td");
+        if (!firstCell) return;
+        const modelName = firstCell.innerText.trim();
 
-    const newCell = document.createElement("td");
-    newCell.innerHTML = `<button class="view-specs-btn" data-img="img/page_${pageNum}.png" style="padding: 6px 12px; background-color: #3b82f6; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.85rem; transition: background 0.2s;">View Specs</button>`;
-    
-    row.appendChild(newCell);
-  });
+        // Ищем точное имя файла в вашей карте соответствия
+        const imgFileName = modelPages[modelName];
+
+        if (imgFileName) {
+            // Загружаем картинку из папки img по имени файла
+            const imgElement = document.getElementById("modalImg");
+            if (imgElement) {
+                imgElement.src = `img/${imgFileName}`;
+            }
+            
+            // Открываем окно
+            modal.style.display = "flex";
+        } else {
+            console.warn(`Файл для модели "${modelName}" не найден в карте modelPages`);
+        }
+    });
+});
+
 
 
   // 2. ОТКРЫТИЕ МОДАЛЬНОГО ОКНА ПРИ КЛИКЕ НА КНОПКУ
