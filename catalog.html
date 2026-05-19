@@ -185,6 +185,10 @@ window.onclick = function(event) {
 <div class="highlight">
 
 <!-- ==================== ЧАСТЬ 1 ==================== -->
+<!-- Поле живого поиска -->
+<div style="margin-bottom: 15px; position: relative;">
+  <input type="text" id="catalogSearch" placeholder="Введите модель для поиска (например, 2JG1)..." style="width: 100%; padding: 10px 15px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+</div>
 
 <h2>1. Sealed electromagnetic relay</h2>
 <table>
@@ -3252,6 +3256,31 @@ if (closeBtn) {
 window.addEventListener("click", (event) => {
     if (event.target === modal) { modal.style.display = "none"; }
 });
+// Ждем, пока вся страница полностью загрузится
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('catalogSearch');
+  
+  // Если поле поиска успешно нашлось на странице
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      const filter = this.value.toLowerCase().trim(); // Текст, который ввел пользователь
+      const tableRows = document.querySelectorAll('table tbody tr'); // Находим все строки таблицы
+
+      tableRows.forEach(row => {
+        // Берем текст из всей строки (или можно ограничить первой ячейкой с моделью)
+        const rowText = row.textContent.toLowerCase();
+
+        // Если текст строки содержит введенный запрос — показываем строку, иначе — скрываем
+        if (rowText.includes(filter)) {
+          row.style.display = ''; // Сброс стилей, строка видна
+        } else {
+          row.style.display = 'none'; // Строка скрывается
+        }
+      });
+    });
+  }
+});
+
 </script>
 </body>
 </html>
