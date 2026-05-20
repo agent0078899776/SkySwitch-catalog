@@ -157,7 +157,6 @@
 }
 </style>
 </head>
-
 <!-- Единственный рабочий скрипт управления -->
 <script>
 window.openModal = function(title, type, current, pack, app) {
@@ -179,14 +178,12 @@ window.openModal = function(title, type, current, pack, app) {
         productModal.style.setProperty('display', 'block', 'important');
     }
 }
-
 window.closeModal = function() {
     const productModal = document.getElementById('productModal');
     if (productModal) {
         productModal.style.setProperty('display', 'none', 'important');
     }
 }
-
 window.onclick = function(event) {
     const modal = document.getElementById('productModal');
     if (modal && event.target === modal) {
@@ -194,13 +191,7 @@ window.onclick = function(event) {
     }
 }
 </script>
-
 <body>
-
-
-
-
-
 <div style="position: fixed; top: 25px; left: 25px; z-index: 9999;">
     <a href="index.html" 
        style="display: inline-flex; align-items: center; gap: 10px; 
@@ -3199,10 +3190,10 @@ const rows = document.querySelectorAll("table tbody tr");
 
 // АВТОМАТИЧЕСКАЯ СБОРКА КНОПОК И ПРИВЯЗКА КАРТИНОК
 rows.forEach(row => {
-    const firstCell = row.querySelector("td");
-    if (!firstCell) return;
-    const modelName = firstCell.innerText.trim();
-
+// Ищем элемент именно с классом модели внутри текущей строки
+const modelElement = row.querySelector(".model"); 
+if (!modelElement) return; // Если в строке нет модели (например, это шапка), пропускаем её
+const modelName = modelElement.innerText.trim();
     // Создаем новую ячейку специально для кнопки
     const actionCell = document.createElement("td");
     actionCell.className = "center";
