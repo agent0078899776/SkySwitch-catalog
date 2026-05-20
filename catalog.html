@@ -3,13 +3,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkySwitch Technologies | Product Catalog 2026</title>
     <style>
+
+
         body { font-family: 'Segoe UI', Times New Roman, sans-serif; margin:0; background:#0f172a; color:#e2e8f0; line-height:1.55; }
         .header { background: linear-gradient(135deg, #1e40af, #3b82f6); padding:80px 20px; text-align:center; color:white; }
         .container { max-width: 1580px; margin:0 auto; padding:20px; }
         h1 { font-size: 3.2rem; margin:0; }
         h2 { color:#60a5fa; margin:20px 0 20px; border-bottom:3px solid #334155; padding-bottom:12px; }
         h3 { color:#93c5fd; margin-top:40px; }
-        
+        /* Перекрашиваем контейнер с таблицей внутри раскрытого списка */
+.category-content, 
+details div, 
+details tr, 
+details td {
+    background-color: #0f172a !important; /* Глубокий темно-синий цвет фона */
+    color: #f8fafc !important; /* Делаем текст внутри таблицы светлым и читаемым */
+}
+
+/* Настройка границ таблицы, чтобы они сочетались с темной темой */
+details table, details th, details td {
+    border-color: #334155 !important;
+}
+
+/* Корректируем шапку таблицы (если нужно сделать её чуть темнее или оставить синей) */
+details th {
+    background-color: #1e3a8a !important; /* Насыщенный темно-синий для заголовков таблицы */
+    color: #ffffff !important;
+}
         table { width:100%; border-collapse:collapse; margin:25px 0; background:#1e2937; box-shadow:0 4px 20px rgba(0,0,0,0.5); }
         th, td { padding:12px 10px; text-align:center; border-bottom:1px solid #475569; vertical-align:middle; }
         th { background:#1e40af; color:white; text-align:center; }
@@ -62,7 +82,7 @@
   cursor: pointer;
   list-style: none; /* Убирает стандартную стрелочку в некоторых браузерах */
   position: relative;
-  background-color: #ffffff;
+  background-color: #e2e8f;
   color: #333;
 }
 
@@ -87,6 +107,61 @@
   border-top: 1px solid #e0e0e0;
   background: #ffffff;
 }
+ /* КРАСИВОЕ ПОЛЕ ПОИСКА */
+    #catalogSearch {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 14px 24px !important;
+        font-size: 16px !important;
+        color: #ffffff !important; /* Белый текст ввода */
+        background-color: #1e293b !important; /* Темно-синий фон поля */
+        border: 2px solid #334155 !important; /* Темная рамка */
+        border-radius: 10px !important;
+        outline: none !important;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    /* Свечение поиска при клике */
+    #catalogSearch:focus {
+        border-color: #3b82f6 !important;
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.4) !important;
+        background-color: #0f172a !important;
+    }
+
+    /* Цвет подсказки внутри поиска */
+    #catalogSearch::placeholder {
+        color: #94a3b8 !important;
+    }
+
+    /* СТИЛЬНЫЕ СВЕРНУТЫЕ СТРОКИ (DETAILS) */
+    details {
+        background-color: #111827 !important; /* Почти черный фон контента */
+        border: 1px solid #1f2937 !important; /* Тонкая темная рамка карточки */
+        border-radius: 10px !important;
+        margin: 15px 0 !important;
+        overflow: hidden !important;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    /* ЗАГОЛОВКИ СТРОК (SUMMARY) */
+    details summary {
+        padding: 18px 24px !important;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        color: #ffffff !important; /* Белый текст заголовка */
+        /* Красивый градиент в цвет шапки вашего сайта */
+        background: linear-gradient(135deg, #1e293b, #0f172a) !important; 
+        cursor: pointer !important;
+        user-select: none !important;
+        transition: all 0.2s ease !important;
+    }
+
+    /* Эффект при наведении на свернутую строку */
+    details summary:hover {
+        background: linear-gradient(135deg, #2563eb, #1d4ed8) !important; /* Подсветка синим */
+        color: #ffffff !important;
+    }
     </style>
     <!-- Отдельные изолированные стили для всплывающего окна -->
 <style>
