@@ -157,30 +157,47 @@
 }
 </style>
 </head>
-<body>
 
 <!-- Единственный рабочий скрипт управления -->
 <script>
 window.openModal = function(title, type, current, pack, app) {
-    document.getElementById('modalTitle').innerText = title;
-    document.getElementById('modalMaterial').innerText = type;
-    document.getElementById('modalStandard').innerText = current;
-    document.getElementById('modalLeak').innerText = pack;
-    document.getElementById('modalTemp').innerText = app;
-    document.getElementById('productModal').style.setProperty('display', 'block', 'important');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalMaterial = document.getElementById('modalMaterial');
+    const modalStandard = document.getElementById('modalStandard');
+    const modalLeak = document.getElementById('modalLeak');
+    const modalTemp = document.getElementById('modalTemp');
+    const productModal = document.getElementById('productModal');
+
+    // Проверяем, что все элементы и само окно существуют на странице, чтобы код не падал в ошибку
+    if (modalTitle) modalTitle.innerText = title;
+    if (modalMaterial) modalMaterial.innerText = type;
+    if (modalStandard) modalStandard.innerText = current;
+    if (modalLeak) modalLeak.innerText = pack;
+    if (modalTemp) modalTemp.innerText = app;
+    
+    if (productModal) {
+        productModal.style.setProperty('display', 'block', 'important');
+    }
 }
 
 window.closeModal = function() {
-    document.getElementById('productModal').style.setProperty('display', 'none', 'important');
+    const productModal = document.getElementById('productModal');
+    if (productModal) {
+        productModal.style.setProperty('display', 'none', 'important');
+    }
 }
 
 window.onclick = function(event) {
-    let modal = document.getElementById('productModal');
-    if (event.target = modal) {
+    const modal = document.getElementById('productModal');
+    if (modal && event.target === modal) {
         modal.style.setProperty('display', 'none', 'important');
     }
 }
 </script>
+
+<body>
+
+
 
 
 
