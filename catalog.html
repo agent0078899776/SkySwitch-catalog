@@ -44,6 +44,49 @@
 .nav-links a:hover {
     color: #bae6fd;
 }
+/* Стили для контейнера категории */
+.catalog-category {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Стили для заголовка (кнопки) */
+.catalog-category summary {
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none; /* Убирает стандартную стрелочку в некоторых браузерах */
+  position: relative;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Добавляем красивую кастомную стрелочку справа */
+.catalog-category summary::after {
+  content: '▼';
+  position: absolute;
+  right: 20px;
+  font-size: 12px;
+  transition: transform 0.2s ease;
+  color: #888;
+}
+
+/* Поворачиваем стрелочку, когда категория открыта */
+.catalog-category[open] summary::after {
+  transform: rotate(180deg);
+}
+
+/* Внутренний отступ для таблицы внутри открытой категории */
+.category-content {
+  padding: 15px;
+  border-top: 1px solid #e0e0e0;
+  background: #ffffff;
+}
     </style>
     <!-- Отдельные изолированные стили для всплывающего окна -->
 <style>
@@ -191,6 +234,9 @@ window.onclick = function(event) {
 </div>
 
 <h2>1. Sealed electromagnetic relay</h2>
+<details class="catalog-category" open>
+  <summary>1. Sealed electromagnetic relay</summary>
+  <div class="category-content">
 <table>
     <thead>
         <tr>
@@ -998,7 +1044,8 @@ Random:
 
     </tbody>
 </table>
-
+  </div>
+</details>
 
   <h3>Technology Overview — Sealed Magnetic Latching Relay</h3>
 
@@ -1043,6 +1090,9 @@ Random:
 
 
 <h2>2. Sealed magnetic holding relay</h2>
+<details class="catalog-category" open>
+  <summary>2. Sealed magnetic holding relay</summary>
+  <div class="category-content">
 <table>
     <thead>
         <tr>
@@ -1192,7 +1242,8 @@ Random:
 
     </tbody>
 </table>
-
+  </div>
+</details>
 
 <h3>Technology Overview — Radio Frequency (RF) Relays</h3>
 
@@ -1243,7 +1294,13 @@ ensuring consistent performance across a defined frequency range.
 </div>
 
 <h2>3. Radio frequency relay</h2>
+
+<details class="catalog-category" open>
+  <summary>3. Radio frequency relay</summary>
+  <div class="category-content">
+
 <table>
+
     <thead>
         <tr>
             <th>Product Model</th>
@@ -1351,7 +1408,8 @@ ensuring consistent performance across a defined frequency range.
         </tr>
     </tbody>
 </table>
-
+</div>
+</details>
 
 <h3>Technology Overview — Electromechanical Contactors</h3>
 
@@ -1394,7 +1452,14 @@ Upon removal of voltage, the contacts return to their original state via a sprin
 
 
 <h2>4. Contactor</h2>
+
+<details class="catalog-category" open>
+  <summary>4. Contactor</summary>
+  <div class="category-content">
+
 <table>
+
+    
     <thead>
         <tr>
             <th>Product Model</th>
@@ -1592,6 +1657,8 @@ Upon removal of voltage, the contacts return to their original state via a sprin
 
     </tbody>
 </table>
+  </div>
+</details>
 
 <h3>Technology Overview</h3>
 <div style="background:#1e2937; padding:20px; border-radius:10px;">
@@ -1614,6 +1681,9 @@ Upon removal of voltage, the contacts return to their original state via a sprin
 <!-- Часть 2 -->
 <h2>5. Solid-state relays</h2>
 <h3>Ceramic package optical MOS relay</h3>
+<details class="catalog-category" open>
+  <summary>5. Solid-state relays</summary>
+  <div class="category-content">
 <table>
     <thead>
         <tr>
@@ -1852,9 +1922,15 @@ Upon removal of voltage, the contacts return to their original state via a sprin
         </tr>
     </tbody>
 </table>
+  </div>
+</details>
 
 <h3>Metal encapsulated solid state relay</h3>
+    <details class="catalog-category" open>
+  <summary>Metal encapsulated solid state relay</summary>
+  <div class="category-content">
 <table>
+
     <thead>
         <tr>
             <th>Product Model</th>
@@ -2052,10 +2128,17 @@ Upon removal of voltage, the contacts return to their original state via a sprin
 
     </tbody>
 </table>
+  </div>
+</details>
 
 <h3>Plastic photorelays (PhotoMOS relay)</h3>
 
+    <details class="catalog-category" open>
+  <summary>Plastic photorelays (PhotoMOS relay)</summary>
+  <div class="category-content">
+
 <table>
+
     <thead>
         <tr>
             <th>Model</th>
@@ -2717,14 +2800,19 @@ Upon removal of voltage, the contacts return to their original state via a sprin
 
     </tbody>
 </table>
-
-
     </tbody>
 </table>
+  </div>
+</details>
 
 <h2>6. Time Relays</h2>
 
+<details class="catalog-category" open>
+  <summary>6. Time Relays</summary>
+  <div class="category-content">
+
 <table>
+    
     <thead>
         <tr>
             <th>Product Model</th>
@@ -2812,10 +2900,15 @@ Upon removal of voltage, the contacts return to their original state via a sprin
         </tr>
     </tbody>
 </table>
-
+  </div>
+</details>
 
 <h2>7. Sealed Optocouplers</h2>
 
+<details class="catalog-category" open>
+  <summary>7. Sealed Optocouplers</summary>
+  <div class="category-content">
+    
 <table>
     <thead>
         <tr>
@@ -2963,6 +3056,8 @@ Upon removal of voltage, the contacts return to their original state via a sprin
         </tr>
     </tbody>
 </table>
+  </div>
+</details>
 
 <div style="text-align:center; margin:50px 0; padding:30px; background:#1e2937; border-radius:12px;">
     <h2>Do you need full datasheets?</h2>
