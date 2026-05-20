@@ -3190,12 +3190,16 @@ const rows = document.querySelectorAll("table tbody tr");
 
 // АВТОМАТИЧЕСКАЯ СБОРКА КНОПОК И ПРИВЯЗКА КАРТИНОК
 rows.forEach(row => {
-// Ищем элемент именно с классом модели внутри текущей строки
-const modelElement = row.querySelector(".model"); 
-if (!modelElement) return; 
+    // Берём самую первую ячейку в текущей строке (где обычно и написано название модели)
+    const firstCell = row.querySelector("td");
+    if (!firstCell) return; // Если это заголовок или пустая строка без ячеек, пропускаем
 
-const modelName = modelElement.innerText.trim();
-if (modelName === "") return; // <-- ЕСЛИ ИМЯ МОДЕЛИ ПУСТОЕ, ПРОПУСКАЕМ СТРОКУ
+    // Берём чистый текст модели и убираем пробелы
+    const modelName = firstCell.innerText.trim();
+    
+    // Если имя пустое или это строка-объединитель без названия модели, пропускаем её
+    if (modelName === "" || modelName.length > 30) return;
+
 
     // Создаем новую ячейку специально для кнопки
     const actionCell = document.createElement("td");
