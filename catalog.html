@@ -44,64 +44,49 @@
 .nav-links a:hover {
     color: #bae6fd;
 }
-<style>
-  /* Контейнер категории */
-  .catalog-category {
-    background: #1e293b; 
-    border: 1px solid #2d3748;
-    border-radius: 8px;
-    margin-bottom: 25px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-  }
+/* Стили для контейнера категории */
+.catalog-category {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
 
-  /* Кнопка раскрытия (шапка категории) */
-  .catalog-category summary {
-    padding: 18px 20px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #111827; /* Глубокий темный фон */
-    color: #f3f4f6; /* Читаемый светлый текст */
-    user-select: none;
-    transition: background-color 0.2s ease;
-  }
+/* Стили для заголовка (кнопки) */
+.catalog-category summary {
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none; /* Убирает стандартную стрелочку в некоторых браузерах */
+  position: relative;
+  background-color: #ffffff;
+  color: #333;
+}
 
-  /* Эффект наведения на шапку */
-  .catalog-category summary:hover {
-    background-color: #1f2937;
-  }
+/* Добавляем красивую кастомную стрелочку справа */
+.catalog-category summary::after {
+  content: '▼';
+  position: absolute;
+  right: 20px;
+  font-size: 12px;
+  transition: transform 0.2s ease;
+  color: #888;
+}
 
-  /* Скрытие стандартного маркера браузера */
-  .catalog-category summary::-webkit-details-marker {
-    display: none;
-  }
+/* Поворачиваем стрелочку, когда категория открыта */
+.catalog-category[open] summary::after {
+  transform: rotate(180deg);
+}
 
-  /* Кастомная аккуратная стрелочка справа */
-  .catalog-category summary .category-arrow::before {
-    content: '▼';
-    font-size: 12px;
-    color: #9ca3af;
-    transition: transform 0.3s ease;
-    display: inline-block;
-  }
-
-  /* Поворот стрелки при открытии */
-  .catalog-category[open] summary .category-arrow::before {
-    transform: rotate(180deg);
-    color: #3b82f6; /* Стрелочка подсвечивается синим */
-  }
-
-  /* Контент внутри плашки (где лежит таблица) */
-  .category-content {
-    padding: 20px;
-    background: #1e293b; /* Совпадает с фоном вашей таблицы */
-    border-top: 1px solid #2d3748;
-  }
+/* Внутренний отступ для таблицы внутри открытой категории */
+.category-content {
+  padding: 15px;
+  border-top: 1px solid #e0e0e0;
+  background: #ffffff;
+}
     </style>
     <!-- Отдельные изолированные стили для всплывающего окна -->
 <style>
@@ -244,15 +229,13 @@ window.onclick = function(event) {
 
 <!-- ==================== ЧАСТЬ 1 ==================== -->
 <!-- Поле живого поиска -->
-<div style="margin-bottom: 25px; position: relative;">
-  <input type="text" id="catalogSearch" placeholder="Enter the model to search for (for example, 2JG1)..." style="width: 100%; padding: 12px 20px; font-size: 16px; border: 1px solid #2d3748; border-radius: 6px; box-sizing: border-box; background-color: #1a202c; color: #fff;">
+<div style="margin-bottom: 15px; position: relative;">
+  <input type="text" id="catalogSearch" placeholder="Enter the model to search for (for example, 2JG1)..." style="width: 100%; padding: 10px 15px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
 </div>
 
-<details class="catalog-category">
-  <summary>
-    <span class="category-title">1. Sealed electromagnetic relay</span>
-    <span class="category-arrow"></span>
-  </summary>
+<h2>1. Sealed electromagnetic relay</h2>
+<details class="catalog-category" open>
+  <summary>1. Sealed electromagnetic relay</summary>
   <div class="category-content">
 <table>
     <thead>
@@ -1064,13 +1047,52 @@ Random:
   </div>
 </details>
 
-  <details class="catalog-category">
-  <summary>
-    <span class="category-title">2. Sealed magnetic holding relay</span>
-    <span class="category-arrow"></span>
-  </summary>
-  <div class="category-content">
+  <h3>Technology Overview — Sealed Magnetic Latching Relay</h3>
 
+<div style="background:#1e2937; padding:20px; border-radius:10px; border-left:4px solid #3b82f6;">
+
+    <p>
+      <b>Sealed magnetic latching relays</b> are electromechanical switching devices that maintain their contact position 
+      after actuation without continuous coil power. Switching is achieved using a magnetic latching mechanism 
+      (permanent magnet or remanent magnetization), combined with a hermetically sealed contact system.
+    </p>
+
+    <p>
+      A short electrical pulse applied to the coil sets or resets the relay. Once switched, the relay remains in its 
+      state even when power is removed, significantly reducing energy consumption and heat generation.
+    </p>
+
+    <h4>Key Advantages</h4>
+    <ul>
+      <li>Zero holding power consumption (no continuous coil drive)</li>
+      <li>High reliability due to hermetic sealing</li>
+      <li>Low thermal load and improved system efficiency</li>
+      <li>Stable operation in vibration and shock environments</li>
+    </ul>
+
+    <h4>Design Features</h4>
+    <ul>
+      <li>Magnetic latching mechanism (single-coil or dual-coil design)</li>
+      <li>Hermetically sealed contact chamber (inert gas or vacuum)</li>
+      <li>Optimized contact materials for long electrical life</li>
+      <li>Compact metal package for harsh environments</li>
+    </ul>
+
+    <h4>Typical Limitations</h4>
+    <ul>
+      <li>Requires polarity control or separate SET/RESET pulses</li>
+      <li>More complex control circuitry compared to non-latching relays</li>
+      <li>Switching speed in milliseconds range</li>
+    </ul>
+
+  </div>
+
+
+
+<h2>2. Sealed magnetic holding relay</h2>
+<details class="catalog-category" open>
+  <summary>2. Sealed magnetic holding relay</summary>
+  <div class="category-content">
 <table>
     <thead>
         <tr>
@@ -1223,11 +1245,58 @@ Random:
   </div>
 </details>
 
-<details class="catalog-category">
-  <summary>
-    <span class="category-title">3. Radio frequency relay</span>
-    <span class="category-arrow"></span>
-  </summary>
+<h3>Technology Overview — Radio Frequency (RF) Relays</h3>
+
+<div style="background:#1e2937; padding:20px; border-radius:10px; border-left:4px solid #3b82f6;">
+
+<p>
+<b>Radio Frequency (RF) relays</b> are precision electromechanical switching devices designed for routing high-frequency signals 
+while maintaining signal integrity. They are optimized for applications where low loss, high isolation, and stable impedance are critical.
+</p>
+
+<p>
+RF relays operate using an electromagnetic actuator that mechanically switches signal paths. 
+Unlike standard relays, RF designs focus on minimizing parasitic capacitance and inductance, 
+ensuring consistent performance across a defined frequency range.
+</p>
+
+<h4 style="color:#93c5fd; margin-top:15px;">Key Advantages</h4>
+<ul>
+    <li>Low insertion loss (minimal signal attenuation)</li>
+    <li>High isolation between signal paths</li>
+    <li>Stable impedance (typically 50Ω or 75Ω systems)</li>
+    <li>Wide frequency range (from MHz up to GHz)</li>
+</ul>
+
+<h4 style="color:#93c5fd; margin-top:15px;">Design Features</h4>
+<ul>
+    <li>Controlled impedance transmission paths</li>
+    <li>Coaxial or stripline internal structures</li>
+    <li>Hermetically sealed enclosure for signal stability</li>
+    <li>Precision contact geometry to reduce reflection (low VSWR)</li>
+</ul>
+
+<h4 style="color:#93c5fd; margin-top:15px;">Key RF Parameters</h4>
+<ul>
+    <li><b>Insertion Loss (dB):</b> signal attenuation through the relay</li>
+    <li><b>Isolation (dB):</b> separation between open signal paths</li>
+    <li><b>VSWR:</b> impedance matching quality</li>
+    <li><b>Operating Frequency:</b> maximum usable frequency range</li>
+</ul>
+
+<h4 style="color:#93c5fd; margin-top:15px;">Typical Limitations</h4>
+<ul>
+    <li>Mechanical switching speed (slower than solid-state RF switches)</li>
+    <li>Limited lifetime due to contact wear</li>
+    <li>Performance degradation at extreme high frequencies if not properly designed</li>
+</ul>
+
+</div>
+
+<h2>3. Radio frequency relay</h2>
+
+<details class="catalog-category" open>
+  <summary>3. Radio frequency relay</summary>
   <div class="category-content">
 
 <table>
@@ -1342,11 +1411,50 @@ Random:
 </div>
 </details>
 
-<details class="catalog-category">
-  <summary>
-    <span class="category-title">4. Contactor</span>
-    <span class="category-arrow"></span>
-  </summary>
+<h3>Technology Overview — Electromechanical Contactors</h3>
+
+<div style="background:#1e2937; padding:20px; border-radius:10px; border-left:4px solid #3b82f6;">
+
+<p>
+<b>Electromechanical contactors</b> are high-power switching devices designed for reliable operation in DC and AC power systems. 
+Switching is performed by mechanically actuated contacts driven by an electromagnetic coil.
+</p>
+
+<p>
+When control voltage is applied to the coil, a magnetic field is generated, pulling the armature and closing the power contacts. 
+Upon removal of voltage, the contacts return to their original state via a spring mechanism.
+</p>
+
+<h4 style="color:#93c5fd; margin-top:15px;">Key Advantages</h4>
+<ul>
+    <li>High current switching capability (tens to hundreds of amperes)</li>
+    <li>True galvanic isolation between control and power circuits</li>
+    <li>Low contact resistance in ON state</li>
+    <li>Robust performance in harsh environments</li>
+</ul>
+
+<h4 style="color:#93c5fd; margin-top:15px;">Design Features</h4>
+<ul>
+    <li>Hermetically sealed or gas-filled contact chamber</li>
+    <li>Arc suppression system (magnetic blowout or gas quenching)</li>
+    <li>Auxiliary contacts for feedback and control logic</li>
+    <li>Optimized contact materials for DC load switching</li>
+</ul>
+
+<h4 style="color:#93c5fd; margin-top:15px;">Typical Limitations</h4>
+<ul>
+    <li>Mechanical wear limits lifetime compared to solid-state devices</li>
+    <li>Slower switching speed (milliseconds range)</li>
+    <li>Contact arcing under high DC loads requires proper derating</li>
+</ul>
+
+</div>
+
+
+<h2>4. Contactor</h2>
+
+<details class="catalog-category" open>
+  <summary>4. Contactor</summary>
   <div class="category-content">
 
 <table>
@@ -1552,16 +1660,30 @@ Random:
   </div>
 </details>
 
+<h3>Technology Overview</h3>
+<div style="background:#1e2937; padding:20px; border-radius:10px;">
+<p><b>Solid State Relays (SSR)</b> use semiconductor switching elements instead of mechanical contacts.</p>
+
+<ul>
+<li>No mechanical wear → lifetime up to 10⁹ cycles</li>
+<li>Fast switching (µs range)</li>
+<li>High vibration resistance</li>
+<li>Leakage current present in OFF state</li>
+</ul>
+</div>
+
+<h3>Dimensions</h3>
+<div style="display:flex; gap:20px;">
+    <img src="DRAWING1.png" style="width:300px; background:white;">
+    <img src="DRAWING2.png" style="width:300px; background:white;">
+</div>
+
 <!-- Часть 2 -->
- <details class="catalog-category">
-  <summary>
-    <span class="category-title">5. Solid-state relays</span>
-    <span class="category-arrow"></span>
-  </summary>
-  <div class="category-content">
-
+<h2>5. Solid-state relays</h2>
 <h3>Ceramic package optical MOS relay</h3>
-
+<details class="catalog-category" open>
+  <summary>5. Solid-state relays</summary>
+  <div class="category-content">
 <table>
     <thead>
         <tr>
@@ -1803,13 +1925,10 @@ Random:
   </div>
 </details>
 
-<details class="catalog-category">
-  <summary>
-    <span class="category-title">Metal encapsulated solid state relay</span>
-    <span class="category-arrow"></span>
-  </summary>
+<h3>Metal encapsulated solid state relay</h3>
+    <details class="catalog-category" open>
+  <summary>Metal encapsulated solid state relay</summary>
   <div class="category-content">
-
 <table>
 
     <thead>
@@ -2012,12 +2131,10 @@ Random:
   </div>
 </details>
 
+<h3>Plastic photorelays (PhotoMOS relay)</h3>
 
-<details class="catalog-category">
-  <summary>
-    <span class="category-title">Plastic photorelays (PhotoMOS relay)</span>
-    <span class="category-arrow"></span>
-  </summary>
+    <details class="catalog-category" open>
+  <summary>Plastic photorelays (PhotoMOS relay)</summary>
   <div class="category-content">
 
 <table>
@@ -2688,13 +2805,11 @@ Random:
   </div>
 </details>
 
-<details class="catalog-category">
-  <summary>
-    <span class="category-title">6. Time Relays</span>
-    <span class="category-arrow"></span>
-  </summary>
-  <div class="category-content">
+<h2>6. Time Relays</h2>
 
+<details class="catalog-category" open>
+  <summary>6. Time Relays</summary>
+  <div class="category-content">
 
 <table>
     
@@ -2788,13 +2903,12 @@ Random:
   </div>
 </details>
 
-<details class="catalog-category">
-  <summary>
-    <span class="category-title">7. Sealed Optocouplers</span>
-    <span class="category-arrow"></span>
-  </summary>
-  <div class="category-content">
+<h2>7. Sealed Optocouplers</h2>
 
+<details class="catalog-category" open>
+  <summary>7. Sealed Optocouplers</summary>
+  <div class="category-content">
+    
 <table>
     <thead>
         <tr>
