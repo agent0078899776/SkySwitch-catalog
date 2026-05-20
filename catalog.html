@@ -3192,8 +3192,11 @@ const rows = document.querySelectorAll("table tbody tr");
 rows.forEach(row => {
 // Ищем элемент именно с классом модели внутри текущей строки
 const modelElement = row.querySelector(".model"); 
-if (!modelElement) return; // Если в строке нет модели (например, это шапка), пропускаем её
+if (!modelElement) return; 
+
 const modelName = modelElement.innerText.trim();
+if (modelName === "") return; // <-- ЕСЛИ ИМЯ МОДЕЛИ ПУСТОЕ, ПРОПУСКАЕМ СТРОКУ
+
     // Создаем новую ячейку специально для кнопки
     const actionCell = document.createElement("td");
     actionCell.className = "center";
