@@ -247,7 +247,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
             <td>Teledyne (411)</td>
-<td> </td>
+
         </tr>
 
 
@@ -3167,11 +3167,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const modelName = firstCell.innerText.trim();
         if (modelName === "" || modelName.length > 30) return;
 
-        // Создаем ячейку с кнопкой
-        const actionCell = document.createElement("td");
-        actionCell.className = "center";
-        actionCell.innerHTML = `<button class="btn" style="padding: 6px 14px; cursor: pointer; background: #3b82f6; color: #fff; border: none; border-radius: 4px; font-weight: 600;">View Specs</button>`;
-        row.appendChild(actionCell);
+// Ищем самую последнюю ячейку в строке (колонку Action)
+let actionCell = row.querySelector("td:last-child");
+
+// Если ячейки нет, тогда создаем её (на всякий случай)
+if (!actionCell) {
+    actionCell = document.createElement("td");
+    row.appendChild(actionCell);
+}
+
+actionCell.className = "center";
+actionCell.innerHTML = `<button class="btn" style="padding: 6px 14px; cursor: pointer; background: #3b82f6; color: #fff; border: none; border-radius: 4px; font-weight: 600; display: inline-block !important; visibility: visible !important;">View Specs</button>`;
+
 
         // Навешиваем событие клика
         const button = actionCell.querySelector(".btn");
