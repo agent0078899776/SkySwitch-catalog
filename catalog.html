@@ -159,7 +159,28 @@
 </head>
 <body>
 
+<!-- Единственный рабочий скрипт управления -->
+<script>
+window.openModal = function(title, type, current, pack, app) {
+    document.getElementById('modalTitle').innerText = title;
+    document.getElementById('modalMaterial').innerText = type;
+    document.getElementById('modalStandard').innerText = current;
+    document.getElementById('modalLeak').innerText = pack;
+    document.getElementById('modalTemp').innerText = app;
+    document.getElementById('productModal').style.setProperty('display', 'block', 'important');
+}
 
+window.closeModal = function() {
+    document.getElementById('productModal').style.setProperty('display', 'none', 'important');
+}
+
+window.onclick = function(event) {
+    let modal = document.getElementById('productModal');
+    if (event.target = modal) {
+        modal.style.setProperty('display', 'none', 'important');
+    }
+}
+</script>
 
 
 
