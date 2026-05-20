@@ -87,10 +87,10 @@
   border-top: 1px solid #e0e0e0;
   background: #ffffff;
 }
-    /* 1. Красивый контейнер и поле поиска */
+   /* 1. СТИЛЬНАЯ СТРОКА ПОИСКА */
     .search-container {
         max-width: 800px;
-        margin: 30px auto;
+        margin: 40px auto 20px auto;
         padding: 0 20px;
     }
     
@@ -98,64 +98,88 @@
         width: 100%;
         padding: 14px 24px;
         font-size: 16px;
-        color: #f8fafc; /* Светлый текст */
-        background-color: #1e293b; /* Тёмный фон полей */
-        border: 2px solid #334155; /* Сдержанная темная граница */
-        border-radius: 12px;
+        color: #ffffff !important; /* Строго белый текст ввода */
+        background-color: #1e293b; /* Глубокий темно-синий фон */
+        border: 2px solid #334155;
+        border-radius: 10px;
         outline: none;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-    /* Эффект свечения при клике на поиск */
+    /* Мягкое неоновое свечение при поиске */
     #catalogSearch:focus {
         border-color: #3b82f6;
-        box-shadow: 0 0 14px rgba(6, 3, 184, 0.897);
-        background-color: #07347e; /* Еще чуть темнее при фокусе */
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+        background-color: #0f172a;
     }
 
-    /* Изменяем цвет подсказки (placeholder) внутри инпута */
     #catalogSearch::placeholder {
-        color: #07347e;
-        opacity: 0.8;
+        color: #94a3b8; /* Читаемый серый цвет подсказки */
     }
 
-    /* 2. Стильное оформление выпадающих категорий (details / summary) */
-    .catalog-category {
-        background-color: #07347e; /* Тёмный фон карточки */
-        border: 1px solid #07347e;
-        border-radius: 12px;
-        margin-bottom: 20px;
+    /* 2. ТЕМНЫЕ И СТИЛЬНЫЕ КАРТОЧКИ КАТЕГОРИЙ */
+    /* Применяем стили ко ВСЕМ тегам details на странице */
+    details {
+        background-color: #111827 !important; /* Очень темный, почти черный фон */
+        border: 1px solid #1f2937 !important; /* Аккуратная тонкая рамка */
+        border-radius: 10px !important;
+        margin: 15px auto !important;
+        max-width: 1200px;
         overflow: hidden;
-        box-shadow: 0 4px 6px -1px rgba(6, 3, 184, 0.897);
-        transition: border-color 0.2s;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        transition: all 0.2s ease;
     }
 
-    .catalog-category:hover {
-        border-color: #07347e;
+    details:hover {
+        border-color: #374151 !important;
     }
 
-    /* Шапка раскрывающегося блока */
-    .catalog-category summary {
-        padding: 16px 24px;
-        font-size: 18px;
-        font-weight: 600;
-        color: #1b5fcc; /* Неоново-голубой цвет в тон вашего заголовка */
+    /* 3. КРАСИВЫЕ КНОПКИ-ЗАГОЛОВКИ (SUMMARY) */
+    details summary {
+        padding: 18px 24px !important;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.5px;
+        color: #ffffff !important; /* Гарантированный белый контрастный текст! */
+        background: linear-gradient(135deg, #1e293b, #0f172a) !important; /* Красивый темный градиент */
         cursor: pointer;
         user-select: none;
-        transition: background-color 0.2s;
-        outline: none;
+        transition: all 0.2s ease;
+        list-style: none; /* Убираем стандартную стрелочку */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .catalog-category summary:hover {
-        background-color: #24334d; /* Легкий отсвет при наведении */
+    /* Кастомная стрелочка справа */
+    details summary::after {
+        content: "▼";
+        font-size: 12px;
+        color: #3b82f6; /* Синяя неоновая стрелочка */
+        transition: transform 0.2s ease;
     }
 
-    /* Внутренний контейнер с таблицей после раскрытия */
-    .category-content {
+    /* Поворот стрелочки при открытии */
+    details[open] summary::after {
+        transform: rotate(180deg);
+    }
+
+    details summary:hover {
+        background: linear-gradient(135deg, #2563eb, #1d4ed8) !important; /* При наведении плашка становится благородно синей */
+        color: #ffffff !important;
+    }
+
+    /* Удаляем стандартный маркер в Safari / Chrome */
+    details summary::-webkit-details-marker {
+        display: none !important;
+    }
+
+    /* Контейнер для таблицы внутри открытого блока */
+    details .category-content {
         padding: 20px;
-        background-color: #0f172a; /* Тёмное дно под саму таблицу */
-        border-top: 1px solid #334155;
+        background-color: #0b0f19 !important;
+        border-top: 1px solid #1f2937;
     }
     </style>
     <!-- Отдельные изолированные стили для всплывающего окна -->
