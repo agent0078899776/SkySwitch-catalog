@@ -157,40 +157,7 @@
 }
 </style>
 </head>
-<!-- Единственный рабочий скрипт управления -->
-<script>
-window.openModal = function(title, type, current, pack, app) {
-    const modalTitle = document.getElementById('modalTitle');
-    const modalMaterial = document.getElementById('modalMaterial');
-    const modalStandard = document.getElementById('modalStandard');
-    const modalLeak = document.getElementById('modalLeak');
-    const modalTemp = document.getElementById('modalTemp');
-    const productModal = document.getElementById('productModal');
 
-    // Проверяем, что все элементы и само окно существуют на странице, чтобы код не падал в ошибку
-    if (modalTitle) modalTitle.innerText = title;
-    if (modalMaterial) modalMaterial.innerText = type;
-    if (modalStandard) modalStandard.innerText = current;
-    if (modalLeak) modalLeak.innerText = pack;
-    if (modalTemp) modalTemp.innerText = app;
-    
-    if (productModal) {
-        productModal.style.setProperty('display', 'block', 'important');
-    }
-}
-window.closeModal = function() {
-    const productModal = document.getElementById('productModal');
-    if (productModal) {
-        productModal.style.setProperty('display', 'none', 'important');
-    }
-}
-window.onclick = function(event) {
-    const modal = document.getElementById('productModal');
-    if (modal && event.target === modal) {
-        modal.style.setProperty('display', 'none', 'important');
-    }
-}
-</script>
 <body>
 <div style="position: fixed; top: 25px; left: 25px; z-index: 9999;">
     <a href="index.html" 
