@@ -1,19 +1,19 @@
 ﻿<html lang="ru"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkySwitch Technologies | Product Catalog 2026</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>SkySwitch Technologies | Product Catalog 2026</title>
 <style>
 body { font-family: 'Segoe UI', 'Times New Roman', sans-serif; margin:0; background:#0f172a; color:#e2e8f0; line-height:1.55; }
 .container { max-width: 1580px; margin:0 auto; padding:20px; }
 h1 { font-size: 3.2rem; margin:0; }
 h2 { color:#60a5fa; margin:20px 0 20px; border-bottom:3px solid #334155; padding-bottom:12px; }
 h3 { color:#93c5fd; margin-top:40px; }
-
+ 
 .category-content, details div, details tr, details td {
-    background-color: #0f172a !important;
-    color: #f8fafc !important;
+ background-color: #0f172a !important;
+ color: #f8fafc !important;
 }
-
+ 
 details table, details th, details td { border-color: #334155 !important; }
 details th { background-color: #1e3a8a !important; color: #ffffff !important; }
 table { width:100%; border-collapse:collapse; margin:25px 0; background:#1e2937; box-shadow:0 4px 20px rgba(0,0,0,0.5); }
@@ -22,206 +22,203 @@ th { background:#1e40af; color:white; text-align:center; }
 .model { font-weight:bold; color:#93c5fd; }
 .product-img { width:100px; height:120px; object-fit:contain; background:#334155; padding:4px; border-radius:5px; }
 .center { text-align:center; }
-
+ 
 .header {
-    background: linear-gradient(135deg, #1e40af, #3b82f6);
-    padding: 16px 0;
-    position: static;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+ background: linear-gradient(135deg, #1e40af, #3b82f6);
+ padding: 16px 0;
+ position: static;
+ width: 100%;
+ top: 0;
+ z-index: 1000;
+ box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 .nav { max-width: 1580px; margin: 0 auto; padding: 0 30px; display: flex; justify-content: space-between; align-items: center; }
 .nav-links a { color: white; text-decoration: none; margin-left: 32px; font-weight: 500; }
 .nav-links a:hover { color: #bae6fd; }
-
+ 
 .catalog-category { background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 6px; margin-bottom: 15px; overflow: hidden; transition: all 0.3s ease; }
 .catalog-category summary { padding: 15px 20px; font-size: 18px; font-weight: bold; cursor: pointer; list-style: none; position: relative; background-color: #e2e8f0; color: #333; }
 .catalog-category summary::after { content: '▼'; position: absolute; right: 20px; font-size: 12px; transition: transform 0.2s ease; color: #888; }
 .catalog-category[open] summary::after { transform: rotate(180deg); }
 .category-content { padding: 15px; border-top: 1px solid #e0e0e0; background: #ffffff; }
-
+ 
 #catalogSearch { width: 100% !important; max-width: 100% !important; padding: 14px 24px !important; font-size: 16px !important; color: #ffffff !important; background-color: #1e293b !important; border: 2px solid #334155 !important; border-radius: 10px !important; outline: none !important; transition: all 0.3s ease !important; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important; }
 #catalogSearch:focus { border-color: #3b82f6 !important; box-shadow: 0 0 15px rgba(59, 130, 246, 0.4) !important; background-color: #0f172a !important; }
 #catalogSearch::placeholder { color: #94a3b8 !important; }
-
+ 
 details { background-color: #111827 !important; border: 1px solid #1f2937 !important; border-radius: 10px !important; margin: 15px 0 !important; overflow: hidden !important; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important; }
 details summary { padding: 18px 24px !important; font-size: 16px !important; font-weight: 700 !important; color: #ffffff !important; background: linear-gradient(135deg, #1e293b, #0f172a) !important; cursor: pointer !important; user-select: none !important; transition: all 0.2s ease !important; }
 details summary:hover { background: linear-gradient(135deg, #2563eb, #1d4ed8) !important; color: #ffffff !important; }
-
-/* СТИЛИ ДЛЯ КНОПОК "VIEW SPECS" */
-table td button, table td .view-specs {
-    display: inline-block !important;
-    visibility: visible !important;
-    padding: 10px 20px !important;
-    background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
-    color: #ffffff !important;
-    border: none !important;
-    border-radius: 6px !important;
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    cursor: pointer !important;
-    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease !important;
+ 
+/* КРАСИВЫЕ КНОПКИ */
+table td button.view-specs {
+ display: inline-block !important;
+ visibility: visible !important;
+ padding: 8px 16px !important;
+ background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+ color: #ffffff !important;
+ border: none !important;
+ border-radius: 6px !important;
+ font-size: 13px !important;
+ font-weight: 600 !important;
+ cursor: pointer !important;
+ transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease !important;
 }
-table td button:hover, table td .view-specs:hover {
-    transform: scale(1.06) !important;
-    filter: brightness(1.2) !important;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4) !important;
+table td button.view-specs:hover {
+ transform: scale(1.06) !important;
+ filter: brightness(1.2) !important;
+ box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4) !important;
 }
-table td button:active, table td .view-specs:active { transform: scale(0.97) !important; }
-</style>
-</head>
-<body>
-<!-- Исправленное модальное окно -->
-<div id="productModal" class="modal" style="display: none !important; position: fixed !important; z-index: 999999 !important; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85) !important; backdrop-filter: blur(4px);">
-    <div class="modal-content" style="background-color: #ffffff !important; color: #1e293b !important; margin: 10% auto !important; padding: 30px !important; border-radius: 12px !important; width: 90% !important; max-width: 480px !important; position: relative !important; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3) !important;">
-        <span class="close-button" onclick="closeModal()" style="position: absolute !important; right: 20px !important; top: 15px !important; font-size: 36px !important; cursor: pointer !important; color: #94a3b8 !important; line-height: 1 !important;">&times;</span>
-        <h2 id="modalTitle" style="margin-top: 0 !important; color: #0f172a !important; font-size: 24px !important; border-bottom: 2px solid #e2e8f0 !important; padding-bottom: 10px !important;">Technical Specifications</h2>
-        <table style="width: 100% !important; margin-top: 20px !important; border-collapse: collapse !important; background: transparent !important;">
-            <tr style="border-bottom: 1px solid #e2e8f0 !important;"><td style="padding: 12px 8px !important; font-weight: bold !important; color: #475569 !important; width: 40% !important; text-align: left !important;">Type:</td><td id="modalMaterial" style="padding: 12px 8px !important; color: #0f172a !important; text-align: left !important;">-</td></tr>
-            <tr style="border-bottom: 1px solid #e2e8f0 !important;"><td style="padding: 12px 8px !important; font-weight: bold !important; color: #475569 !important; text-align: left !important;">Current Range:</td><td id="modalStandard" style="padding: 12px 8px !important; color: #0f172a !important; text-align: left !important;">-</td></tr>
-            <tr style="border-bottom: 1px solid #e2e8f0 !important;"><td style="padding: 12px 8px !important; font-weight: bold !important; color: #475569 !important; text-align: left !important;">Package:</td><td id="modalLeak" style="padding: 12px 8px !important; color: #0f172a !important; text-align: left !important;">-</td></tr>
-            <tr style="border-bottom: 1px solid #e2e8f0 !important;"><td style="padding: 12px 8px !important; font-weight: bold !important; color: #475569 !important; text-align: left !important;">Application:</td><td id="modalTemp" style="padding: 12px 8px !important; color: #0f172a !important; text-align: left !important;">-</td></tr>
-        </table>
-    </div>
-</div>
+table td button.view-specs:active { transform: scale(0.97) !important; }
 
-<!-- Единственный рабочий скрипт управления -->
-<style>
-/* Чистые стили для модального окна чертежей */
+/* Модальное окно */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 99999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(4px);
+ display: none;
+ position: fixed;
+ z-index: 99999;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0, 0, 0, 0.85);
+ backdrop-filter: blur(4px);
 }
 .modal-content {
-    background-color: #1e293b;
-    color: #ffffff;
-    margin: 5% auto;
-    padding: 25px;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 650px;
-    position: relative;
-    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5);
-    border: 1px solid #334155;
+ background-color: #1e293b;
+ color: #ffffff;
+ margin: 5% auto;
+ padding: 25px;
+ border-radius: 12px;
+ width: 90%;
+ max-width: 650px;
+ position: relative;
+ box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5);
+ border: 1px solid #334155;
 }
 .close-button {
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    font-size: 36px;
-    cursor: pointer;
-    color: #94a3b8;
-    line-height: 1;
-    transition: color 0.2s;
+ position: absolute;
+ right: 20px;
+ top: 15px;
+ font-size: 36px;
+ cursor: pointer;
+ color: #94a3b8;
+ line-height: 1;
+ transition: color 0.2s;
 }
 .close-button:hover { color: #ffffff; }
 .schematic-container {
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 15px;
-    text-align: center;
-    box-shadow: inset 0 2px 8px rgba(0,0,0,0.2);
+ background: #ffffff;
+ padding: 15px;
+ border-radius: 8px;
+ margin-top: 15px;
+ text-align: center;
 }
 .schematic-container img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+ max-width: 100%;
+ height: auto;
+ display: block;
+ margin: 0 auto;
 }
 </style>
+</head>
+<body>
 
 <div id="productModal" class="modal">
-    <div class="modal-content">
-        <span class="close-button" onclick="closeModal()">&times;</span>
-        <h2 id="modalTitle" style="margin-top:0; color:#60a5fa; font-size:22px; border-bottom:2px solid #334155; padding-bottom:10px;">Technical Specifications</h2>
-        <p style="color: #94a3b8; font-weight: 600; margin-top: 15px; margin-bottom: 5px;">Schematic / Dimensions:</p>
-        <div class="schematic-container">
-            <img id="modalImage" src="" alt="Product Schematic">
-        </div>
-    </div>
+ <div class="modal-content">
+ <span class="close-button" onclick="closeModal()">&times;</span>
+ <h2 id="modalTitle" style="margin-top:0; color:#60a5fa; font-size:22px; border-bottom:2px solid #334155; padding-bottom:10px;">Technical Specifications</h2>
+ <p style="color: #94a3b8; font-weight: 600; margin-top: 15px; margin-bottom: 5px;">Schematic / Dimensions:</p>
+ <div class="schematic-container">
+ <img id="modalImage" src="" alt="Product Schematic">
+ </div>
+ </div>
 </div>
-
-
+ 
 <div style="position: fixed; top: 25px; left: 25px; z-index: 9999;">
-    <a href="index.html" 
-       style="display: inline-flex; align-items: center; gap: 10px; 
-              padding: 14px 24px; background: linear-gradient(135deg, #1e40af, #3b82f6); 
-              color: white; text-decoration: none; border-radius: 50px; 
-              font-weight: 600; box-shadow: 0 6px 20px rgba(59,130,246,0.3); 
-              transition: all 0.3s;">
-        ← SkySwitch
-
-    </a>
+ <a href="index.html" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; background: linear-gradient(135deg, #1e40af, #3b82f6); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; box-shadow: 0 6px 20px rgba(59,130,246,0.3); transition: all 0.3s;">
+ ← SkySwitch
+ </a>
 </div>
-<!-- ==================== UNIFIED HEADER ==================== -->
+
 <header class="header">
-    <div class="nav">
-        
-        <!-- Logo + Brand Name in one line -->
-        <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: white;">
-            <img src="https://imgur.com/5jlSX4v.png" 
-                 alt="SkySwitch Logo" 
-                 style="height: 100px; margin-right: 12px;">
-            <span style="font-size: 2.2rem; font-weight: 700; letter-spacing: -0.5px; white-space: nowrap;">
-                SkySwitch Technologies
-            </span>
-        </a>
-
-        <!-- Navigation -->
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Company</a>
-            <a href="index.html#applications">Applications</a>
-            <a href="catalog.html">Full Catalog</a>
-            <a href="index.html#contacts">Contacts</a>
-        </nav>
-
-    </div>
+ <div class="nav">
+ <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: white;">
+ <img src="https://imgur.com/5jlSX4v.png" alt="SkySwitch Logo" style="height: 100px; margin-right: 12px;">
+ <span style="font-size: 2.2rem; font-weight: 700; letter-spacing: -0.5px; white-space: nowrap;">
+ SkySwitch Technologies
+ </span>
+ </a>
+ <nav class="nav-links">
+ <a href="index.html">Home</a>
+ <a href="about.html">About Company</a>
+ <a href="index.html#applications">Applications</a>
+ <a href="catalog.html">Full Catalog</a>
+ <a href="index.html#contacts">Contacts</a>
+ </nav>
+ </div>
 </header>
-
+ 
 <div class="container">
-
-<h2 style="text-align:center; color:#bfdbfe;">Full Product Catalog 2026</h2>
-
-<!-- ==================== ВВЕДЕНИЕ ==================== -->
-<div class="highlight">
-
-<!-- ==================== ЧАСТЬ 1 ==================== -->
-<!-- Поле живого поиска -->
-<div style="margin-bottom: 15px; position: relative;">
-<input type="text" id="catalogSearch" placeholder="Enter the model to search for...">
-</div>
-
-<details class="catalog-category" open>
-  <summary>1. Sealed electromagnetic relay</summary>
-  <div class="category-content">
-<table>
-    <thead>
-        <tr>
-            <th>Product Model</th>
-            <th>Picture</th>
-            <th>Dimensions (mm)</th>
-            <th>Temperature (°C)</th>
-            <th>Contact Form</th>
-            <th>Vibration</th>
-            <th>Contact Load &amp; Lifetime</th>
-            <th>Benchmarking Model</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-
-
+ <h2 style="text-align:center; color:#bfdbfe;">Full Product Catalog 2026</h2>
+ 
+ <div style="margin-bottom: 15px; position: relative;">
+ <input type="text" id="catalogSearch" placeholder="Enter the model to search for...">
+ </div>
+ 
+ <details class="catalog-category" open>
+ <summary>1. Sealed electromagnetic relay</summary>
+ <div class="category-content">
+ <table>
+ <thead>
+ <tr>
+ <th>Product Model</th>
+ <th>Picture</th>
+ <th>Dimensions (mm)</th>
+ <th>Temperature (°C)</th>
+ <th>Contact Form</th>
+ <th>Vibration</th>
+ <th>Contact Load &amp; Lifetime</th>
+ <th>Benchmarking Model</th>
+ <th>Action</th>
+ </tr>
+ </thead>
+ <tbody>
+ 
+ <tr>
+ <td class="center"><span class="model">1J1Z1A</span></td>
+ <td class="center"><img src="https://imgur.com/PQCZJCx.jpg" class="product-img" alt=""></td>
+ <td>Φ8.5×7.1 Resistance sealing welding</td>
+ <td class="center">-65~125</td>
+ <td class="center">1PDT</td>
+ <td class="center">Sinusoidal: 196m/s² 10~2000Hz Random: 169.1m/s² 20(m/s²)²/Hz</td>
+ <td>1A, 28Vd.c. 1×10⁵ cycles</td>
+ <td>Teledyne (411)</td>
+ <td class="center"><button class="view-specs">View Specs</button></td>
+ </tr>
+ 
+ <tr>
+ <td class="center"><span class="model">1J2Z1A</span></td>
+ <td class="center"><img src="https://imgur.com/PQCZJCx.jpg" class="product-img" alt=""></td>
+ <td>Φ8.5×7.1 Resistance sealing welding</td>
+ <td class="center">-55~85</td>
+ <td class="center">2PDT</td>
+ <td class="center">Sinusoidal: 196m/s² 10~2000Hz</td>
+ <td>1A, 28Vd.c. 1×10⁵ cycles</td>
+ <td>Teledyne (412) Tyco (MA)</td>
+ <td class="center"><button class="view-specs">View Specs</button></td>
+ </tr>
+ 
+ <tr>
+ <td class="center"><span class="model">1J2Z1AG</span></td>
+ <td class="center"><img src="https://imgur.com/PQCZJCx.jpg" class="product-img" alt=""></td>
+ <td>Φ8.5×7.1 Resistance sealing welding</td>
+ <td class="center">-55~85</td>
+ <td class="center">2PDT</td>
+ <td class="center">Sinusoidal: 196m/s² 10~2000Hz</td>
+ <td>1A, 28Vd.c. 1×10⁵ cycles</td>
+ <td>Teledyne (412G) Tyco (MAG)</td>
+ <td class="center"><button class="view-specs">View Specs</button></td>
+ </tr>
 
         <tr>
             <td class="center"><span class="model">1J1Z1A</span></td>
@@ -237,7 +234,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
             <td>Teledyne (411)</td>
-
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -253,6 +250,7 @@ Random:
 10~2000Hz</td>
             <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
             <td>Teledyne (412) Tyco (MA)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -269,6 +267,7 @@ Random:
 10~2000Hz</td>
             <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
             <td>Teledyne (432) Tyco (MS)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -288,6 +287,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>0.5A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
             <td>Teledyne (114D)Tyco (MA)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 <tr>
@@ -304,6 +304,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
             <td>Teledyne (134) Tyco (MG)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -322,6 +323,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
             <td>Teledyne (134D) Tyco (MGAD)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -340,6 +342,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
             <td>РЭК23, РЭС49</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -358,6 +361,7 @@ Random:
 40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>2A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -377,6 +381,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>1A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
             <td>РЭС60, РЭС80</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -396,6 +401,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>2A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -415,6 +421,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>2A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
             <td>Tyco (3SBC)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -433,6 +440,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>5A, 28Vd.c. 3×10<sup>4</sup> cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -451,6 +459,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>10A, 28Vd.c. 2×10<sup>4</sup> cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -470,6 +479,7 @@ Random:
 40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>15A, 28Vd.c. 2×10<sup>4</sup> cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -486,6 +496,7 @@ Random:
 </td>
             <td>2A, 27Vd.c. 2×10<sup>4</sup> cycles</td>
             <td>РЭС47</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -503,6 +514,7 @@ Random:
 </td>
             <td>5A, 28Vd.c. 2×10<sup>4</sup> cycles</td>
             <td>Tyco (HFW4/HFC-5A)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -520,6 +532,7 @@ Random:
 </td>
             <td>8A, 28Vd.c. 1×10<sup>4</sup> cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -539,6 +552,7 @@ Random:
 40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>10A, 28Vd.c. 3×10<sup>4</sup> cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -555,6 +569,7 @@ Random:
 10~2000Hz</td>
             <td>10A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
             <td>Leach US (XC) Leach EU (M215)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -570,6 +585,7 @@ Random:
 10~2000Hz</td>
             <td>15A, 28Vd.c. 1×10<sup>4</sup> cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -586,6 +602,7 @@ Random:
 10~2000Hz</td>
             <td>5A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
             <td>Leach EU (M205)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -604,6 +621,7 @@ Random:
 40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>10A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
             <td>Leach EU (M230)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -623,6 +641,7 @@ Random:
 40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>5A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
             <td>Leach EU (M220)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -641,6 +660,7 @@ Random:
 40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>10A, 28Vd.c. 1×10<sup>4</sup> cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -664,6 +684,7 @@ Random:
 </td>
             <td>25A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
             <td>Leach US (JC) Leach EU (M320)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -683,6 +704,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>25A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
             <td>Leach EU (M320)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -703,6 +725,7 @@ Random:
 40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>40A, 28Vd.c. 1×10<sup>4</sup> cycles</td>
             <td>Leach EU (M320)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -719,6 +742,7 @@ Random:
 10~3000Hz</td>
             <td>12A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
             <td>Leach US (J) Leach EU (M300) Tyco (FCA-210)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -738,6 +762,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>10A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
             <td>Leach EU (M300)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -759,6 +784,7 @@ Random:
 </td>
             <td>15A, 28Vd.c. 1×10<sup>5</sup> cycles</td>
             <td>Leach EU (M300)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -778,6 +804,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>25A, 28Vd.c. 2×10<sup>4</sup> cycles</td>
             <td>Leach US (KC) Leach EU (M500) Tyco (FCA-325)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -797,6 +824,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>30A, 28Vd.c. 1×10<sup>4</sup> cycles</td>
             <td>Leach EU (M500)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -817,6 +845,7 @@ Random:
 10÷40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>30A, 28Vd.c. 1×10<sup>4</sup> cycles</td>
             <td>Leach EU (M400)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -836,6 +865,7 @@ Random:
 40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>10A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
             <td>Leach EU (M400)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -855,6 +885,7 @@ Random:
 40(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>20A, 28Vd.c. 1×10<sup>4</sup> cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -874,6 +905,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>50A, 28Vd.c. 2×10<sup>4</sup> cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -893,6 +925,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>50A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -913,6 +946,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>75A, 28Vd.c. 2×10<sup>4</sup> cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -932,6 +966,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>30A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -951,6 +986,7 @@ Random:
 20(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>30A, 28Vd.c. 5×10<sup>4</sup> cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -966,6 +1002,7 @@ Random:
 10~1500Hz</td>
             <td>2A, 27Vd.c. 1×10<sup>5</sup> cycles</td>
             <td>РЭС8</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -989,6 +1026,7 @@ Random:
 10(m/s<sup>2</sup>)<sup>2</sup>/Hz</td>
             <td>25A, 28d.c. 1×10<sup>4</sup> cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 
@@ -1008,6 +1046,7 @@ Random:
 </td>
             <td>25A, 28d.c. 1×10<sup>4</sup> cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
     </tbody>
@@ -1042,6 +1081,7 @@ Random:
             <td>Sinusoidal: 196m/s² 10~2000Hz<br>Random: 239.1m/s² 40(m/s²)²/Hz</td>
             <td>1A, 28Vd.c.<br>1×10⁵ cycles</td>
             <td>Teledyne (422)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">4JM2Z2A</span></td>
@@ -1052,6 +1092,7 @@ Random:
             <td>Sinusoidal: 294m/s² 10~3000Hz<br>Random: 169.1m/s² 20(m/s²)²/Hz</td>
             <td>2A, 28Vd.c.<br>1×10⁵ cycles</td>
             <td>Leach EU (GP2)<br>Tyco (LS)<br>Teledyne (J255)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">5JM2Z2A</span></td>
@@ -1062,6 +1103,7 @@ Random:
             <td>Sinusoidal: 147m/s² 10~2000Hz<br>Random: 169.1m/s² 20(m/s²)²/Hz</td>
             <td>2A, 28Vd.c.<br>5×10⁴ cycles</td>
             <td>РПС32<br>РПК44</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">6JM1Z10A</span></td>
@@ -1072,6 +1114,7 @@ Random:
             <td>Sinusoidal: 196m/s² 10~2000Hz</td>
             <td>10A, 28Vd.c.<br>5×10⁴ cycles</td>
             <td>Leach US (XCL)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">6JM2Z5A</span></td>
@@ -1082,6 +1125,7 @@ Random:
             <td>Sinusoidal: 147m/s² 10~3000Hz<br>Random: 239.1m/s² 40(m/s²)²/Hz</td>
             <td>5A, 28Vd.c.<br>5×10⁴ cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">6JM3Z10A</span></td>
@@ -1092,6 +1136,7 @@ Random:
             <td>Sinusoidal: 196m/s² 10~3000Hz<br>Random: 169.1m/s² 20(m/s²)²/Hz</td>
             <td>10A, 28Vd.c.<br>5×10⁴ cycles</td>
             <td>Leach US (YCL)<br>Leach EU (M232)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <!-- Новые модели из вашего изображения -->
         <tr>
@@ -1103,6 +1148,7 @@ Random:
             <td>Sinusoidal: 294m/s² 10~3000Hz<br>Random: 239.1m/s² 40(m/s²)²/Hz</td>
             <td>5A, 28Vd.c.<br>1×10⁵ cycles</td>
             <td>Leach US (Y)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">7JM1Z25A</span></td>
@@ -1113,6 +1159,7 @@ Random:
             <td>Sinusoidal: 196m/s² 10~3000Hz<br>Random: 169.1m/s² 20(m/s²)²/Hz</td>
             <td>25A, 28Vd.c.<br>5×10⁴ cycles</td>
             <td>Leach US (JCL)<br>Tyco (FCA-125)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">7JM2Z10A</span></td>
@@ -1123,6 +1170,7 @@ Random:
             <td>Sinusoidal: 294m/s² 10~3000Hz<br>Random: 239.1m/s² 40(m/s²)²/Hz</td>
             <td>10A, 28Vd.c.<br>5×10⁴ cycles</td>
             <td>Leach US (JL)<br>Leach EU (M302)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">7JM2Z15A</span></td>
@@ -1133,6 +1181,7 @@ Random:
             <td>Sinusoidal: 294m/s² 10~3000Hz<br>Random: 239.1m/s² 40(m/s²)²/Hz</td>
             <td>15A, 28Vd.c.<br>1×10⁵ cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">8JM3Z25A</span></td>
@@ -1143,6 +1192,7 @@ Random:
             <td>Sinusoidal: 196m/s² 10~2000Hz<br>Random: 169.1m/s² 20(m/s²)²/Hz</td>
             <td>25A, 28Vd.c.<br>2×10⁴ cycles</td>
             <td>Leach US (KCL)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">8JM4Z15A</span></td>
@@ -1153,6 +1203,7 @@ Random:
             <td>Sinusoidal: 294m/s² 10~3000Hz<br>Random: 239.1m/s² 40(m/s²)²/Hz</td>
             <td>15A, 28Vd.c.<br>1×10⁵ cycles</td>
             <td>Leach EU (M402)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">9JM12Z2A</span></td>
@@ -1163,6 +1214,7 @@ Random:
             <td>Sinusoidal: 98m/s² 10~1500Hz</td>
             <td>2A, 28Vd.c.<br>1×10⁵ cycles</td>
             <td>DP12</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
     </tbody>
@@ -1199,6 +1251,7 @@ Random:
             <td>98m/s²<br>10~2000Hz</td>
             <td>25A<br>1×10⁶ cycles</td>
             <td>Gigavac: G43A<br>Kilovac: K43A</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">9JPK1D</span></td>
@@ -1209,6 +1262,7 @@ Random:
             <td>98m/s²<br>10~2000Hz</td>
             <td>25A<br>1×10⁶ cycles</td>
             <td>Gigavac: G43B<br>Kilovac: K43B</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">9JPK1Z</span></td>
@@ -1219,6 +1273,7 @@ Random:
             <td>98m/s²<br>10~2000Hz</td>
             <td>25A<br>1×10⁶ cycles</td>
             <td>Gigavac: G43C<br>Kilovac: K43C</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">11JPT-SPDT50S</span></td>
@@ -1229,6 +1284,7 @@ Random:
             <td>98m/s²<br>10~2000Hz</td>
             <td>100W @ 1GHz<br>1×10⁶ cycles</td>
             <td>Radiall: 570413000<br>Teledyne: CCS-33S<br>Dowkey: 401T-20802</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">11JPT-DPDT50S</span></td>
@@ -1239,6 +1295,7 @@ Random:
             <td>98m/s²<br>10~2000Hz</td>
             <td>100W @ 1GHz<br>1×10⁶ cycles</td>
             <td>Radiall: 577412000<br>Teledyne: CCS-37S<br>Dowkey: 411CT-230802</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">11JPT-SPDT50N</span></td>
@@ -1249,6 +1306,7 @@ Random:
             <td>98m/s²<br>10~2000Hz</td>
             <td>150W @ 3GHz<br>1×10⁶ cycles</td>
             <td>Radiall: 570013000<br>Teledyne: CCS-32<br>Dowkey: 402T-330102</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
 <tr>
@@ -1260,6 +1318,7 @@ Random:
             <td>98m/s² 10~2000Hz</td>
             <td>800W @ 30MHz<br>1×10⁶ cycles</td>
             <td>Radiall: 577113000<br>Teledyne: CCS-47<br>Dowkey: 412T-230102</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">11JPTSPDT75S</span></td>
@@ -1270,6 +1329,7 @@ Random:
             <td>98m/s² 10~2000Hz</td>
             <td>24W @ 500MHz<br>1×10⁶ cycles</td>
             <td>PПB5/7-PC4.521.326</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">11JPT-2Z50C</span></td>
@@ -1280,6 +1340,7 @@ Random:
             <td>196m/s² 10~2000Hz</td>
             <td>2A, 28Vd.c.<br>1×10⁵ cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
     </tbody>
 </table>
@@ -1316,6 +1377,7 @@ Random:
             <td>A ver: 98m/s² 10~500Hz<br>B ver: 147m/s²</td>
             <td>50A, 27Vd.c. (Resistive)<br>5×10⁴ cycles</td>
             <td>ТКД501<br>ДОД</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">1J1H50A-I</span></td>
@@ -1326,6 +1388,7 @@ Random:
             <td>44.1m/s² 10~2000Hz</td>
             <td>50A, 27Vd.c. (Resistive)<br>5×10⁴ cycles</td>
             <td>КМ-50ДВ</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">1J1H100A</span></td>
@@ -1336,6 +1399,7 @@ Random:
             <td>44.1m/s² 10~2000Hz</td>
             <td>100A, 27Vd.c. (Resistive)<br>5×10⁴ cycles</td>
             <td>КМ-100ДВ</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">1J1H200A</span></td>
@@ -1346,6 +1410,7 @@ Random:
             <td>49m/s² 10~500Hz</td>
             <td>200A, 27Vd.c. (Resistive)<br>5×10⁴ cycles</td>
             <td>ТКС201 ДОД</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">1J3H3D25A</span></td>
@@ -1356,6 +1421,7 @@ Random:
             <td>98m/s² 10~500Hz</td>
             <td>25A, 115/200Va.c. 400Hz<br>5×10⁴ cycles</td>
             <td>ТКД233 ДОД</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">1J3H100A</span></td>
@@ -1366,6 +1432,7 @@ Random:
             <td>98m/s² 10~500Hz</td>
             <td>150A, 115/200Va.c. 400Hz<br>5×10⁴ cycles</td>
             <td>ТКС103 ДОД</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">2J1H100A</span></td>
@@ -1376,6 +1443,7 @@ Random:
             <td>Sinusoidal: 98m/s² 10~2000Hz<br>Random: 4(m/s²)²/Hz</td>
             <td>Main: 100A, 28Vd.c.<br>Aux: 5A, 28Vd.c.<br>5×10⁴ cycles</td>
             <td>101CC01 ECE</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">2J1H200A</span></td>
@@ -1386,6 +1454,7 @@ Random:
             <td>Sinusoidal: 98m/s² 10~2000Hz<br>Random: 4(m/s²)²/Hz</td>
             <td>Main: 200A, 28Vd.c.<br>Aux: 5A, 28Vd.c.<br>5×10⁴ cycles</td>
             <td>2520MM ECE<br>S209 Leach</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">2J3H3D30A</span></td>
@@ -1396,6 +1465,7 @@ Random:
             <td>Sinusoidal: 98m/s² 10~2000Hz<br>Random: 4(m/s²)²/Hz</td>
             <td>Main: 30A, 115/200Va.c. 400Hz<br>Aux: 5A, 115Va.c.<br>5×10⁴ cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">2J3H3D150A</span></td>
@@ -1406,6 +1476,7 @@ Random:
             <td>Sinusoidal: 98m/s² 10~2000Hz<br>Random: 4(m/s²)²/Hz</td>
             <td>Main: 150A, 115/200Va.c. 400Hz<br>Aux: 5A, 115/200Va.c.<br>5×10⁴ cycles</td>
             <td>25860SBM ECE</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">3J1H200A</span></td>
@@ -1416,6 +1487,7 @@ Random:
             <td>Sinusoidal: 98m/s² 5~2000Hz<br>Random: 10(m/s²)²/Hz</td>
             <td>Main: 200A, 28Vd.c.<br>Aux: 5A, 28Vd.c.<br>5×10⁴ cycles</td>
             <td>CC0201P-XXR02B<br>Leach</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">3J1H400A</span></td>
@@ -1426,6 +1498,7 @@ Random:
             <td>Sinusoidal: 98m/s² 10~2000Hz<br>Random: 10(m/s²)²/Hz</td>
             <td>Main: 400A, 28Vd.c.<br>Aux: 5A, 28Vd.c.<br>5×10⁴ cycles</td>
             <td>CC0401P-XXN52B<br>Leach</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">3J3H100A</span></td>
@@ -1436,6 +1509,7 @@ Random:
             <td>Sinusoidal: 98m/s² 10~2000Hz<br>Random: 16(m/s²)²/Hz</td>
             <td>Main: 100A, 115/200Va.c.<br>Aux: 5A, 28.5Vd.c.<br>5×10⁴ cycles</td>
             <td>CA090-003 Leach</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">3J3H375A</span></td>
@@ -1446,6 +1520,7 @@ Random:
             <td>Sinusoidal: 98m/s² 10~2000Hz<br>Random: 16(m/s²)²/Hz</td>
             <td>Main: 375A, 115/200Va.c. 400Hz<br>Aux: 5A, 28.5Vd.c.<br>5×10⁴ cycles</td>
             <td>CA350-001-PR Leach</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">4J1H150A</span></td>
@@ -1456,6 +1531,7 @@ Random:
             <td>Sinusoidal: 147m/s² 10~2000Hz<br>Random: 6(m/s²)²/Hz</td>
             <td>Main: 150A, 270Vd.c.<br>Aux: 2A, 28Vd.c.<br>1×10⁴ cycles</td>
             <td>EV150 Tyco</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">4J1H350A</span></td>
@@ -1466,6 +1542,7 @@ Random:
             <td>Sinusoidal: 147m/s² 10~2000Hz<br>Random: 6(m/s²)²/Hz</td>
             <td>Main: 350A, 270Vd.c.<br>Aux: 2A, 28Vd.c.<br>1×10⁴ cycles</td>
             <td>EV500 Tyco</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">4J1H400AI</span></td>
@@ -1476,6 +1553,7 @@ Random:
             <td>Sinusoidal: 49m/s² 10~500Hz</td>
             <td>Main: 400A, 850Vd.c.<br>Aux: 2A, 28Vd.c.<br>1×10⁴ cycles</td>
             <td>ECPN350<br>BHAADA Tyco</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">4J1H600AI</span></td>
@@ -1486,6 +1564,7 @@ Random:
             <td>Sinusoidal: 49m/s² 10~500Hz</td>
             <td>Main: 600A, 850Vd.c.<br>Aux: 2A, 28Vd.c.<br>1×10⁴ cycles</td>
             <td>ECPN650<br>BHAADB Tyco</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
     </tbody>
@@ -1524,6 +1603,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>2A, 50Vd.c.<br>1A, ±50 Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">1JG1H80-1.6A</span></td>
@@ -1534,6 +1614,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>1.6A, 80Vd.c.<br>0.8A, ±80 Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">1JG2H330-0.1A</span></td>
@@ -1544,6 +1625,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>0.1A, ±330Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">1JG2H80-0.6A</span></td>
@@ -1554,6 +1636,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>0.6A, ±80Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">1JG2H80-2.5A</span></td>
@@ -1564,6 +1647,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>2.5A, ±80Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">1JG4H330-0.1A</span></td>
@@ -1574,6 +1658,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>2A, 50Vd.c.<br>1A, ±50 Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         
         <tr>
@@ -1585,6 +1670,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>0.6A, ±80Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">1JG4H80-2.5A</span></td>
@@ -1595,6 +1681,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>2.5A, 80Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">1JG4H80-2A</span></td>
@@ -1605,6 +1692,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>2A, 80Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">2JG1H80-1A</span></td>
@@ -1615,6 +1703,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>1A, ±80Vd.c.</td>
             <td>AVAGO ASSR1218</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">2JG1H80-5A</span></td>
@@ -1625,6 +1714,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>5A, 80Vd.c.<br>2.5A, ±80Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">2JG1H50-5A</span></td>
@@ -1635,6 +1725,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>5A, 50Vd.c.<br>2.5A, ±50Vd.c.</td>
             <td>AVAGO ASSR711X</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">2JG1H80-8A</span></td>
@@ -1645,6 +1736,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>8A, 80Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">2JG1H80-20A</span></td>
@@ -1655,6 +1747,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>20A, 80Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">2JG2H80-2A</span></td>
@@ -1665,6 +1758,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>20A, 80Vd.c.</td>
             <td>AVAGO ASSR1228</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">2JG4H80-2A</span></td>
@@ -1675,6 +1769,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>2A, ±80Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">2JG4H80-3A</span></td>
@@ -1685,6 +1780,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>3A, 80Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">2JG4H80-5A</span></td>
@@ -1695,6 +1791,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>5A, 80Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">2JG1D50-0.2A</span></td>
@@ -1705,6 +1802,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>0.2A, ±50Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">2JG1D180-0.3A</span></td>
@@ -1715,6 +1813,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>0.3A, 180Vd.c.<br>0.15A, ±180Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">2JG2D50-0.3A</span></td>
@@ -1725,6 +1824,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>0.3A, ±50Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">2JG4D50-0.2A</span></td>
@@ -1735,6 +1835,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>0.2A, ±50Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
     </tbody>
 </table>
@@ -1769,6 +1870,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>6A, 80Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">4JG1H60-10A</span></td>
@@ -1779,6 +1881,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>10A, 60Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">4JG1H540-20A</span></td>
@@ -1789,6 +1892,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>20A, 540Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">4JG1H270-10A</span></td>
@@ -1799,6 +1903,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>10A, 270Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">4JG1H60-20A</span></td>
@@ -1809,6 +1914,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>20A, 60Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">4JG1H50-3A</span></td>
@@ -1819,6 +1925,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 30(m/s²)²/Hz</td>
             <td>3A, ±50Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">4JG1H380-7A</span></td>
@@ -1829,6 +1936,7 @@ Random:
             <td>Sinusoidal: 294m/s² 10~3000Hz<br>Random: 30(m/s²)²/Hz</td>
             <td>7A, 380Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">4JG1H80-40A</span></td>
@@ -1839,6 +1947,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>40A, 80Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">4JG1H60-100A</span></td>
@@ -1849,6 +1958,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~2000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>100A, 60Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">4JG1H270-150A</span></td>
@@ -1859,6 +1969,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>150A, 270Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">4JG2H50-4A</span></td>
@@ -1869,6 +1980,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 30(m/s²)²/Hz</td>
             <td>4A, 50Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">4JG2H60-20A</span></td>
@@ -1879,6 +1991,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>20A, ±60Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">4JG4H50-4A</span></td>
@@ -1889,6 +2002,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 30(m/s²)²/Hz</td>
             <td>4A, 50Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">4JG4H150-5A</span></td>
@@ -1899,6 +2013,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>5A, 150Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">4JG4H50-10A</span></td>
@@ -1909,6 +2024,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 30(m/s²)²/Hz</td>
             <td>10A, 50Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">4JG8H80-5A</span></td>
@@ -1919,6 +2035,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 30(m/s²)²/Hz</td>
             <td>5A, 80Vd.c.</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">9JG1H270-10A</span></td>
@@ -1929,6 +2046,7 @@ Random:
             <td>Sinusoidal: 294m/s² 10~3000Hz<br>Random: 30(m/s²)²/Hz</td>
             <td>10A, 270Vd.c.</td>
             <td>Teledyne PC27010-47XX</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">9JG1H60-25A</span></td>
@@ -1939,6 +2057,7 @@ Random:
             <td>Sinusoidal: 490m/s² 10~3000Hz<br>Random: 30(m/s²)²/Hz</td>
             <td>25A, 60Vd.c.</td>
             <td>Teledyne PC02825-47XX</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
     </tbody>
@@ -1978,6 +2097,7 @@ Random:
             <td class="center">0.9A</td>
             <td class="center">—</td>
             <td>AQH2213(A)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BC3213</span></td>
@@ -1987,6 +2107,7 @@ Random:
             <td class="center">1.2A</td>
             <td class="center">—</td>
             <td>AQH3213(A)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BC5213</span></td>
@@ -1996,6 +2117,7 @@ Random:
             <td class="center">2A</td>
             <td class="center">—</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BC2223</span></td>
@@ -2005,6 +2127,7 @@ Random:
             <td class="center">0.9A</td>
             <td class="center">—</td>
             <td>AQH2223(A)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BC3223 / BC5223</span></td>
@@ -2014,6 +2137,7 @@ Random:
             <td class="center">1.2A / 2A</td>
             <td class="center">—</td>
             <td>AQH3223(A)</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
         <!-- Следующая группа с другой картинкой -->
@@ -2028,6 +2152,7 @@ Random:
             <td class="center">2A</td>
             <td class="center">0.06Ω</td>
             <td>AQY211G2S, G3VM-41GR8</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <!-- Добавляй остальные строки без картинки -->
         <tr>
@@ -2038,6 +2163,7 @@ Random:
             <td class="center">200mA</td>
             <td class="center">2Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">BCY212S</span></td>
@@ -2047,6 +2173,7 @@ Random:
             <td class="center">500mA</td>
             <td class="center">0.8Ω</td>
             <td>AQY212S, G3VM-61G2</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">BCY212G1S</span></td>
@@ -2056,6 +2183,7 @@ Random:
             <td class="center">800mA</td>
             <td class="center">0.22Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">BCY212G2S</span></td>
@@ -2065,6 +2193,7 @@ Random:
             <td class="center">1.3A</td>
             <td class="center">0.15Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">BCY212GS</span></td>
@@ -2074,6 +2203,7 @@ Random:
             <td class="center">2A</td>
             <td class="center">0.07Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">BCY215S</span></td>
@@ -2083,6 +2213,7 @@ Random:
             <td class="center">1.25A</td>
             <td class="center">0.15Ω</td>
             <td>AQY225R1S, G3VM-81G1</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">BCY217S</span></td>
@@ -2092,6 +2223,7 @@ Random:
             <td class="center">180mA</td>
             <td class="center">5Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">BCY217GS</span></td>
@@ -2101,6 +2233,7 @@ Random:
             <td class="center">400mA</td>
             <td class="center">1.25Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">BCY214S</span></td>
@@ -2110,6 +2243,7 @@ Random:
             <td class="center">120mA</td>
             <td class="center">14Ω</td>
             <td>AQY214S, G3VM-401G</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">BCY214ES</span></td>
@@ -2119,6 +2253,7 @@ Random:
             <td class="center">120mA</td>
             <td class="center">14.5Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">BCY214GS</span></td>
@@ -2128,6 +2263,7 @@ Random:
             <td class="center">180mA</td>
             <td class="center">9Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">BCY216S</span></td>
@@ -2137,6 +2273,7 @@ Random:
             <td class="center">80mA</td>
             <td class="center">28Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">BCY412S</span></td>
@@ -2146,6 +2283,7 @@ Random:
             <td class="center">500mA</td>
             <td class="center">2Ω</td>
             <td>AQY412S, G3VM-63G</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">BCY414S</span></td>
@@ -2155,6 +2293,7 @@ Random:
             <td class="center">100mA</td>
             <td class="center">20Ω</td>
             <td>AQY414S</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">BCY212E</span></td>
@@ -2168,6 +2307,7 @@ Random:
             <td class="center">200mA</td>
             <td class="center">2Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCY212</span></td>
@@ -2177,6 +2317,7 @@ Random:
             <td class="center">500mA</td>
             <td class="center">1Ω</td>
             <td>AQY212EH</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCY211G</span></td>
@@ -2186,6 +2327,7 @@ Random:
             <td class="center">3A</td>
             <td class="center">0.04Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCY252</span></td>
@@ -2195,6 +2337,7 @@ Random:
             <td class="center">1.1A</td>
             <td class="center">0.27Ω</td>
             <td>AQY212GH</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCY252G</span></td>
@@ -2204,6 +2347,7 @@ Random:
             <td class="center">1.3A</td>
             <td class="center">0.15Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCY217</span></td>
@@ -2213,6 +2357,7 @@ Random:
             <td class="center">200mA</td>
             <td class="center">5Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCY214</span></td>
@@ -2222,6 +2367,7 @@ Random:
             <td class="center">140mA</td>
             <td class="center">14Ω</td>
             <td>AQY214EH, G3VM-401A, G3VM-401D</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCY216</span></td>
@@ -2231,6 +2377,7 @@ Random:
             <td class="center">80mA</td>
             <td class="center">28Ω</td>
             <td>AQY216EH</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCY412</span></td>
@@ -2240,6 +2387,7 @@ Random:
             <td class="center">500mA</td>
             <td class="center">2Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCY414</span></td>
@@ -2249,6 +2397,7 @@ Random:
             <td class="center">120mA</td>
             <td class="center">20Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">BCV211G4</span></td>
@@ -2262,6 +2411,7 @@ Random:
             <td class="center">4.5A</td>
             <td class="center">0.033Ω</td>
             <td>AQV101</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCV212</span></td>
@@ -2271,6 +2421,7 @@ Random:
             <td class="center">500mA</td>
             <td class="center">1Ω</td>
             <td>AQV212</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCV212G</span></td>
@@ -2280,6 +2431,7 @@ Random:
             <td class="center">1.3A</td>
             <td class="center">0.27Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCV252G</span></td>
@@ -2289,6 +2441,7 @@ Random:
             <td class="center">2.5A</td>
             <td class="center">0.1Ω</td>
             <td>AQV252G, G3VM-61BR, G3VM-61ER</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCV215</span></td>
@@ -2298,6 +2451,7 @@ Random:
             <td class="center">500mA</td>
             <td class="center">0.27Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCV215G1</span></td>
@@ -2307,6 +2461,7 @@ Random:
             <td class="center">1.3A</td>
             <td class="center">0.15Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCV215G2</span></td>
@@ -2316,6 +2471,7 @@ Random:
             <td class="center">2A</td>
             <td class="center">0.15Ω</td>
             <td>AQV215</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCV217</span></td>
@@ -2325,6 +2481,7 @@ Random:
             <td class="center">200mA</td>
             <td class="center">5Ω</td>
             <td>AQV257</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCV214</span></td>
@@ -2334,6 +2491,7 @@ Random:
             <td class="center">140mA</td>
             <td class="center">14Ω</td>
             <td>AQV214</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCV216</span></td>
@@ -2343,6 +2501,7 @@ Random:
             <td class="center">80mA</td>
             <td class="center">35Ω</td>
             <td>AQV216</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCV258</span></td>
@@ -2352,6 +2511,7 @@ Random:
             <td class="center">45mA</td>
             <td class="center">140Ω</td>
             <td>AQV258</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCV412</span></td>
@@ -2361,6 +2521,7 @@ Random:
             <td class="center">500mA</td>
             <td class="center">2Ω</td>
             <td>AQV412EH</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCV414</span></td>
@@ -2370,6 +2531,7 @@ Random:
             <td class="center">100mA</td>
             <td class="center">20Ω</td>
             <td>AQV414</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">BCV278</span></td>
@@ -2382,6 +2544,7 @@ Random:
             <td class="center">30mA</td>
             <td class="center">200Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <!-- Группа SMD8/DIP8 -->
         <tr>
@@ -2396,6 +2559,7 @@ Random:
             <td class="center">2A</td>
             <td class="center">0.06Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW251G</span></td>
@@ -2405,6 +2569,7 @@ Random:
             <td class="center">2.5A</td>
             <td class="center">0.05Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW212E</span></td>
@@ -2414,6 +2579,7 @@ Random:
             <td class="center">200mA</td>
             <td class="center">2Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW212</span></td>
@@ -2423,6 +2589,7 @@ Random:
             <td class="center">500mA</td>
             <td class="center">1Ω</td>
             <td>AQW212EH, G3VM-62C1, G3VM-62F1</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW252</span></td>
@@ -2432,6 +2599,7 @@ Random:
             <td class="center">1.1A</td>
             <td class="center">0.27Ω</td>
             <td>AQW212</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW252G</span></td>
@@ -2441,6 +2609,7 @@ Random:
             <td class="center">2A</td>
             <td class="center">0.07Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW215</span></td>
@@ -2450,6 +2619,7 @@ Random:
             <td class="center">500mA</td>
             <td class="center">0.27Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW255</span></td>
@@ -2459,6 +2629,7 @@ Random:
             <td class="center">1.1A</td>
             <td class="center">0.27Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW217</span></td>
@@ -2468,6 +2639,7 @@ Random:
             <td class="center">180mA</td>
             <td class="center">5Ω</td>
             <td>AQW217</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW214</span></td>
@@ -2477,6 +2649,7 @@ Random:
             <td class="center">140mA</td>
             <td class="center">14Ω</td>
             <td>AQW214, G3VM-402C, G3VM-402F</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW216</span></td>
@@ -2486,6 +2659,7 @@ Random:
             <td class="center">80mA</td>
             <td class="center">28Ω</td>
             <td>AQW216</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">BCW211GS</span></td>
@@ -2498,6 +2672,7 @@ Random:
             <td class="center">2A</td>
             <td class="center">0.06Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW212S1</span></td>
@@ -2507,6 +2682,7 @@ Random:
             <td class="center">200mA</td>
             <td class="center">2Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW212S</span></td>
@@ -2516,6 +2692,7 @@ Random:
             <td class="center">500mA</td>
             <td class="center">0.8Ω</td>
             <td>AQW212S</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW212GS</span></td>
@@ -2525,6 +2702,7 @@ Random:
             <td class="center">1.1A</td>
             <td class="center">0.15Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW215S</span></td>
@@ -2534,6 +2712,7 @@ Random:
             <td class="center">1.1A</td>
             <td class="center">0.15Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW217S</span></td>
@@ -2543,6 +2722,7 @@ Random:
             <td class="center">180mA</td>
             <td class="center">5Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW214S</span></td>
@@ -2552,6 +2732,7 @@ Random:
             <td class="center">120mA</td>
             <td class="center">13Ω</td>
             <td>AQW214S</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW216S</span></td>
@@ -2561,6 +2742,7 @@ Random:
             <td class="center">80mA</td>
             <td class="center">28Ω</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW412S</span></td>
@@ -2570,6 +2752,7 @@ Random:
             <td class="center">500mA</td>
             <td class="center">2Ω</td>
             <td>AQW412S</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW414S</span></td>
@@ -2579,6 +2762,7 @@ Random:
             <td class="center">100mA</td>
             <td class="center">20Ω</td>
             <td>AQW414S</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW612S</span></td>
@@ -2588,6 +2772,7 @@ Random:
             <td class="center">500mA</td>
             <td class="center">1Ω</td>
             <td>AQW612S</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">BCW614S</span></td>
@@ -2597,6 +2782,7 @@ Random:
             <td class="center">100mA</td>
             <td class="center">20Ω</td>
             <td>AQW614S</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">BCS225S</span></td>
@@ -2609,6 +2795,7 @@ Random:
             <td class="center">100mA</td>
             <td class="center">0.3Ω</td>
             <td>AQS225R2S</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 
     </tbody>
@@ -2648,6 +2835,7 @@ Random:
             <td>Sinusoidal: 196m/s² 10~3000Hz<br>Random: 40(m/s²)²/Hz</td>
             <td>2A, 28Vd.c.<br>100000 cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">6JS4Z1-4A</span></td>
@@ -2658,6 +2846,7 @@ Random:
             <td>196m/s² 10~2000Hz</td>
             <td>4A, 28Vd.c.<br>20000 cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">6JS1Z1-10A</span></td>
@@ -2668,6 +2857,7 @@ Random:
             <td>196m/s² 10~2000Hz</td>
             <td>10A, 28Vd.c.<br>20000 cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">6JS2Z1-10A</span></td>
@@ -2678,6 +2868,7 @@ Random:
             <td>196m/s² 10~2000Hz</td>
             <td>10A, 28Vd.c.<br>50000 cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">6JS2Z3-1A</span></td>
@@ -2688,6 +2879,7 @@ Random:
             <td>147m/s² 10~2000Hz</td>
             <td>1A, 28Vd.c. 100000 cycles<br>2A, 28Vd.c. 20000 cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">6JS2Z3-5A</span></td>
@@ -2698,6 +2890,7 @@ Random:
             <td>196m/s² 10~2000Hz</td>
             <td>5A, 28Vd.c.<br>10000 cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">6JS2Z4-2A</span></td>
@@ -2708,6 +2901,7 @@ Random:
             <td>196m/s² 10~2000Hz</td>
             <td>2A, 28Vd.c.<br>50000 cycles</td>
             <td>—</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
     </tbody>
 </table>
@@ -2742,6 +2936,7 @@ Random:
             <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
             <td>Single channel;<br>CTR: ≥50%<br>BVCES: 100Vd.c.</td>
             <td>TOSHIBA TLP521-1</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">5GH2H3201Z</span></td>
@@ -2752,6 +2947,7 @@ Random:
             <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
             <td>CTR: ≥50%<br>BVCES: 100Vd.c.</td>
             <td>TOSHIBA TLP521-2</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">5GH4H3201Z</span></td>
@@ -2762,6 +2958,7 @@ Random:
             <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
             <td>CTR: ≥50%<br>BVCES: 100Vd.c.</td>
             <td>TOSHIBA TLP521-4</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">5GH1H3201J</span></td>
@@ -2772,6 +2969,7 @@ Random:
             <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
             <td>CTR: ≥50%<br>BVCES: 100Vd.c.</td>
             <td>TOSHIBA TLP281</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">5GH2H3201J</span></td>
@@ -2782,6 +2980,7 @@ Random:
             <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
             <td>CTR: ≥50%<br>BVCES: 100Vd.c.</td>
             <td>TOSHIBA TLP281-2</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">5GH4H3201J</span></td>
@@ -2792,6 +2991,7 @@ Random:
             <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
             <td>CTR: ≥50%<br>BVCES: 100Vd.c.</td>
             <td>TOSHIBA TLP281-4</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">5GH1H181</span></td>
@@ -2802,6 +3002,7 @@ Random:
             <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
             <td>CTR: ≥50%<br>BVCES: 100Vd.c.</td>
             <td>TOSHIBA TLP181</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
 <tr>
             <td class="center"><span class="model">5GH1H2502</span></td>
@@ -2812,6 +3013,7 @@ Random:
             <td>Random: 40(m/s²)²/Hz</td>
             <td>Single channel;<br>Rated supply voltage: 5V;<br>Current transmission ratio: 1000~4000%</td>
             <td>ISOCOM PS2502-1</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">5GH2H2502</span></td>
@@ -2822,6 +3024,7 @@ Random:
             <td>Random: 40(m/s²)²/Hz</td>
             <td>Single channel;<br>Rated supply voltage: 5V;<br>Current transmission ratio: 1000~4000%</td>
             <td>ISOCOM PS2502-2</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">5GH4H2502</span></td>
@@ -2832,6 +3035,7 @@ Random:
             <td>Random: 40(m/s²)²/Hz</td>
             <td>Single channel;<br>Rated supply voltage: 5V;<br>Current transmission ratio: 1000~4000%</td>
             <td>ISOCOM PS2502-4</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">5GH1H0601</span></td>
@@ -2842,6 +3046,7 @@ Random:
             <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
             <td>Single channel;<br>Rated supply voltage: 5V;<br>Output current: ≤25mA;<br>Maximum rate: 10Mbit/s</td>
             <td>FAIRCHILD HCPL0601</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">5GH2H0631</span></td>
@@ -2852,6 +3057,7 @@ Random:
             <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
             <td>Single channel;<br>Rated supply voltage: 5V;<br>Output current: ≤25mA;<br>Maximum rate: 10Mbit/s</td>
             <td>AVAGO HCPL0630</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
         <tr>
             <td class="center"><span class="model">5GH4H6651</span></td>
@@ -2862,61 +3068,32 @@ Random:
             <td>Random: 239.1m/s² 40(m/s²)²/Hz</td>
             <td>Single channel;<br>Rated supply voltage: 5V;<br>Output current: ≤25mA;<br>Maximum rate: 10Mbit/s</td>
             <td>AVAGO HCPL-6651</td>
+            <td class="center"><button class="view-specs">View Specs</button></td>
         </tr>
     </tbody>
 </table>
   </div>
 </details>
 
-<div style="text-align:center; margin:50px 0; padding:30px; background:#1e2937; border-radius:12px;">
-    <h2>Do you need full datasheets?</h2>
-    <p style="font-size:1.2rem;">Contact us for full technical specifications, drawings and samples.</p>
-    <p><strong>SkySwitch Technologies — Reliability in extreme conditions</strong></p>
-</div>
-
-<!-- МОДАЛЬНОЕ ОКНО -->
-<div id="specsModal" style="display: none; position: fixed; z-index: 99999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); align-items: center; justify-content: center; overflow: hidden; backdrop-filter: blur(4px);">
-    <div style="background-color: #1e2937; color: #fff; padding: 30px; border-radius: 12px; width: 90%; max-width: 550px; max-height: 85vh; display: flex; flex-direction: column; position: relative; border: 1px solid #374151; font-family: sans-serif;">
-        <span class="close-btn" style="position: absolute; right: 20px; top: 15px; font-size: 28px; cursor: pointer; color: #9ca3af;">&times;</span>
-        <h3 style="margin-top: 0; color: #3b82f6; font-size: 1.4rem; border-bottom: 1px solid #374151; padding-bottom: 10px; flex-shrink: 0;">Technical Specifications</h3>
-        <div style="overflow-y: auto; padding-right: 5px; flex-grow: 1;">
-            <p><strong>Schematic / Dimensions:</strong></p>
-            <div style="text-align: center; margin-top: 10px; background: #fff; padding: 10px; border-radius: 6px;">
-                <img id="modalImg" src="" alt="Schematic" style="max-width: 100%; height: auto; display: block; margin: 10px auto;">
-            </div>
-        </div>
-    </div>
-</div>
-
 <script>
-// Функция закрытия окна
 window.closeModal = function() {
     const modal = document.getElementById('productModal');
     if (modal) modal.style.display = 'none';
 }
 
-// Автоматический перехват клика по кнопкам "View Specs"
 document.addEventListener('click', function(event) {
-    if (event.target && (event.target.tagName === 'BUTTON' || event.target.textContent.trim() === 'View Specs')) {
-        
-        const row = event.target.closest('tr'); // Находим строку таблицы
-        
+    if (event.target && event.target.classList.contains('view-specs')) {
+        const row = event.target.closest('tr');
         if (row) {
-            // Берем название модели из первой ячейки (или ячейки с классом .model)
-            const modelCell = row.querySelector('.model') || row.querySelector('td:first-child');
-            
+            const modelCell = row.querySelector('.model');
             if (modelCell) {
                 const modelName = modelCell.textContent.trim();
-                
-                // Ставим имя модели в заголовок окна
                 document.getElementById('modalTitle').innerText = modelName + ' - Technical Specifications';
                 
                 const modalImg = document.getElementById('modalImage');
                 if (modalImg) {
-                    // Основной путь: ищем в img2 в формате webp
                     let pathToSchematic = 'img2/' + modelName + '.webp';
                     
-                    // Если картинки нет в img2, скрипт автоматически переключится на папку img
                     modalImg.onerror = function() {
                         if (this.src.includes('img2/')) {
                             this.src = 'img/' + modelName + '.webp';
@@ -2929,15 +3106,12 @@ document.addEventListener('click', function(event) {
                     modalImg.style.display = 'block';
                     modalImg.src = pathToSchematic;
                 }
-                
-                // Показываем окно
                 document.getElementById('productModal').style.display = 'block';
             }
         }
     }
 });
 
-// Закрытие по клику на темную область вокруг окна
 window.onclick = function(event) {
     const modal = document.getElementById('productModal');
     if (event.target === modal) {
@@ -2945,20 +3119,14 @@ window.onclick = function(event) {
     }
 }
 
-// СВЕРХБЫСТРЫЙ ПОИСК ПО ТАБЛИЦЕ
 const searchInput = document.getElementById('catalogSearch');
 if (searchInput) {
     searchInput.addEventListener('input', function() {
         const filter = this.value.toLowerCase();
         const tableRows = document.querySelectorAll('table tbody tr');
-        
         tableRows.forEach(row => {
             const rowText = row.textContent.toLowerCase();
-            if (rowText.includes(filter)) {
-                row.style.display = ''; 
-            } else {
-                row.style.display = 'none'; 
-            }
+            row.style.display = rowText.includes(filter) ? '' : 'none';
         });
     });
 }
