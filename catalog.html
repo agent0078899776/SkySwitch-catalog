@@ -2,220 +2,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkySwitch Technologies | Product Catalog 2026</title>
-    <style>
+<style>
+body { font-family: 'Segoe UI', 'Times New Roman', sans-serif; margin:0; background:#0f172a; color:#e2e8f0; line-height:1.55; }
+.container { max-width: 1580px; margin:0 auto; padding:20px; }
+h1 { font-size: 3.2rem; margin:0; }
+h2 { color:#60a5fa; margin:20px 0 20px; border-bottom:3px solid #334155; padding-bottom:12px; }
+h3 { color:#93c5fd; margin-top:40px; }
 
-
-        body { font-family: 'Segoe UI', Times New Roman, sans-serif; margin:0; background:#0f172a; color:#e2e8f0; line-height:1.55; }
-        .header { background: linear-gradient(135deg, #1e40af, #3b82f6); padding:80px 20px; text-align:center; color:white; }
-        .container { max-width: 1580px; margin:0 auto; padding:20px; }
-        h1 { font-size: 3.2rem; margin:0; }
-        h2 { color:#60a5fa; margin:20px 0 20px; border-bottom:3px solid #334155; padding-bottom:12px; }
-        h3 { color:#93c5fd; margin-top:40px; }
-        /* Перекрашиваем контейнер с таблицей внутри раскрытого списка */
-.category-content, 
-details div, 
-details tr, 
-details td {
-    background-color: #0f172a !important; /* Глубокий темно-синий цвет фона */
-    color: #f8fafc !important; /* Делаем текст внутри таблицы светлым и читаемым */
+.category-content, details div, details tr, details td {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
 }
 
-/* Настройка границ таблицы, чтобы они сочетались с темной темой */
-details table, details th, details td {
-    border-color: #334155 !important;
-}
+details table, details th, details td { border-color: #334155 !important; }
+details th { background-color: #1e3a8a !important; color: #ffffff !important; }
+table { width:100%; border-collapse:collapse; margin:25px 0; background:#1e2937; box-shadow:0 4px 20px rgba(0,0,0,0.5); }
+th, td { padding:12px 10px; text-align:center; border-bottom:1px solid #475569; vertical-align:middle; }
+th { background:#1e40af; color:white; text-align:center; }
+.model { font-weight:bold; color:#93c5fd; }
+.product-img { width:100px; height:120px; object-fit:contain; background:#334155; padding:4px; border-radius:5px; }
+.center { text-align:center; }
 
-/* Корректируем шапку таблицы (если нужно сделать её чуть темнее или оставить синей) */
-details th {
-    background-color: #1e3a8a !important; /* Насыщенный темно-синий для заголовков таблицы */
-    color: #ffffff !important;
-}
-        table { width:100%; border-collapse:collapse; margin:25px 0; background:#1e2937; box-shadow:0 4px 20px rgba(0,0,0,0.5); }
-        th, td { padding:12px 10px; text-align:center; border-bottom:1px solid #475569; vertical-align:middle; }
-        th { background:#1e40af; color:white; text-align:center; }
-        .model { font-weight:bold; color:#93c5fd; }
-        .product-img { width:100px; height:120px; object-fit:contain; background:#334155; padding:4px; border-radius:5px; }
-        .center { text-align:center; }
 .header {
     background: linear-gradient(135deg, #1e40af, #3b82f6);
     padding: 16px 0;
-    position: none;
+    position: static;
     width: 100%;
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
-.nav {
-    max-width: 1580px;
-    margin: 0 auto;
-    padding: 0 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+.nav { max-width: 1580px; margin: 0 auto; padding: 0 30px; display: flex; justify-content: space-between; align-items: center; }
+.nav-links a { color: white; text-decoration: none; margin-left: 32px; font-weight: 500; }
+.nav-links a:hover { color: #bae6fd; }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    margin-left: 32px;
-    font-weight: 500;
-}
+.catalog-category { background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 6px; margin-bottom: 15px; overflow: hidden; transition: all 0.3s ease; }
+.catalog-category summary { padding: 15px 20px; font-size: 18px; font-weight: bold; cursor: pointer; list-style: none; position: relative; background-color: #e2e8f0; color: #333; }
+.catalog-category summary::after { content: '▼'; position: absolute; right: 20px; font-size: 12px; transition: transform 0.2s ease; color: #888; }
+.catalog-category[open] summary::after { transform: rotate(180deg); }
+.category-content { padding: 15px; border-top: 1px solid #e0e0e0; background: #ffffff; }
 
-.nav-links a:hover {
-    color: #bae6fd;
-}
-/* Стили для контейнера категории */
-.catalog-category {
-  background: #f8f9fa;
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
-  margin-bottom: 15px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
+#catalogSearch { width: 100% !important; max-width: 100% !important; padding: 14px 24px !important; font-size: 16px !important; color: #ffffff !important; background-color: #1e293b !important; border: 2px solid #334155 !important; border-radius: 10px !important; outline: none !important; transition: all 0.3s ease !important; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important; }
+#catalogSearch:focus { border-color: #3b82f6 !important; box-shadow: 0 0 15px rgba(59, 130, 246, 0.4) !important; background-color: #0f172a !important; }
+#catalogSearch::placeholder { color: #94a3b8 !important; }
 
-/* Стили для заголовка (кнопки) */
-.catalog-category summary {
-  padding: 15px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  list-style: none; /* Убирает стандартную стрелочку в некоторых браузерах */
-  position: relative;
-  background-color: #e2e8f;
-  color: #333;
-}
+details { background-color: #111827 !important; border: 1px solid #1f2937 !important; border-radius: 10px !important; margin: 15px 0 !important; overflow: hidden !important; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important; }
+details summary { padding: 18px 24px !important; font-size: 16px !important; font-weight: 700 !important; color: #ffffff !important; background: linear-gradient(135deg, #1e293b, #0f172a) !important; cursor: pointer !important; user-select: none !important; transition: all 0.2s ease !important; }
+details summary:hover { background: linear-gradient(135deg, #2563eb, #1d4ed8) !important; color: #ffffff !important; }
 
-/* Добавляем красивую кастомную стрелочку справа */
-.catalog-category summary::after {
-  content: '▼';
-  position: absolute;
-  right: 20px;
-  font-size: 12px;
-  transition: transform 0.2s ease;
-  color: #888;
-}
-
-/* Поворачиваем стрелочку, когда категория открыта */
-.catalog-category[open] summary::after {
-  transform: rotate(180deg);
-}
-
-/* Внутренний отступ для таблицы внутри открытой категории */
-.category-content {
-  padding: 15px;
-  border-top: 1px solid #e0e0e0;
-  background: #ffffff;
-}
- /* КРАСИВОЕ ПОЛЕ ПОИСКА */
-    #catalogSearch {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 14px 24px !important;
-        font-size: 16px !important;
-        color: #ffffff !important; /* Белый текст ввода */
-        background-color: #1e293b !important; /* Темно-синий фон поля */
-        border: 2px solid #334155 !important; /* Темная рамка */
-        border-radius: 10px !important;
-        outline: none !important;
-        transition: all 0.3s ease !important;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
-    }
-
-    /* Свечение поиска при клике */
-    #catalogSearch:focus {
-        border-color: #3b82f6 !important;
-        box-shadow: 0 0 15px rgba(59, 130, 246, 0.4) !important;
-        background-color: #0f172a !important;
-    }
-
-    /* Цвет подсказки внутри поиска */
-    #catalogSearch::placeholder {
-        color: #94a3b8 !important;
-    }
-
-    /* СТИЛЬНЫЕ СВЕРНУТЫЕ СТРОКИ (DETAILS) */
-    details {
-        background-color: #111827 !important; /* Почти черный фон контента */
-        border: 1px solid #1f2937 !important; /* Тонкая темная рамка карточки */
-        border-radius: 10px !important;
-        margin: 15px 0 !important;
-        overflow: hidden !important;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
-    }
-
-    /* ЗАГОЛОВКИ СТРОК (SUMMARY) */
-    details summary {
-        padding: 18px 24px !important;
-        font-size: 16px !important;
-        font-weight: 700 !important;
-        color: #ffffff !important; /* Белый текст заголовка */
-        /* Красивый градиент в цвет шапки вашего сайта */
-        background: linear-gradient(135deg, #1e293b, #0f172a) !important; 
-        cursor: pointer !important;
-        user-select: none !important;
-        transition: all 0.2s ease !important;
-    }
-
-    /* Эффект при наведении на свернутую строку */
-    details summary:hover {
-        background: linear-gradient(135deg, #2563eb, #1d4ed8) !important; /* Подсветка синим */
-        color: #ffffff !important;
-    }
-    </style>
-    <!-- Отдельные изолированные стили для всплывающего окна -->
-<style>
-.modal {
-    display: none !important; 
-    position: fixed !important;
-    z-index: 99999 !important; 
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.75) !important;
-}
-
-.modal-content {
-    background-color: #ffffff !important;
-    color: #333333 !important;
-    margin: 12% auto !important;
-    padding: 25px !important;
-    border-radius: 8px !important;
-    width: 90% !important;
-    max-width: 450px !important;
-    position: relative !important;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
-}
-
-.close-button {
-    position: absolute !important;
-    right: 15px !important;
-    top: 10px !important;
-    font-size: 32px !important;
+/* СТИЛИ ДЛЯ КНОПОК "VIEW SPECS" */
+table td button, table td .view-specs {
+    display: inline-block !important;
+    visibility: visible !important;
+    padding: 10px 20px !important;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
     cursor: pointer !important;
-    color: #666 !important;
-    line-height: 1 !important;
+    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease !important;
 }
-.close-button:hover { color: #000 !important; }
-
-.tech-table {
-    width: 100% !important;
-    margin-top: 15px !important;
-    border-collapse: collapse !important;
-    background: transparent !important;
+table td button:hover, table td .view-specs:hover {
+    transform: scale(1.06) !important;
+    filter: brightness(1.2) !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4) !important;
 }
-.tech-table td {
-    padding: 12px 8px !important;
-    border-bottom: 1px solid #dddddd !important;
-    color: #333333 !important;
-    text-align: left !important;
-}
-.tech-table td:first-child { 
-    font-weight: bold !important; 
-    color: #555555 !important; 
-    width: 40% !important;
-}
+table td button:active, table td .view-specs:active { transform: scale(0.97) !important; }
 </style>
 </head>
 <body>
@@ -234,28 +88,68 @@ details th {
 </div>
 
 <!-- Единственный рабочий скрипт управления -->
-<script>
-window.openModal = function(title, type, current, pack, app) {
-    document.getElementById('modalTitle').innerText = title;
-    document.getElementById('modalMaterial').innerText = type;
-    document.getElementById('modalStandard').innerText = current;
-    document.getElementById('modalLeak').innerText = pack;
-    document.getElementById('modalTemp').innerText = app;
-    document.getElementById('productModal').style.setProperty('display', 'block', 'important');
+<style>
+/* Чистые стили для модального окна чертежей */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
 }
-
-window.closeModal = function() {
-    document.getElementById('productModal').style.setProperty('display', 'none', 'important');
+.modal-content {
+    background-color: #1e293b;
+    color: #ffffff;
+    margin: 5% auto;
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 650px;
+    position: relative;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5);
+    border: 1px solid #334155;
 }
-
-window.onclick = function(event) {
-    let modal = document.getElementById('productModal');
-    if (event.target == modal) {
-        modal.style.setProperty('display', 'none', 'important');
-    }
+.close-button {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 36px;
+    cursor: pointer;
+    color: #94a3b8;
+    line-height: 1;
+    transition: color 0.2s;
 }
-</script>
+.close-button:hover { color: #ffffff; }
+.schematic-container {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    text-align: center;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.2);
+}
+.schematic-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+</style>
 
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle" style="margin-top:0; color:#60a5fa; font-size:22px; border-bottom:2px solid #334155; padding-bottom:10px;">Technical Specifications</h2>
+        <p style="color: #94a3b8; font-weight: 600; margin-top: 15px; margin-bottom: 5px;">Schematic / Dimensions:</p>
+        <div class="schematic-container">
+            <img id="modalImage" src="" alt="Product Schematic">
+        </div>
+    </div>
+</div>
 
 
 <div style="position: fixed; top: 25px; left: 25px; z-index: 9999;">
@@ -2995,302 +2889,84 @@ Random:
 </div>
 
 <script>
-// Переменные для управления окном
-const modal = document.getElementById("specsModal");
-const closeBtn = document.querySelector(".close-btn");
-const rows = document.querySelectorAll("table tbody tr");
 
-  
-  // КАРТА СООТВЕТСТВИЯ: "Точное имя модели из таблицы": "Номер страницы её схемы"
-  const modelPages = {
-    "1J1Z1A": "img/1J1Z1A.webp",
-    "1J2Z1A": "img/1J2Z1A.webp",
-    "1J2Z1AG": "img/1J2Z1AG.webp",
-    "1J2Z05AFD": "img/1J2Z05AFD.webp",
-    "1J2Z1AFG": "img/1J2Z1AFG.webp",
-    "1J2Z1AFGD": "img/1J2Z1AFGD.webp",
-    "2J1Z1A": "img/2J1Z1A.webp",
-    "2J1Z2A": "img/2J1Z2A.webp",
-    "2J2Z1AT": "img/2J2Z1AT.webp",
-    "3J2Z2AT": "img/3J2Z2AT.webp",
-    "3J2Z2A": "img/3J2Z2A.webp",
-    "3J2Z5A": "img/3J2Z5A.webp",
-    "4J1Z10A": "img/4J1Z10A.webp",
-    "4J1Z15A": "img/4J1Z15A.webp",
-    "4J2Z2A": "img/4J2Z2A.webp",
-    "4J2Z5A": "img/4J2Z5A.webp",
-    "4J2Z8A": "img/4J2Z8A.webp",
-    "4J2Z10A": "img/4J2Z10A.webp",
-    "6J1Z10A": "img/6J1Z10A.webp",
-    "6J1Z15A": "img/6J1Z15A.webp",
-    "6J2Z5A": "img/6J2Z5A.webp",
-    "6J3Z10AD": "img/6J3Z10AD.webp",
-    "6J4Z5AD": "img/6J4Z5AD.webp",
-    "6J4Z10A": "img/6J4Z10A.webp",
-    "7J1Z25A": "img/7J1Z25A.webp",
-    "7J1Z25AD": "img/7J1Z25AD.webp",
-    "7J1Z40A": "img/7J1Z40A.webp",
-    "7J2Z12A": "img/7J2Z12A.webp",
-    "7J2Z10AD": "img/7J2Z10AD.webp",
-    "7J2Z15A": "img/7J2Z15A.webp",
-    "8J3Z25A": "img/8J3Z25A.webp",
-    "8J4Z10A": "img/8J4Z10A.webp",
-    "8J4Z10AD": "img/8J4Z10AD.webp",
-    "8J4Z20A": "img/8J4Z20A.webp",
-    "8J1Z50A": "img/8J1Z50A.webp",
-    "8J1Z50AD": "img/8J1Z50AD.webp",
-    "8J1H75A": "img/8J1H75A.webp",
-    "8J2Z30A": "img/8J2Z30A.webp",
-    "8J2Z30AD": "img/8J2Z30AD.webp",
-    "9J6Z2A": "img/9J6Z2A8.webp",
-    "9J6Z2A": "img/9J6Z2A.webp",
-    "10J4Z25A": "img/10J4Z25A.webp",
-    "10J6Z15A": "img/10J6Z15A.webp",
-    "1JM2Z1A": "img/1JM2Z1A.webp",
-    "4JM2Z2A": "img/4JM2Z2A.webp",
-    "5JM2Z2A": "img/5JM2Z2A.webp",
-    "6JM1Z10A": "img/6JM1Z10A.webp",
-    "6JM2Z5A": "img/6JM2Z5A.webp",
-    "6JM4Z5A": "img/6JM4Z5A.webp",
-    "7JM1Z25A": "img/7JM1Z25A.webp",
-    "7JM2Z10A": "img/7JM2Z10A.webp",
-    "7JM2Z15A": "img/7JM2Z15A.webp",
-    "8JM3Z25A": "img/8JM3Z25A.webp",
-    "8JM4Z15A": "img/8JM4Z15A.webp",
-    "9JM12Z2A": "img/9JM12Z2A.webp",
-    "9JPK1H": "img/9JPK1H.webp",
-    "9JPK1D": "img/9JPK1D.webp",
-    "9JPK1Z": "img/9JPK1Z.webp",
-    "11JPT-SPDT50S": "img/11JPT-SPDT50S.webp",
-    "11JPT-DPDT50S": "img/11JPT-DPDT50S.webp",
-    "11JPT-DPDT50N": "img/11JPT-DPDT50N.webp",
-    "11JPTSPDT75S": "img/11JPT-SPDT75S.webp",
-    "11JPT-2Z50C": "img/11JPT-2Z50C.webp",
-    "1J1H50A": "img/1J1H50A.webp",
-    "1J1H50A-I": "img/1J1H50AI.webp",
-    "1J1H100A": "img/1J1H100A.webp",
-    "1J1H200A": "img/1J1H200A.webp",
-    "1J3H3D25A": "img/1J3H3D25A.webp",
-    "1J3H100A": "img/1J3H100A.webp",
-    "2J1H100A": "img/2J1H100A.webp",
-    "2J1H200A": "img/2J1H200A.webp",
-    "2J3H3D30A": "img/2J3H3D30A.webp",
-    "2J3H3D150A": "img/2J3H3D150A.webp",
-    "3J1H200A": "img/3J1H200A.webp",
-    "3J1H400A": "img/3J1H400A.webp",
-    "3J3H100A": "img/3J3H100A.webp",
-    "3J3H375A": "img/3J3H375A.webp",
-    "4J1H150A": "img/4J1H150A.webp",
-    "4J1H350A": "img/4J1H350A.webp",
-    "4J1H400AI": "img/4J1H400AI.webp",
-    "4J1H600AI": "img/4J1H600AI.webp",
-// второй каталог
-    "1JG1H50-2A": "img2/1JG1H50-2A.webp",
-    "1JG1H80-1.6A": "img2/1JG1H80-1.6A.webp",
-    "1JG2H330-0.1A": "img2/1JG2H330-0.1A.webp",
-    "1JG2H80-0.6A": "img2/1JG2H80-0.6A.webp",
-    "1JG2H80-2.5A": "img2/1JG2H80-2.5A.webp",
-    "1JG4H330-0.1A": "img2/1JG4H330-0.1A.webp",
-    "1JG4H80-0.6A": "img2/1JG4H80-0.6A.webp",
-    "1JG4H80-2.5A": "img2/1JG4H80-2.5A.webp",
-    "1JG4H80-2A": "img2/1JG4H80-2A.webp",
-    "2JG1H80-1A": "img2/2JG1H80-1A.webp",
-    "2JG1H80-5A": "img2/2JG1H80-5A.webp",
-    "2JG1H50-5A": "img2/2JG1H50-5A.webp",
-    "2JG1H80-8A": "img2/2JG1H80-8A.webp",
-    "2JG1H80-20A": "img2/2JG1H80-20A.webp",
-    "2JG2H80-2A": "img2/2JG2H80-2A.webp",
-    "2JG4H80-2A": "img2/2JG4H80-2A.webp",
-    "2JG4H80-3A": "img2/2JG4H80-3A.webp",
-    "2JG4H80-5A": "img2/2JG4H80-5A.webp",
-    "2JG1D50-0.2A": "img2/2JG1D50-0.2A.webp",
-    "2JG1D180-0.3A": "img2/2JG1D180-0.3A.webp",
-    "2JG2D50-0.3A": "img2/2JG2D50-0.3A.webp",
-    "2JG4D50-0.2A": "img2/2JG4D50-0.2A.webp",
-    "4JG1H80-6A": "img2/4JG1H80-6A.webp",
-    "4JG1H60-10A": "img2/4JG1H60-10A.webp",
-    "4JG1H540-20A": "img2/4JG1H540-20A.webp",
-    "4JG1H270-10A": "img2/4JG1H270-10A.webp",
-    "4JG1H60-20A": "img2/4JG1H60-20A.webp",
-    "4JG1H50-3A": "img2/4JG1H50-3A.webp",
-    "4JG1H380-7A": "img2/4JG1H380-7A.webp",
-    "4JG1H80-40A": "img2/4JG1H80-40A.webp",
-    "4JG1H60-100A": "img2/4JG1H60-100A.webp",
-    "4JG1H270-150A": "img2/4JG1H270-150A.webp",
-    "4JG2H50-4A": "img2/4JG2H50-4A.webp",
-    "4JG2H60-20A": "img2/4JG2H60-20A.webp",
-    "4JG4H50-4A": "img2/4JG4H50-4A.webp",
-    "4JG4H150-5A": "img2/4JG4H150-5A.webp",
-    "4JG4H50-10A": "img2/4JG4H50-10A.webp",
-    "4JG8H80-5A": "img2/4JG8H80-5A.webp",
-    "9JG1H270-10A": "img2/9JG1H270-10A.webp",
-    "9JG1H60-25A": "img2/9JG1H60-25A.webp",
-    "BC2213": "img2/BC2213.webp",
-    "BC3213": "img2/BC2213.webp",
-    "BC5213": "img2/BC2213.webp",
-    "BC2223": "img2/BC2223.webp",
-    "BC3223": "img2/BC2223.webp",
-    "BC5223": "img2/BC2223.webp",
-    "BCY211S": "img2/BCY211S.webp",
-    "BCY212S1": "img2/BCY212S1.webp",
-    "BCY212S": "img2/BCY212S1.webp",
-    "BCY212G1S": "img2/BCY212S1.webp",
-    "BCY212G2S": "img2/BCY212G2S.webp",
-    "BCY212GS": "img2/BCY212G2S.webp",
-    "BCY215S": "img2/BCY215S.webp",
-    "BCY217S": "img2/BCY217S.webp",
-    "BCY217GS": "img2/BCY217S.webp",
-    "BCY214S": "img2/BCY214S.webp",
-    "BCY214ES": "img2/BCY214S.webp",
-    "BCY214GS": "img2/BCY214S.webp",
-    "BCY216S": "img2/BCY216S.webp",
-    "BCY412S": "img2/BCY412S.webp",
-    "BCY414S": "img2/BCY412S.webp",
-    "BCY212E": "img2/BCY212E.webp",
-    "BCY212": "img2/BCY212E.webp",
-    "BCY211G": "img2/BCY211G.webp",
-    "BCY252": "img2/BCY252.webp",
-    "BCY252G": "img2/BCY252.webp",
-    "BCY215G1": "img2/BCY252.webp",
-    "BCY217": "img2/BCY217.webp",
-    "BCY214": "img2/BCY217.webp",
-    "BCY216": "img2/BCY216.webp",
-    "BCY412": "img2/BCY412.webp",
-    "BCY414": "img2/BCY412.webp",
-    "BCV211G4": "img2/BCV211G4.webp",
-    "BCV212": "img2/BCV212.webp",
-    "BCV212G": "img2/BCV212.webp",
-    "BCV252G": "img2/BCV252G.webp",
-    "BCV215": "img2/BCV215.webp",
-    "BCV215G1": "img2/BCV215.webp",
-    "BCV215G2": "img2/BCV215.webp",
-    "BCV217": "img2/BCV217.webp",
-    "BCV214": "img2/BCV214.webp",
-    "BCV216": "img2/BCV214.webp",
-    "BCV258": "img2/BCV258.webp",
-    "BCV412": "img2/BCV412.webp",
-    "BCV414": "img2/BCV412.webp",
-    "BCV278": "img2/BCV278.webp",
-    "BCW251": "img2/BCW251.webp",
-    "BCW251G": "img2/BCW251.webp",
-    "BCW212E": "img2/BCW212E.webp",
-    "BCW212": "img2/BCW212E.webp",
-    "BCW252": "img2/BCW252.webp",
-    "BCW252G": "img2/BCW252.webp",
-    "BCW215": "img2/BCW215.webp",
-    "BCW255": "img2/BCW215.webp",
-    "BCW217": "img2/BCW217.webp",
-    "BCW214": "img2/BCW217.webp",
-    "BCW216": "img2/BCW217.webp",
-    "BCW412": "img2/BCW412.webp",
-    "BCW414": "img2/BCW412.webp",
-    "BCW612": "img2/BCW612.webp",
-    "BCW614": "img2/BCW612.webp",
-    "BCW211GS": "img2/BCW211GS.webp",
-    "BCW251G": "img2/BCW212S1.webp",
-    "BCW212S": "img2/BCW212S1.webp",
-    "BCW212GS": "img2/BCW212S1.webp",
-    "BCW215S": "img2/BCW215S.webp",
-    "BCW217S": "img2/BCW215S.webp",
-    "BCW214S": "img2/BCW215S.webp",
-    "BCW216S": "img2/BCW216S.webp",
-    "BCW412S": "img2/BCW412S.webp",
-    "BCW414S": "img2/BCW412S.webp",
-    "BCW612S": "img2/BCW612S.webp",
-    "BCW614S": "img2/BCW612S.webp",
-    "BCS225S": "img2/BCS225S.webp",
-    "6JS2Z1-2A": "img2/6JS2Z1-2A.webp",
-    "6JS4Z1-4A": "img2/6JS4Z1-4A.webp",
-    "6JS1Z1-10A": "img2/6JS1Z1-10A.webp",
-    "6JS2Z1-10A": "img2/6JS2Z1-10A.webp",
-    "6JS2Z3-1A": "img2/6JS2Z3-1A.webp",
-    "6JS2Z3-5A": "img2/6JS2Z3-5A.webp",
-    "6JS2Z4-2A": "img2/6JS2Z4-2A.webp",
-    "5GH1H3202Z": "img2/5GH1H3202Z.webp",
-    "5GH2H3201Z": "img2/5GH2H3201Z.webp",
-    "5GH2H3201Z": "img2/5GH2H3201Z.webp",
-    "5GH1H3201J": "img2/5GH1H3201J.webp",
-    "5GH2H3201J": "img2/5GH2H3201J.webp",
-    "5GH4H3201J": "img2/5GH4H3201J.webp",
-    "5GH1H181": "img2/5GH1H181.webp",
-    "5GH1H2502": "img2/5GH1H2502.webp",
-    "5GH2H2502": "img2/5GH2H2502.webp",
-    "5GH4H2502": "img2/5GH4H2502.webp",
-    "5GH1H0601": "img2/5GH1H0601.webp",
-    "5GH2H0631": "img2/5GH2H0631.webp",
-    "5GH4H6651": "img2/5GH4H6651.webp",
-    
-    // Допишите сюда остальные модели по аналогии, когда проверите эти
-  };
-
-// АВТОМАТИЧЕСКАЯ СБОРКА КНОПОК И ПРИВЯЗКА КАРТИНОК
-rows.forEach(row => {
-    const firstCell = row.querySelector("td");
-    if (!firstCell) return;
-    const modelName = firstCell.innerText.trim();
-
-    // Создаем новую ячейку специально для кнопки
-    const actionCell = document.createElement("td");
-    actionCell.className = "center";
-    actionCell.innerHTML = `<button class="btn" style="padding: 6px 14px; cursor: pointer; background: #3b82f6; color: #fff; border: none; border-radius: 4px; font-weight: 600;">View Specs</button>`;
-    
-    // Вставляем ячейку в конец текущей строки
-    row.appendChild(actionCell);
-
-    // Вешаем клик на созданную кнопку
-    const button = actionCell.querySelector(".btn");
-    button.addEventListener("click", (event) => {
-        event.stopPropagation();
-
-        // Ищем точное имя файла в вашей карте modelPages
-        const imgFileName = modelPages[modelName];
-
-        if (imgFileName) {
-            const imgElement = document.getElementById("modalImg");
-            if (imgElement) {
-                imgElement.src = imgFileName;
-            }
-            if (modal) {
-                modal.style.display = "flex";
-            }
-        } else {
-            console.warn(`Файл для модели "${modelName}" не настроен в карте modelPages`);
-        }
-    });
-});
-
-// ЛОГИКА ЗАКРЫТИЯ ОКНА
-if (closeBtn) {
-    closeBtn.addEventListener("click", () => { modal.style.display = "none"; });
+function closeModal() {
+    const modal = document.getElementById('productModal');
+    if (modal) modal.style.display = 'none';
 }
-window.addEventListener("click", (event) => {
-    if (event.target === modal) { modal.style.display = "none"; }
-});
-// Ждем, пока вся страница полностью загрузится
-document.addEventListener('DOMContentLoaded', function() {
-  const searchInput = document.getElementById('catalogSearch');
-  
-  // Если поле поиска успешно нашлось на странице
-  if (searchInput) {
-    searchInput.addEventListener('input', function() {
-      const filter = this.value.toLowerCase().trim(); // Текст, который ввел пользователь
-      const tableRows = document.querySelectorAll('table tbody tr'); // Находим все строки таблицы
 
-      tableRows.forEach(row => {
-        // Берем текст из всей строки (или можно ограничить первой ячейкой с моделью)
-        const rowText = row.textContent.toLowerCase();
 
-        // Если текст строки содержит введенный запрос — показываем строку, иначе — скрываем
-        if (rowText.includes(filter)) {
-          row.style.display = ''; // Сброс стилей, строка видна
-        } else {
-          row.style.display = 'none'; // Строка скрывается
+document.addEventListener('click', function(event) {
+    if (event.target && (event.target.classList.contains('view-specs') || event.target.textContent.trim() === 'View Specs')) {
+        
+        const button = event.target;
+        const row = button.closest('tr'); // Находим строку таблицы
+        
+        if (row) {
+
+            const modelCell = row.querySelector('.model') || row.querySelector('td:first-child');
+            
+            if (modelCell) {
+                const modelName = modelCell.textContent.trim();
+                
+                
+                document.getElementById('modalTitle').innerText = modelName;
+                
+                
+                const modalImg = document.querySelector('#productModal .modal-content img');
+                if (modalImg) {
+                    
+                    let pathToSchematic = 'img2/' + modelName + '.webp';
+                    
+                    
+                    modalImg.onerror = function() {
+                        if (this.src.includes('img2/')) {
+                            this.src = 'img/' + modelName + '.webp';
+                        } else {
+                            // Если картинки нет вообще нигде, прячем битый тег и пишем текст
+                            this.style.display = 'none';
+                            console.log('Чертеж для модели ' + modelName + ' не найден.');
+                        }
+                    };
+                    
+                    
+                    modalImg.style.display = 'inline-block';
+                    modalImg.src = pathToSchematic;
+                }
+                
+                
+                const modal = document.getElementById('productModal');
+                if (modal) modal.style.display = 'block';
+            }
         }
-      });
-    });
-  }
+    }
+    
+    
+    const modal = document.getElementById('productModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
 });
 
+
+
+const searchInput = document.getElementById('catalogSearch');
+if (searchInput) {
+    searchInput.addEventListener('input', function() {
+        const filter = this.value.toLowerCase();
+        const tableRows = document.querySelectorAll('table tbody tr');
+        
+        tableRows.forEach(row => {
+            const rowText = row.textContent.toLowerCase();
+            
+            if (rowText.includes(filter)) {
+                row.style.display = ''; // Показываем строку
+            } else {
+                row.style.display = 'none'; // Скрываем строку
+            }
+        });
+    });
+}
 </script>
 </body>
 </html>
