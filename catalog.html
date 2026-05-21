@@ -231,7 +231,10 @@ table td button.view-specs:active { transform: scale(0.97) !important; }
  <tbody>
  
  <tr>
- <td class="center"><span class="model">1J1Z1A</span></td>
+ <td class="center">
+    <input type="checkbox" class="compare-checkbox" style="margin-right: 8px; transform: scale(1.2); cursor: pointer;">
+    <span class="model">1J1Z1A</span>
+</td>
  <td class="center"><img src="https://imgur.com/PQCZJCx.jpg" class="product-img" alt=""></td>
  <td>Φ8.5×7.1 Resistance sealing welding</td>
  <td class="center">-65~125</td>
@@ -243,7 +246,10 @@ table td button.view-specs:active { transform: scale(0.97) !important; }
  </tr>
  
  <tr>
- <td class="center"><span class="model">1J2Z1A</span></td>
+ <td class="center">
+    <input type="checkbox" class="compare-checkbox" style="margin-right: 8px; transform: scale(1.2); cursor: pointer;">
+    <span class="model">1J2Z1A</span>
+</td>
  <td class="center"><img src="https://imgur.com/PQCZJCx.jpg" class="product-img" alt=""></td>
  <td>Φ8.5×7.1 Resistance sealing welding</td>
  <td class="center">-55~85</td>
@@ -3193,6 +3199,108 @@ if (searchInput) {
         });
     });
 }
+// ========================================================
+// НОВЫЙ КОД: ЛОГИКА ДЛЯ ОКНА СРАВНЕНИЯ МОДЕЛЕЙ (ВСТАВЛЯТЬ СЮДА)
+// ========================================================
+document.addEventListener('change', function(event) {
+    if (event.target && event.target.classList.contains('compare-checkbox')) {
+        updateCompareBar();
+    }
+});
+
+function updateCompareBar() {
+    const checkboxes = document.querySelectorAll('.compare-checkbox:checked');
+    const compareBar = document.getElementById('compareBar');
+    const compareCount = document.getElementById('compareCount');
+    
+    if (checkboxes.length > 0) {
+        compareCount.innerText = `Selected: ${checkboxes.length} model(s) to compare`;
+        compareBar.classList.add('active');
+    } else {
+        compareBar.classList.remove('active');
+    }
+}
+
+function clearCompare() {
+    const checkboxes = document.querySelectorAll('.compare-checkbox:checked');
+    checkboxes.forEach(cb => cb.checked = false);
+    updateCompareBar();
+}
+
+function openCompareModal() {
+    const checkboxes = document.querySelectorAll('.compare-checkbox:checked');
+    if (checkboxes.length === 0) return;
+    
+    const modelsData = [];
+    
+    checkboxes.forEach(cb => {
+        const row = cb.closest('tr');
+        const modelName = row.querySelector('.model').textContent.trim();
+        const cells = row.querySelectorAll('td');
+        
+        modelsData.push({
+            name: modelName,
+            picture: cells[1] ? cells[1].innerHTML : '', 
+            dimensions: cells[2] ? cells[2].innerText : '-',
+            temp: cells[3] ? cells[3].innerText : '-',
+            contactForm: cells[4] ? cells[4].innerText : '-',
+            vibration: cells[5] ? cells[5].innerText : '-',
+            load: cells[6] ? cells[6].innerText : '-',
+            benchmarking: cells[7] ? cells[7].innerText : '-'
+        });
+    });
+    
+    buildCompareTable(modelsData);
+    document.getElementById('compareModal').style.display = 'block';
+}
+
+function buildCompareTable(data) {
+    const table = document.getElementById('compareResultTable');
+    table.innerHTML = ''; 
+    
+    const parameters = [
+        { key: 'picture', label: 'Product Picture' },
+        { key: 'dimensions', label: 'Dimensions (mm)' },
+        { key: 'temp', label: 'Temperature Range (°C)' },
+        { key: 'contactForm', label: 'Contact Form' },
+        { key: 'vibration', label: 'Vibration' },
+        { key: 'load', label: 'Contact Load & Lifetime' },
+        { key: 'benchmarking', label: 'Benchmarking Model' }
+    ];
+    
+    let headerHtml = '<tr><th>Parameters</th>';
+    data.forEach(item => {
+        headerHtml += `<th>${item.name}</th>`;
+    });
+    headerHtml += '</tr>';
+    table.innerHTML += headerHtml;
+    
+    parameters.forEach(param => {
+        let rowHtml = `<tr><td>${param.label}</td>`;
+        const values = data.map(d => d[param.key].trim());
+        const isDifferent = values.length > 1 && !values.every(v => v === values[0]);
+        
+        data.forEach(item => {
+            const highlightClass = (isDifferent && param.key !== 'picture') ? 'class="different-value"' : '';
+            rowHtml += `<td ${highlightClass}>${item[param.key]}</td>`;
+        });
+        
+        rowHtml += '</tr>';
+        table.innerHTML += rowHtml;
+    });
+}
+
+function closeCompareModal() {
+    document.getElementById('compareModal').style.display = 'none';
+}
+
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('compareModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
 </script>
 </body>
-</html>
+</html>   
