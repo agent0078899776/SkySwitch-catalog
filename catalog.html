@@ -86,14 +86,19 @@ table td button.view-specs:active { transform: scale(0.97) !important; }
 .modal-content {
  background-color: #1e293b;
  color: #ffffff;
- margin: 5% auto;
+ margin: 2vh auto; /* Уменьшили отступ сверху, чтобы окно сидело выше */
  padding: 25px;
  border-radius: 12px;
  width: 90%;
- max-width: 650px;
+ max-width: 750px; /* Немного расширили окно для удобства просмотра */
  position: relative;
  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5);
  border: 1px solid #334155;
+ 
+ /* Включаем внутреннюю прокрутку всего окна, если контент не влезает по высоте */
+ max-height: 92vh; 
+ display: flex;
+ flex-direction: column;
 }
 .close-button {
  position: absolute;
@@ -112,7 +117,13 @@ table td button.view-specs:active { transform: scale(0.97) !important; }
  border-radius: 8px;
  margin-top: 15px;
  text-align: center;
+ 
+ /* Магия скролла здесь: контейнер будет прокручиваться, если картинка огромная */
+ overflow-y: auto; 
+ overflow-x: auto; /* На случай, если схема слишком широкая */
+ flex-grow: 1;
 }
+
 .schematic-container img {
  max-width: 100%;
  height: auto;
