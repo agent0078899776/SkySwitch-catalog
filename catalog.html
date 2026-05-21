@@ -113,14 +113,18 @@ table td button.view-specs:active { transform: scale(0.97) !important; }
 .close-button:hover { color: #ffffff; }
 .schematic-container {
  background: #ffffff;
- padding: 15px;
+ padding: 20px;
  border-radius: 8px;
  margin-top: 15px;
  text-align: center;
  
- /* Автоматически показывает скроллбары ТОЛЬКО если картинка действительно не влезла */
- overflow: auto; 
+ /* Ограничиваем белую область по высоте экрана */
+ max-height: 70vh !important; 
+ 
+ /* ВКЛЮЧАЕМ СКРОЛЛ ВО ВСЕ СТОРОНЫ */
+ overflow: auto !important; 
  flex-grow: 1;
+ position: relative;
 }
 /* Красивое оформление для подзаголовков внутри категорий */
 .catalog-category h3 {
@@ -134,11 +138,14 @@ table td button.view-specs:active { transform: scale(0.97) !important; }
     display: block !important; /* Гарантируем правильное отображение отступов */
 }
 .schematic-container img {
- max-width: 100% !important;
- max-height: 65vh !important; /* Ограничивает картинку по высоте до 65% от экрана */
- width: auto !important;       /* Позволяет картинке пропорционально сжиматься */
+ /* Убираем жесткое сжатие до 100% ширины, чтобы картинка не мельчала */
+ max-width: none !important; 
+ max-height: none !important;
+ 
+ /* Устанавливаем комфортный крупный размер для чтения схем */
+ width: 130% !important; /* Картинка будет крупнее контейнера, создавая правильный скролл */
  height: auto !important;
- object-fit: contain !important; /* Идеально вписывает изображение в рамки */
+ 
  display: block;
  margin: 0 auto;
 }
