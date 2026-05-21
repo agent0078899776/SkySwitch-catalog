@@ -112,21 +112,47 @@ table td button.view-specs:active { transform: scale(0.97) !important; }
 }
 .close-button:hover { color: #ffffff; }
 .schematic-container {
- background: #ffffff;
- padding: 20px;
- border-radius: 8px;
- margin-top: 15px;
- text-align: center;
- 
- /* Ограничиваем белую область по высоте экрана */
- max-height: 65vh !important; 
- 
- /* Запрещаем горизонтальный скролл (влево-вправо) и оставляем вертикальный (вверх-вниз) */
- overflow-x: hidden !important; 
- overflow-y: auto !important; 
- 
- flex-grow: 1;
- position: relative;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    text-align: center;
+    
+    /* Ограничиваем белую область по высоте экрана */
+    max-height: 65vh !important; 
+    
+    /* Скролл появится автоматически, только когда картинка увеличена */
+    overflow: auto !important; 
+    
+    flex-grow: 1;
+    position: relative;
+}
+.schematic-container img {
+    /* По умолчанию картинка идеально аккуратно вписана в окно */
+    width: 100% !important; 
+    max-width: 100% !important; 
+    height: auto !important;
+    max-height: none !important;
+    display: block;
+    margin: 0 auto;
+    
+    /* Меняем курсор, показывая, что картинку можно приблизить */
+    cursor: zoom-in;
+    
+    /* Плавное увеличение */
+    transition: transform 0.25s ease;
+    transform-origin: center center;
+}
+/* Класс, который будет добавляться через JavaScript при клике */
+.schematic-container img.zoomed {
+    /* Увеличиваем картинку в 2 раза. Можно поставить 1.8 или 2.5 */
+    transform: scale(2) !important; 
+    
+    /* Меняем курсор на "руку" для перетаскивания */
+    cursor: zoom-out; 
+    
+    /* Делаем отступы, чтобы при увеличении края не обрезались вплотную */
+    margin: 40px auto; 
 }
 /* Красивое оформление для подзаголовков внутри категорий */
 .catalog-category h3 {
@@ -138,18 +164,6 @@ table td button.view-specs:active { transform: scale(0.97) !important; }
     font-weight: 600 !important;
     letter-spacing: 0.5px !important;
     display: block !important; /* Гарантируем правильное отображение отступов */
-}
-.schematic-container img {
- /* Картинка ВСЕГДА будет идеально вписываться по ширине белого окна */
- width: 100% !important; 
- max-width: 100% !important; 
- 
- /* Снимаем ограничения по высоте для самого изображения, чтобы текст не сжимался уродливо */
- height: auto !important;
- max-height: none !important;
- 
- display: block;
- margin: 0 auto;
 }
 </style>
 </head>
@@ -3130,6 +3144,10 @@ document.addEventListener('click', function(event) {
                 
                 const modalImg = document.getElementById('modalImage');
                 if (modalImg) {
+                    // Важное улучшение: Сбрасываем класс зума при открытии новой модели,
+                    // чтобы новое окно не открывалось сразу увеличенным!
+                    modalImg.classList.remove('zoomed');
+                    
                     let pathToSchematic = 'img2/' + modelName + '.webp';
                     
                     modalImg.onerror = function() {
@@ -3147,6 +3165,13 @@ document.addEventListener('click', function(event) {
                 document.getElementById('productModal').style.display = 'block';
             }
         }
+    }
+});
+
+// Новый обработчик: Переключение зума по клику на саму картинку чертежа
+document.addEventListener('click', function(event) {
+    if (event.target && event.target.id === 'modalImage') {
+        event.target.classList.toggle('zoomed');
     }
 });
 
