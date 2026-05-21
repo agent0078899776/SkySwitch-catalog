@@ -3657,7 +3657,6 @@ function openCompareModal() {
             contactForm: cells[4] ? cells[4].innerText : '-',
             vibration: cells[5] ? cells[5].innerText : '-',
             load: cells[6] ? cells[6].innerText : '-',
-            benchmarking: cells[7] ? cells[7].innerText : '-'
         });
     });
     
@@ -3669,16 +3668,17 @@ function buildCompareTable(data) {
     const table = document.getElementById('compareResultTable');
     table.innerHTML = ''; 
     
+    // Оставляем только те параметры, которые РЕАЛЬНО нужно выводить (без Benchmarking и Action)
     const parameters = [
         { key: 'picture', label: 'Product Picture' },
         { key: 'dimensions', label: 'Dimensions (mm)' },
         { key: 'temp', label: 'Temperature Range (°C)' },
         { key: 'contactForm', label: 'Contact Form' },
         { key: 'vibration', label: 'Vibration' },
-        { key: 'load', label: 'Contact Load & Lifetime' },
-        { key: 'benchmarking', label: 'Benchmarking Model' }
+        { key: 'load', label: 'Contact Load & Lifetime' }
     ];
     
+    // Создаем шапку таблицы с именами выбранных моделей
     let headerHtml = '<tr><th>Parameters</th>';
     data.forEach(item => {
         headerHtml += `<th>${item.name}</th>`;
@@ -3686,6 +3686,7 @@ function buildCompareTable(data) {
     headerHtml += '</tr>';
     table.innerHTML += headerHtml;
     
+    // Генерируем строки параметров
     parameters.forEach(param => {
         let rowHtml = `<tr><td>${param.label}</td>`;
         const values = data.map(d => d[param.key].trim());
@@ -3744,14 +3745,12 @@ function closeCompareModal() {
     document.getElementById('compareModal').style.display = 'none';
 }
 
-// Открыть окно сравнения и построить таблицу
 function openCompareModal() {
     const checkboxes = document.querySelectorAll('.compare-checkbox:checked');
     if (checkboxes.length === 0) return;
     
     const modelsData = [];
     
-    // Бежим по всем строкам, где стоят галочки, и собираем инфо
     checkboxes.forEach(cb => {
         const row = cb.closest('tr');
         const modelName = row.querySelector('.model').textContent.trim();
@@ -3759,13 +3758,13 @@ function openCompareModal() {
         
         modelsData.push({
             name: modelName,
-            picture: cells[1] ? cells[1].innerHTML : '', // Копируем ячейку с картинкой
+            picture: cells[1] ? cells[1].innerHTML : '', 
             dimensions: cells[2] ? cells[2].innerText : '-',
             temp: cells[3] ? cells[3].innerText : '-',
             contactForm: cells[4] ? cells[4].innerText : '-',
             vibration: cells[5] ? cells[5].innerText : '-',
-            load: cells[6] ? cells[6].innerText : '-',
-            benchmarking: cells[7] ? cells[7].innerText : '-'
+            load: cells[6] ? cells[6].innerText : '-'
+            // Строку benchmarking и кнопку View Specs (cells[7] и cells[8]) мы здесь просто игнорируем
         });
     });
     
