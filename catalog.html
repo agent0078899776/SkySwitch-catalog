@@ -123,7 +123,15 @@ table td button.view-specs:active { transform: scale(0.97) !important; }
  overflow-x: auto; /* На случай, если схема слишком широкая */
  flex-grow: 1;
 }
-
+/* Красивое оформление для подзаголовков внутри категорий */
+.category-content h3 {
+    margin: 30px 0 15px 10px !important; /* Отступы: 30px сверху, 15px снизу, 10px слева */
+    padding-left: 12px !important;       /* Внутренний отступ для линии */
+    border-left: 4px solid #3b82f6 !important; /* Красивая вертикальная синяя линия слева */
+    color: #93c5fd !important;           /* Приятный светло-голубой оттенок */
+    font-size: 1.4rem !important;        /* Адекватный размер шрифта */
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;    /* Немного увеличим межбуквенное расстояние */
 .schematic-container img {
  max-width: 100%;
  height: auto;
