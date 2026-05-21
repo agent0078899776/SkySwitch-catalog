@@ -2889,67 +2889,63 @@ Random:
 </div>
 
 <script>
-
-function closeModal() {
+// Функция закрытия окна
+window.closeModal = function() {
     const modal = document.getElementById('productModal');
     if (modal) modal.style.display = 'none';
 }
 
-
+// Автоматический перехват клика по кнопкам "View Specs"
 document.addEventListener('click', function(event) {
-    if (event.target && (event.target.classList.contains('view-specs') || event.target.textContent.trim() === 'View Specs')) {
+    if (event.target && (event.target.tagName === 'BUTTON' || event.target.textContent.trim() === 'View Specs')) {
         
-        const button = event.target;
-        const row = button.closest('tr'); // Находим строку таблицы
+        const row = event.target.closest('tr'); // Находим строку таблицы
         
         if (row) {
-
+            // Берем название модели из первой ячейки (или ячейки с классом .model)
             const modelCell = row.querySelector('.model') || row.querySelector('td:first-child');
             
             if (modelCell) {
                 const modelName = modelCell.textContent.trim();
                 
+                // Ставим имя модели в заголовок окна
+                document.getElementById('modalTitle').innerText = modelName + ' - Technical Specifications';
                 
-                document.getElementById('modalTitle').innerText = modelName;
-                
-                
-                const modalImg = document.querySelector('#productModal .modal-content img');
+                const modalImg = document.getElementById('modalImage');
                 if (modalImg) {
-                    
+                    // Основной путь: ищем в img2 в формате webp
                     let pathToSchematic = 'img2/' + modelName + '.webp';
                     
-                    
+                    // Если картинки нет в img2, скрипт автоматически переключится на папку img
                     modalImg.onerror = function() {
                         if (this.src.includes('img2/')) {
                             this.src = 'img/' + modelName + '.webp';
                         } else {
-                            // Если картинки нет вообще нигде, прячем битый тег и пишем текст
+                            this.alt = 'Schematic for ' + modelName + ' not found.';
                             this.style.display = 'none';
-                            console.log('Чертеж для модели ' + modelName + ' не найден.');
                         }
                     };
                     
-                    
-                    modalImg.style.display = 'inline-block';
+                    modalImg.style.display = 'block';
                     modalImg.src = pathToSchematic;
                 }
                 
-                
-                const modal = document.getElementById('productModal');
-                if (modal) modal.style.display = 'block';
+                // Показываем окно
+                document.getElementById('productModal').style.display = 'block';
             }
         }
     }
-    
-    
+});
+
+// Закрытие по клику на темную область вокруг окна
+window.onclick = function(event) {
     const modal = document.getElementById('productModal');
     if (event.target === modal) {
         modal.style.display = 'none';
     }
-});
+}
 
-
-
+// СВЕРХБЫСТРЫЙ ПОИСК ПО ТАБЛИЦЕ
 const searchInput = document.getElementById('catalogSearch');
 if (searchInput) {
     searchInput.addEventListener('input', function() {
@@ -2958,11 +2954,10 @@ if (searchInput) {
         
         tableRows.forEach(row => {
             const rowText = row.textContent.toLowerCase();
-            
             if (rowText.includes(filter)) {
-                row.style.display = ''; // Показываем строку
+                row.style.display = ''; 
             } else {
-                row.style.display = 'none'; // Скрываем строку
+                row.style.display = 'none'; 
             }
         });
     });
