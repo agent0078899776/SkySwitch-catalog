@@ -119,10 +119,12 @@ table td button.view-specs:active { transform: scale(0.97) !important; }
  text-align: center;
  
  /* Ограничиваем белую область по высоте экрана */
- max-height: 70vh !important; 
+ max-height: 65vh !important; 
  
- /* ВКЛЮЧАЕМ СКРОЛЛ ВО ВСЕ СТОРОНЫ */
- overflow: auto !important; 
+ /* Запрещаем горизонтальный скролл (влево-вправо) и оставляем вертикальный (вверх-вниз) */
+ overflow-x: hidden !important; 
+ overflow-y: auto !important; 
+ 
  flex-grow: 1;
  position: relative;
 }
@@ -138,13 +140,13 @@ table td button.view-specs:active { transform: scale(0.97) !important; }
     display: block !important; /* Гарантируем правильное отображение отступов */
 }
 .schematic-container img {
- /* Убираем жесткое сжатие до 100% ширины, чтобы картинка не мельчала */
- max-width: none !important; 
- max-height: none !important;
+ /* Картинка ВСЕГДА будет идеально вписываться по ширине белого окна */
+ width: 100% !important; 
+ max-width: 100% !important; 
  
- /* Устанавливаем комфортный крупный размер для чтения схем */
- width: 130% !important; /* Картинка будет крупнее контейнера, создавая правильный скролл */
+ /* Снимаем ограничения по высоте для самого изображения, чтобы текст не сжимался уродливо */
  height: auto !important;
+ max-height: none !important;
  
  display: block;
  margin: 0 auto;
