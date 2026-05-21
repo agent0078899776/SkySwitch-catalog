@@ -118,23 +118,27 @@ table td button.view-specs:active { transform: scale(0.97) !important; }
  margin-top: 15px;
  text-align: center;
  
- /* Магия скролла здесь: контейнер будет прокручиваться, если картинка огромная */
- overflow-y: auto; 
- overflow-x: auto; /* На случай, если схема слишком широкая */
+ /* Автоматически показывает скроллбары ТОЛЬКО если картинка действительно не влезла */
+ overflow: auto; 
  flex-grow: 1;
 }
 /* Красивое оформление для подзаголовков внутри категорий */
-.category-content h3 {
-    margin: 30px 0 15px 10px !important; /* Отступы: 30px сверху, 15px снизу, 10px слева */
-    padding-left: 12px !important;       /* Внутренний отступ для линии */
-    border-left: 4px solid #3b82f6 !important; /* Красивая вертикальная синяя линия слева */
-    color: #93c5fd !important;           /* Приятный светло-голубой оттенок */
-    font-size: 1.4rem !important;        /* Адекватный размер шрифта */
+.catalog-category h3 {
+    margin: 35px 0 15px 10px !important; /* Увеличили верхний отступ до 35px */
+    padding-left: 12px !important;
+    border-left: 4px solid #3b82f6 !important; /* Наша красивая линия */
+    color: #93c5fd !important;
+    font-size: 1.4rem !important;
     font-weight: 600 !important;
-    letter-spacing: 0.5px !important;    /* Немного увеличим межбуквенное расстояние */
+    letter-spacing: 0.5px !important;
+    display: block !important; /* Гарантируем правильное отображение отступов */
+}
 .schematic-container img {
- max-width: 100%;
- height: auto;
+ max-width: 100% !important;
+ max-height: 65vh !important; /* Ограничивает картинку по высоте до 65% от экрана */
+ width: auto !important;       /* Позволяет картинке пропорционально сжиматься */
+ height: auto !important;
+ object-fit: contain !important; /* Идеально вписывает изображение в рамки */
  display: block;
  margin: 0 auto;
 }
